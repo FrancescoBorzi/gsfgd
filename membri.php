@@ -1,5 +1,5 @@
 <?php
 
-echo 'Gabriele, Ture, Ciccio, Germana, Dario'
+echo 'Gabriele, Ture, Ciccio, Dario'
 echo "forutnso è il migliore"
 ?>
