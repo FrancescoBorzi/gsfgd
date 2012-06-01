@@ -6,44 +6,36 @@
     </head>
     <body>
         <?php
+        include "../db_connect.php";
+          
+        //ARRAY CONTIENE LE VARIABILI DA INSERIRE NEGLI ATTRIBUTI       
         
-        include "accediDB.php";
-        connetti();
+        $arr=array('drugbank_id',
+        'name',
+        'description',
+        'pharmacology',
+        'toxicity',
+        'categories',           //molti
+        'atc_code',
+        'drug_interactions',    //molti
+        'Molecular_Formula',
+        'target_partner',       //molti
+        'action',               //molti
+        'target_position');
         
-        $nomeDB="drugbank";
-        $qDB="CREATE DATABASE IF NOT EXISTS $nomeDB";
-        $sql = mysql_query($qDB) or die (mysql_error());
+        //ASSEGNO AD ALCUNE POSIZIONI UN ARRAY DATO CHE CI POSSONO ESSERE PIÙ DATI
+        $arr['categories']=array();
+        $arr['drug_interactions']=array();
+        $arr['target_partner']=array();
+        $arr['action']=array();
+       
         
-        $db=mysql_select_db($nomeDB) or die (mysql_error());
-        
-        $qcrea="CREATE TABLE IF NOT EXISTS drugID(ATC_code VARCHAR(50),idDrug VARCHAR(50),Description VARCHAR(1000), Drug_Category VARCHAR(500))";
-        mysql_query($qcrea) or die (mysql_error());
-        //$qcrea="ALTER TABLE drugID ADD ATC_code VARCHAR(50)";
-        //mysql_query($qcrea) or die (mysql_error());
-        
-        echo "dio\n";
-        
-        
-        $par="DPD_Drug_ID_Number";
-        $par2="ATC_Codes";
-        $par3="Description";
-        $par4="Drug_Category";
-        
-        $tmp="";
-        $tmp33="";
-        $tmp44="";
-        
-        $testo=file("./drugbank.txt");
-        //reset($testo);
-        $linea=1;
+        //LEGGO IL FILE
+        //$testo=file("./drugbank.txt");
+       
+        /*$linea=1;
         $rigasuccessiva=-3;
-        
-        $str11=false;
-        $str22=false;
-        $str33=false;
-        $str44=false;
-        
-        //$write_file = fopen("./out.txt","w+");
+     
         while(list(,$value)= each($testo)) {
         
             $str=strpos($value,$par);
@@ -92,7 +84,7 @@
         }
                  // fclose(@$write_file);   
       
-           
+           */
         ?>
     </body>
 </html>
