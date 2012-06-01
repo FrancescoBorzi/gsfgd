@@ -1,3 +1,7 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,40 +10,7 @@
     </head>
     <body>
         <?php
-        echo "dio\n";
-             
-        $par="DPD_Drug_ID_Number";
-        $testo=file("./drugbank.txt");
-        reset($testo);
-        $linea=1;
-        $rigasuccessiva=1;
-       
-        //$write_file = fopen("./out.txt","w+");
-        while(list(,$value)= each($testo)) {
-        
-            $str=strpos($value,$par);
-           
-            if($str!=false){
-               
-                print_r("$value\n");
-                //print_r("$linea\n");
-                $rigasuccessiva=$linea;
-                //fwrite($write_file,"$value\n");
-                //file_put_contents($percorso, $value );
-            }
-    
-            if(($rigasuccessiva+1)==($linea)){
-                //fwrite($write_file,"$value\n");
-                //print_r("$value\n");
-                //print_r("$linea\n");
-               
-               
-            }
-            $linea++;
-                
-        }
-                  fclose($write_file);   
-        
+          
         //FUNZIONE NON UTILIZZATA
         function readLine($file, $line_num, $delimiter="\n"){
 
