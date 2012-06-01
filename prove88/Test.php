@@ -12,8 +12,11 @@ function nextDat($pos, $str){
             if($cont==$pos){
                 $index2=$index;
                 $index++;
-                while(substr($str,$index)!='|'){
-                    $index++;  
+                if(substr($str,$index)=='|')
+                    return '';
+                else 
+                    while(substr($str,$index)!='|'){
+                        $index++;  
                 }
                 return substr($str, $index2,$index-1);
             }
