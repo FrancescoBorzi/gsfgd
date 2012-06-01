@@ -6,17 +6,17 @@ DROP TABLE IF EXISTS drugbank;
 CREATE TABLE drugbank (
 	id_drugbank VARCHAR(7) NOT NULL,
 	name VARCHAR(30),
-	description VARCHAR(255),
-	toxicity VARCHAR(255),
+	description TEXT,
+	toxicity TEXT,
 	atc_code VARCHAR(7),
 	action VARCHAR(20),
-	pharmacology VARCHAR(255),
+	pharmacology TEXT,
 	formula_molecolare VARCHAR(20),
 	drug_interaction VARCHAR(7),
-	categories VARCHAR(50),
+	categories TEXT,
 --	target_position NON LO TROVO!
 --	target_partner NON LO TROVO!
-	property VARCHAR(30),
+	property TEXT,
 	PRIMARY KEY (id_drugbank)
 );
 
