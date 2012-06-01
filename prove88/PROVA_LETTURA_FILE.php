@@ -16,7 +16,7 @@
         
         $db=mysql_select_db($nomeDB) or die (mysql_error());
         
-        $qcrea="CREATE TABLE IF NOT EXISTS drugID(ATC_code VARCHAR(50), drugID(idDrug VARCHAR(50),Description VARCHAR(1000), Drug_Category VARCHAR(500))";
+        $qcrea="CREATE TABLE IF NOT EXISTS drugID(ATC_code VARCHAR(50),idDrug VARCHAR(50),Description VARCHAR(1000), Drug_Category VARCHAR(500))";
         mysql_query($qcrea) or die (mysql_error());
         //$qcrea="ALTER TABLE drugID ADD ATC_code VARCHAR(50)";
         //mysql_query($qcrea) or die (mysql_error());
