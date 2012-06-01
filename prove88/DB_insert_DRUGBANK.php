@@ -31,60 +31,39 @@
        
         
         //LEGGO IL FILE
-        //$testo=file("./drugbank.txt");
-       
-        /*$linea=1;
-        $rigasuccessiva=-3;
-     
+        $testo=file("./drugbank.txt");
+        $indice=0;
+        $indiceMul=0;
+        $i=0;
+        
+        
         while(list(,$value)= each($testo)) {
         
-            $str=strpos($value,$par);
-            $str2=strpos($value,$par2);
-            $str3=strpos($value,$par3);
-            $str4=strpos($value,$par4);
-           
+            if(!strpos($value,"<")){
+                $arr['$indice']=$value;
+                      
+            }
+            else {
+                while((list(,$value)= each($testo))&& $i<1){
+                    multipli($arr,$indice,$value);
+                    $i++;
+                    
+                }
+            }
             
-            if($str!=false || $str2!=false || $str3!=false || $str4!=false){
-             
-                if($str!=false)$str11=true;
-                if($str2!=false)$str22=true;
-                if($str3!=false)$str33=true;
-                if($str4!=false)$str44=true;
-                //print_r("$value\n");
-                //print_r("$linea\n");
-                $rigasuccessiva=$linea;
-                
-             }
-    
-            if(($rigasuccessiva+1)==($linea)){
+            echo $arr['$indice'];
+            $indice++;               
+            //print_r("$linea\n");
               
-                 if($str11){echo "ci sono";
-                     //mysql_query("INSERT INTO drugID VALUES ('$tmp','$value')")or die (mysql_error());
-                     $str11=false;//IDdrug
-                     }
-                 if($str22){
-                     $tmp=$value;//atc
-                     $str22=false;
-                  }
-                  if($str33){
-                     $tmp33=$value;//Description
-                     $str33=false;
-                  }
-                  if($str44){
-                     $tmp44=$value;//Categories
-                     mysql_query("INSERT INTO drugID VALUES ('$tmp','$value,'$tmp33','$tmp44')")or die (mysql_error());
-                     $str44=false;
-                  }
-                 
-                //print_r("$value\n");
-                //print_r("$linea\n");
-             }
-            $linea++;
-                
         }
-                 // fclose(@$write_file);   
-      
-           */
+        //mysql_query("INSERT INTO drugID VALUES ('$tmp','$value,'$tmp33','$tmp44')")or die (mysql_error());
+        function multipli (&$array,$indice,$contenuto){
+            $tmp=$array[$indice];
+            $tmp['$indiceMul']=$contenuto;
+            $indiceMul++;
+             
+        }
+        
         ?>
     </body>
 </html>
