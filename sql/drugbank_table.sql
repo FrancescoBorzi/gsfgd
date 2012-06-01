@@ -1,5 +1,4 @@
 -- TODO: ottimizzare la grandezza degli attributi,
--- TODO:  implementare anche i campi 'target_position' e 'target_partner' che non ho trovato
 -- TODO:  discutere sul campo 'property' (vedi commenti sotto).
 
 DROP TABLE IF EXISTS drugbank;
@@ -14,8 +13,8 @@ CREATE TABLE drugbank (
 	formula_molecolare VARCHAR(20),
 	drug_interaction VARCHAR(7),
 	categories TEXT,
---	target_position NON LO TROVO!
---	target_partner NON LO TROVO!
+	target_position VARCHAR(10),
+	target_partner VARCHAR(10),
 	property TEXT,
 	PRIMARY KEY (id_drugbank)
 );
@@ -34,8 +33,8 @@ SET @pharmacology:='Lepirudin is used to break up clots and to reduce thrombocyt
 SET @formula_molecolare:='C287H440N80O110S6';
 SET @drug_interaction:='DB01381';
 SET @categories:='Anticoagulants|Antithrombotic Agents|Fibrinolytic Agents';
-#SET @target_position:=;
-#SET @target_partner:=;
+SET @target_position:='';
+SET @target_partner:='54';
 SET @property:='logP/hydrophobicity:0.777|Molecular Weight:6963.4250';
 -- *** NOTA: per quanto concerne property, ve ne sono più di una (quindi separate da una |pipeline|)
 -- *** inoltre ogni property è un doppio valore, che per il momento ho impostato a nomeproperty:value
@@ -44,7 +43,7 @@ SET @property:='logP/hydrophobicity:0.777|Molecular Weight:6963.4250';
 -- query ri-eseguibile
 DELETE FROM drugbank WHERE id_drugbank = @id_drugbank;
 INSERT INTO drugbank VALUES
-(@id_drugbank, @name, @description, @toxicity, @atc_code, @action, @pharmacology, @formula_molecolare, @drug_interaction, @categories, @property);
+(@id_drugbank, @name, @description, @toxicity, @atc_code, @action, @pharmacology, @formula_molecolare, @drug_interaction, @categories, @target_position, @target_partner, @property);
 
 -- test finale
 SELECT * FROM drugbank WHERE id_drugbank = @id_drugbank;
