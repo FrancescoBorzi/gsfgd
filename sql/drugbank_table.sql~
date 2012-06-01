@@ -1,4 +1,0 @@
-CREATE TABLE `account` (
-	`id_drugbank` INT(11) NOT NULL,
-	PRIMARY KEY (`id_drugbank`),
-)
