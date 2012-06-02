@@ -50,26 +50,20 @@
                     $arr[$indice]=$value;
                     //echo $value;      
                 }
+                //echo "{$arr[$indice]}  $indice\n\n\n";
                 $indice++;
             }
             else{
                 $indice=0;
-                insertDB($arr);
-                
+                //insertDB($arr);
             }
-            //echo "{$arr[$indice]}  $indice\n\n\n";
-            
         }
-        //echo "stampo array".$arr['categories'] .$arr['drug_interactions'].$arr['target_partner'].$arr['action'];
-        //$tmp=$arr['drug_interactions'];
-        //echo $tmp[0];
-        
+                
         function multipli (&$arr,$indice,$contenuto,&$indiceMul){
             $tmp=$arr[$indice];
             $tmp=$arr[$tmp];
             $tmp[$indiceMul]=$contenuto;
             //echo $tmp[$indiceMul]."\n";
-            //getSubArray($arr, $subArr, $indice);
             $indiceMul++;
         }
         
