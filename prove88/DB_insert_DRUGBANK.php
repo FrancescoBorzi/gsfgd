@@ -34,34 +34,66 @@
         $testo=file("./drugbank.txt");
         $indice=0;
         $indiceMul=0;
-        $i=0;
-        
         
         while(list(,$value)= each($testo)) {
-        
-            if(!strpos($value,"<")){
-                $arr['$indice']=$value;
-                      
+            if($value!="---\n"){
+                if($value=="?\n"){
+                   while((list(,$value)= each($testo))){
+                        if($value!="?/\n"){
+                            multipli($arr,$indice,$value,$indiceMul);
+                        }
+                        else break;
+                    }
+                    $indiceMul=0;
+                }
+                else{
+                    $arr[$indice]=$value;
+                    //echo $value;      
+                }
+                $indice++;
             }
-            else {
-                while((list(,$value)= each($testo))&& $i<1){
-                    multipli($arr,$indice,$value);
-                    $i++;
-                    
+            else{
+                $indice=0;
+                insertDB($arr);
+                
+            }
+            //echo "{$arr[$indice]}  $indice\n\n\n";
+            
+        }
+        //echo "stampo array".$arr['categories'] .$arr['drug_interactions'].$arr['target_partner'].$arr['action'];
+        //$tmp=$arr['drug_interactions'];
+        //echo $tmp[0];
+        
+        function multipli (&$arr,$indice,$contenuto,&$indiceMul){
+            $tmp=$arr[$indice];
+            $tmp=$arr[$tmp];
+            $tmp[$indiceMul]=$contenuto;
+            //echo $tmp[$indiceMul]."\n";
+            //getSubArray($arr, $subArr, $indice);
+            $indiceMul++;
+        }
+        
+        function getSubArray(&$arr,&$subArr,$indice){
+            $tmp=$arr[$indice];
+            $tmp=$arr[$tmp];
+            $subArr=$tmp;
+            
+        }
+        
+        function insertDB(&$arr){
+            $i=0;
+            $subArr;
+            while($i<12){
+                if($i==5||$i==7||$i==9||$i==10){
+                    getSubArray($arr, $subArr, $i);
+                    //COME STIAMO IMPOSTANDO LE TABELLE?? DOVE METTO QUESTI ATTRIBUTI MULTIPLI?
+                }
+                else{
+                    //mysql_query("INSERT INTO drugID VALUES ('$tmp','$value,'$tmp33','$tmp44')")or die (mysql_error());
+                 
                 }
             }
             
-            echo $arr['$indice'];
-            $indice++;               
-            //print_r("$linea\n");
-              
-        }
-        //mysql_query("INSERT INTO drugID VALUES ('$tmp','$value,'$tmp33','$tmp44')")or die (mysql_error());
-        function multipli (&$array,$indice,$contenuto){
-            $tmp=$array[$indice];
-            $tmp['$indiceMul']=$contenuto;
-            $indiceMul++;
-             
         }
         
         ?>
