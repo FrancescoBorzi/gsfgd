@@ -85,6 +85,7 @@
                     //COME STIAMO IMPOSTANDO LE TABELLE?? DOVE METTO QUESTI ATTRIBUTI MULTIPLI?
                 }
             }
+            mysql_query("DELETE FROM drugbank WHERE id_drugbank = $arr[0]");
             mysql_query("INSERT INTO drugbank VALUES ('$arr[0]','$arr[1]','$arr[2]','$arr[3]','$arr[4]','','$arr[6]','','$arr[8]','','','$arr[11]','')")or die (mysql_error());
         }
         
