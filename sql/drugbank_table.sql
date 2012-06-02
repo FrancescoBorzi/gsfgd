@@ -3,7 +3,7 @@
 
 DROP TABLE IF EXISTS drugbank;
 CREATE TABLE drugbank (
-	id_drugbank VARCHAR(7) NOT NULL,
+	id_drugbank VARCHAR(15) NOT NULL,
 	name VARCHAR(30),
 	description TEXT,
 	toxicity TEXT,

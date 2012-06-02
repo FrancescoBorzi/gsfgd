@@ -1,4 +1,4 @@
--- dubbio: ma la chiave qual'è dev'essere? per ora ho messo 'mim'
+-- dubbio: ma la chiave quale dev'essere? per ora ho messo 'mim'
 
 -- Nota: i COMMENT indicano la posizione nella pipeline (fonte: genemap.Key)
 DROP TABLE IF EXISTS omim;
