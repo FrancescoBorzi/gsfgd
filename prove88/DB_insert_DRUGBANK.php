@@ -17,7 +17,7 @@
         'toxicity',
         'categories',           //molti
         'atc_code',
-        'drug_interactions',    //molti
+        'drug_interactions',    //molti //dopo interaction ci sta property
         'Molecular_Formula',
         'target_partner',       //molti
         'action',               //molti
@@ -54,8 +54,9 @@
                 $indice++;
             }
             else{
+                echo "sono entrato";
                 $indice=0;
-                //insertDB($arr);
+                insertDB($arr);
             }
         }
                 
@@ -77,18 +78,17 @@
         function insertDB(&$arr){
             $i=0;
             $subArr;
-            while($i<12){
+            //while($i<12){
                 if($i==5||$i==7||$i==9||$i==10){
                     getSubArray($arr, $subArr, $i);
                     //COME STIAMO IMPOSTANDO LE TABELLE?? DOVE METTO QUESTI ATTRIBUTI MULTIPLI?
                 }
                 else{
-                    mysql_query("INSERT INTO drugbank VALUES ('$arr[0]',
-                                 '$arr[1],'$arr[2]','$arr[3]','$arr[4]',
-                                '$arr[5]','$arr[6]','$arr[7]','$arr[8]',
-                                '$arr[9]','$arr[10]','$arr[11]')")or die (mysql_error());
+                    echo $arr[0];
+                    mysql_query("INSERT INTO drugbank VALUES ('$arr[0]','$arr[1]','$arr[2]','$arr[3]','$arr[4]','','$arr[6]','','$arr[8]','','','$arr[11]','')")or die (mysql_error());
+                    echo "insert";
                 }
-            }
+            //}
             
         }
         
