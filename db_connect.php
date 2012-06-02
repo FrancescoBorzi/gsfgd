@@ -9,6 +9,7 @@ $mysql_username="root";
 $mysql_password="";
 $database="progetto";
 $connect=mysql_connect ($mysql_host, $mysql_username, $mysql_password);
+$createdb=mysql_query("CREATE DATABASE IF NOT EXISTS $database")or die(mysql_error());
 $connectdb=mysql_select_db("$database", $connect);
 if (!$connect ) {
   echo "mysql_connect : " . mysql_error() . "<br />";
