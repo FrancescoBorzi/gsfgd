@@ -3,7 +3,6 @@
 DROP TABLE IF EXISTS hmdd;
 CREATE TABLE hmdd (
 	mirna VARCHAR(20) NOT NULL,
-	dsw VARCHAR(20),
 	conservation_group SMALLINT,
 	PRIMARY KEY (mirna)
 );
