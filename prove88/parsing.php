@@ -83,7 +83,7 @@
                     hasChild($figlio,$p);
                  }
                   else if(strcmp($tag,"targets")==0){
-                    echo $tag." partner : ";
+                    //echo $tag." partner : ";
                     hasChild($figlio,$p);
                  }
                  else if(strcmp($tag,"actions")==0){
@@ -110,11 +110,11 @@
                         $i=$i+1;
                         $tmp=$attributo -> value;
                         if($i>1){
-                        echo "target position=".$tmp;    
-                        echo "target partner".$attributo -> value . "<br>";
+                        echo "target partner=".$tmp;    
+                        //echo "target ".$attributo -> value . "<br>";
                         $i=0;
                         }
-                        else echo "target partner".$attributo -> value . "<br>";
+                        if ($i==1)echo "target position".$attributo -> value . "<br>";
                 }
                  
                 }
@@ -161,17 +161,17 @@
                         xmltree($figlio, $p);
                     } 
                     else if (strcmp(($tag),"target")==0){
-                        //echo "target partner ";                              
+                         //echo "DIOOOOOOOOO <BR><BR><BR><BR>" ;                             
                         xmltree($figlio, $p);
                     }
                     else if (strcmp(($tag),"action")==0){
                         echo "<br>action: " ;                              
                         xmltree($figlio, $p);
                     }
-                    else if (strcmp(($tag),"target position")==0){
-                        echo "ss" ;                              
-                        xmltree($figlio, $p);
-                    }
+                    //else if (strcmp(($tag),"target position")==0){
+                     //   echo "DIOOOOOOOOO <BR><BR><BR><BR>" ;                              
+                      //  xmltree($figlio, $p);
+                    //}
                                    
                 }
                 else
