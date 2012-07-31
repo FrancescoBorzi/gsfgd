@@ -82,6 +82,15 @@
                     echo $tag."  : ";
                     hasChild($figlio,$p);
                  }
+                  else if(strcmp($tag,"targets")==0){
+                    //echo $tag."  : ";
+                    hasChild($figlio,$p);
+                 }
+                 else if(strcmp($tag,"actions")==0){
+                    //echo $tag."  : ";
+                    hasChild($figlio,$p);
+                 }
+                 
                  
             }
 
@@ -138,7 +147,20 @@
                     else if (strcmp($tag,"source")==0){
                         echo "source: ";                                   
                         xmltree($figlio, $p);
+                    } 
+                    else if (strcmp(($tag),"target")==0){
+                        echo "target BOOOO";                              
+                        xmltree($figlio, $p);
                     }
+                    else if (strcmp(($tag),"action")==0){
+                        echo "<br>action: " ;                              
+                        xmltree($figlio, $p);
+                    }
+                    else if (strcmp(($tag),"target position")==0){
+                        echo "ss" ;                              
+                        xmltree($figlio, $p);
+                    }
+                   
                 
                 }
                 else
