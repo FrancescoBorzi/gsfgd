@@ -83,7 +83,7 @@
                     hasChild($figlio,$p);
                  }
                   else if(strcmp($tag,"targets")==0){
-                    //echo $tag."  : ";
+                    echo $tag." partner : ";
                     hasChild($figlio,$p);
                  }
                  else if(strcmp($tag,"actions")==0){
@@ -97,6 +97,8 @@
             //Controlla se il nodo ha degli attributi
             if($figlio -> hasAttributes())
             {
+                $i=0;
+                $tmp="";
                 //Cerca attributi nel nodo
                 $attributi = $figlio -> attributes;
 
@@ -104,7 +106,17 @@
                 foreach($attributi as $attributo)
                 {
                     //echo " -- NOME ATTRIBUTO: " . $attributo -> name . " - VALORE ATTRIBUTO: " . $attributo -> value;
-                    //echo $attributo -> value . "<br>";
+                    if (strcmp(($tag),"target")==0){
+                        $i=$i+1;
+                        $tmp=$attributo -> value;
+                        if($i>1){
+                        echo "target position=".$tmp;    
+                        echo "target partner".$attributo -> value . "<br>";
+                        $i=0;
+                        }
+                        else echo "target partner".$attributo -> value . "<br>";
+                }
+                 
                 }
             }
 
@@ -149,7 +161,7 @@
                         xmltree($figlio, $p);
                     } 
                     else if (strcmp(($tag),"target")==0){
-                        echo "target BOOOO";                              
+                        //echo "target partner ";                              
                         xmltree($figlio, $p);
                     }
                     else if (strcmp(($tag),"action")==0){
@@ -160,8 +172,7 @@
                         echo "ss" ;                              
                         xmltree($figlio, $p);
                     }
-                   
-                
+                                   
                 }
                 else
                 {
