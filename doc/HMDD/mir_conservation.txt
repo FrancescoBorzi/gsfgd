@@ -1,0 +1,17 @@
+Human miRNA conservation data, which was calculated based on miRNA family data of miRBase Release 18 using the method presented
+by Wang et al. (Wang et al., Human microRNA oncogenes and tumor suppressors show significantly different biological patterns: from functions to targets. PLoS ONE 2010 5(9):e13067. )
+
+For this method, Human miRNAs are divided into five categories according to their conservation, namely, an miRNA is conserved only in humans (5), primates (4), mammals (3), vertebrates (2), or other more distant species (1, which is the most conserved group). 
+
+Qinghua Cui
+Department of Biomedical Informatics
+Peking University Health Science Center
+Email: cuiqinghua@hsc.pku.edu.cn
+March-25, 2012
+
+miRNA	conservation_group
+hsa-mir-9-1	1
+hsa-mir-29b-2	1
+hsa-mir-190b	1
+hsa-mir-126	1
+hsa-mir-216a	1

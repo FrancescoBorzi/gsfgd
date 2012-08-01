@@ -1,0 +1,7 @@
+mir	disease
+ebv-mir-BHRF1-1	Nasopharyngeal Neoplasms
+hcmv-mir-UL148D	Human Cytomegalovirus Infection
+hsa-let-7a	ACTH-Secreting Pituitary Adenoma
+hsa-let-7a	Adenocarcinoma
+hsa-let-7a	Adrenocortical Carcinoma
+hsa-let-7a	Asthma

@@ -1,0 +1,24 @@
+This file contains the disease spectrum width (DSW) data of miRNA.
+miRNA DSW was defined by Qiu et al. (Qiu et al. Scientific Reports 2012 in press).
+For one miRNA, i, 
+DSW(i)=n(i)/N
+where, n(i) is the number of diseases associated with miRNA i, N is the total number of diseases that have reported associated miRNAs.
+DSW of a miRNA represents its role in human disease.
+
+DSW in this file was calculated based on miRNA-disease data in HMDD (version March-15, 2012). We calculated DSW at the miRNA-gene level and at the merged-miRNA-gene (i.e. let-7a-1 and let-7a-2 are merged to let-7a) level, respectively.
+
+Qinghua Cui, Ph.D
+Associate Professor
+Peking University
+cuiqinghua@hsc.pku.edu.cn
+March-16, 2012
+
+--------------------------------
+DSW data at the merged-miRNA-gene level
+
+miRNA	DSW
+hsa-mir-21	.328571428571429
+hsa-mir-155	.211428571428571
+hsa-mir-146a	.18
+hsa-mir-17	.162857142857143
+hsa-mir-20a	.151428571428571
