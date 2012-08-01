@@ -25,8 +25,7 @@ function nextDat($pos, $str, $lenght,&$ret){
                 $posPipe++;
                 $tmp++;
             }
-          echo substr($str, $index+1,$posPipe)." ";//.($index+1)."  ".($posPipe+1);
-          //$ret=substr($str, $index,$posPipe)."<br>";
+          $ret=substr($str, $index+1,$posPipe);
           $posso=false;
         }
         $posPipe=0;
