@@ -1,0 +1,4 @@
+1	hsa-mir-21	miR-21	miR-21	Acute myeloid Leukemia	arabinosylcytosine (Ara-C)	arabinosylcytosine (Ara-C) treatment	leukemic HL60 cells	Human	A specific anti-miR-21 oligonucleotide (AMO-miR-21) to sensitize leukemic HL60 cells to arabinosylcytosine (Ara-C) by down-regulating miR-21.Expression of miR-21 was significantly decreased after AMO-miR-21 treatment.AMO-miR-21 significantly sensitizes HL	20670480
+2	hsa-mir-212	miR-212	miR-212	Alcoholic liver disease	alcohol	alcohol treatment	colon biopsy samples from patients with ALD and in Caco-2 cells (a human intestinal epithelial cell line)	Human	Ethanol increased miR-212 expression	18162065
+3	hsa-mir-451	miR-451	miR-451	Glioblastoma	Imatinib mesylate	Imatinib mesylate treatment	GBM cells	Human	miR-451 combined with Imatinib mesylate treatment had a cooperative effect in dispersal of GBM neurospheres;through up-regulation of miR-451 and reduces their tumorigenicity	18765229
+

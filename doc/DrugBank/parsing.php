@@ -1,4 +1,8 @@
 <?php
+
+$drugId;$name;$description;$pharmacology;$toxicity;$categories;$atcCodes;
+$drugInteractions;$property;$target_partner;$action;$Molecular_Formula;$target_position;   
+
     //Path file XML
     $xml_path = "a.xml";
     
@@ -47,39 +51,39 @@
                   //echo "<br><br>" . $livello . " NODO: " . $figlio -> nodeName;
                   $tag=$figlio->nodeName;
                 if(strcmp($tag,"drugbank-id")==0){
-                    echo $tag."  : ";
+                    //echo $tag."  : ";
                     hasChild($figlio,$p);
                  }
                  else if(strcmp($tag,"name")==0){
-                    echo $tag."  : ";
+                    //echo $tag."  : ";
                     hasChild($figlio,$p);
                  }
                  else if(strcmp($tag,"description")==0){
-                    echo $tag."  : ";
+                    //echo $tag."  : ";
                      hasChild($figlio,$p);
                  }
                  else if(strcmp($tag,"pharmacology")==0){
-                    echo $tag."  : ";
+                    //echo $tag."  : ";
                     hasChild($figlio,$p);
                  }
                  else if(strcmp($tag,"toxicity")==0){
-                    echo $tag."  : ";
+                    //echo $tag."  : ";
                     hasChild($figlio,$p);
                  }
                   else if(strcmp($tag,"categories")==0){
-                    echo $tag."  : ";
+                    //echo $tag."  : ";
                     hasChild($figlio,$p);
                  }
                  else if(strcmp($tag,"atc-code")==0){
-                    echo $tag."  : ";
+                    //echo $tag."  : ";
                     hasChild($figlio,$p);
                  }
                  else if(strcmp($tag,"drug-interactions")==0){
-                    echo $tag."  : ";
+                    //echo $tag."  : ";
                     hasChild($figlio,$p);
                  }
                   else if(strcmp($tag,"property")==0){
-                    echo $tag."  : ";
+                    //echo $tag."  : ";
                     hasChild($figlio,$p);
                  }
                   else if(strcmp($tag,"targets")==0){
@@ -179,6 +183,7 @@
                     //Visualizza il valore contenuto nel nodo
                     //echo " -- VALORE DEL NODO: " . $figlio -> nodeValue;
                     $tag2= $figlio->nodeValue;
+                    
                     echo $tag2."<br>";
                 }
             }
@@ -198,7 +203,7 @@
                     //echo " -- VALORE DEL NODO: " . $figlio -> nodeValue;
                     echo $figlio -> nodeValue."<br>";
                 }
-        
+                 
     }
     
 ?>
