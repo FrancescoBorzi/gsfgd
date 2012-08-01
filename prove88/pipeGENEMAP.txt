@@ -1,0 +1,5 @@
+1.1|9|11|95|1pter-p36.13|CCV|P|Cataract, congenital, Volkmann type||115665|Fd|linked to Rh in Scottish family||Cataract, congenital, Volkmann type (2)| | ||
+1.2|9|25|01|1p36.23|ENO1, PPH, MPB1|C|Enolase-1, alpha||172430|S, F, R, REa|||Enolase deficiency (1)| | |4(Eno1)|
+1.3|12|22|87|1pter-p36|ERPL1, HLM2|C|Endogenous retroviral pol gene-like sequence 1 (oncogene HLM2)||131190|REa, F|||| | ||
+1.4|4|14|11|1p36.11|HMGCL|P|3-hydroxy-3-methylglutaryl-Coenzyme A lyase||613898|REa, A|||HMG-CoA lyase deficiency, 246450 (3)| | |4(Hmgcl)|
+1.5|11|3|09|1p36.33|AGRN|P|Agrin||103320|REa|||Myasthenia, limb-girdle, familial, 254300 (3)| | |4(Agrn)|
