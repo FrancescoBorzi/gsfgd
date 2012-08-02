@@ -6,7 +6,6 @@
  * @author fortunso
  */
 $testo=file("./mir.txt");
-$i=0;
 $risultato;
 
 while (($line=each($testo))!=null){

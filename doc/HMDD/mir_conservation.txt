@@ -14,4 +14,4 @@ hsa-mir-9-1	1
 hsa-mir-29b-2	1
 hsa-mir-190b	1
 hsa-mir-126	1
-hsa-mir-216a	1
+hsa-mir-216a	1323423

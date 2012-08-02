@@ -8,6 +8,8 @@
 $testo=file("./hmdd.txt");
 $risultato;
 $entra=false;
+$mirna="";
+$disease="";
 
 while (($line=each($testo))!=null){
      $line=implode($line);
@@ -18,7 +20,12 @@ while (($line=each($testo))!=null){
             preg_match_all("((.*?)\\t(.*?)\\n)", $line , $risultato);
             if(implode($risultato[0])!=null){
                 $tmp=implode($risultato[0]);
-                echo substr($tmp,(strlen($tmp)/2))."<br>";
+                $tmp2=substr($tmp,(strlen($tmp)/2));//
+                $tmp3=strpos($tmp2,"\t");
+                $mirna=substr($tmp2,0,$tmp3);
+                $disease=substr($tmp2,$tmp3);
+                                
+                echo "mirna=$mirna  disease=$disease  <br>";
             }
     }
 }

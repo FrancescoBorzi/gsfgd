@@ -1,0 +1,15 @@
+miRNA set was originally defined by Lu et al. (Lu et al., PLoS ONE 2008) and curated by Lu et al. (Lu et al., BMC Bioinformatics 2010).
+Here we curated a number of sets of experimetnally supported miRNA functions, as follows.
+
+Qinghua Cui
+Department of Biomedical Informatics
+Peking University Health Science Center
+Email: cuiqinghua@hsc.pku.edu.cn
+March-25, 2012
+
+
+Function	immune system(Xiao's Cell2009)	hsa-mir-17	hsa-mir-18a	hsa-mir-19a	hsa-mir-19b	hsa-mir-20a	hsa-mir-92a	hsa-mir-150	hsa-mir-155	hsa-mir-146	hsa-mir-181	hsa-mir-223	hsa-mir-106a	hsa-mir-18b	hsa-mir-20b	hsa-mir-363	hsa-mir-106b	hsa-mir-25	hsa-mir-93
+Function	cell proliferation(Hwang etal BJC2006)	hsa-mir-17	hsa-mir-18a	hsa-mir-19a	hsa-mir-19b	hsa-mir-20a	hsa-mir-92a
+Function	anti-cell proliferation(Hwang etal BJC2006)	hsa-let-7a	hsa-let-7b	hsa-let-7c	hsa-let-7d	hsa-let-7e	hsa-let-7f	hsa-mir-98	hsa-let-7g	hsa-let-7i	hsa-mir-15a	hsa-mir-16
+Function	Activation of caspases cascade	hsa-mir-155	hsa-mir-144	hsa-let-7c	hsa-mir-10a	hsa-mir-193	hsa-mir-150
+Function	Akt pathway	hsa-mir-141	hsa-mir-17	hsa-mir-184	hsa-mir-18a	hsa-mir-19	hsa-mir-196a	hsa-mir-19a	hsa-mir-19b	hsa-mir-205	hsa-mir-20a	hsa-mir-214	hsa-mir-221	hsa-mir-222	hsa-mir-26a	hsa-mir-331	hsa-mir-7	hsa-mir-92a	
