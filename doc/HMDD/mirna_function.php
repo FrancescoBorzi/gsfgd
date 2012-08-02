@@ -4,27 +4,20 @@
  * Description of mirna_function
  *
  * @author fortunso
+ * 
  */
 
-$testo=file("./mirna_function.txt");
-$i=0;
-$j=0;
+$testo=file_get_contents("./mirna_function.txt");
+$asd=explode("\t",$testo);
+$asd=str_replace("\n", "<br/>", $asd);
+$entra=false;
 
-while(($Line = each($testo))!= null){
-    if(strcmp(substr(implode($Line),0,8),"Function")==0){
-        
-        $Line=implode($Line);
-        while($i<strlen($Line)){
-            if(strcmp($Line[$i],"\t")==0){
-                echo substr($Line,$j,$i)."<br>";
-            
-             $j=$i+1;   
-            }
-            $i++; 
-        }
-    }
-    $i=0;
-    $j=0;
+for ($i=0; $i<count($asd); $i++)
+{
+    if(strpos($asd[$i],"Function")==0)
+        $entra=true;
+    if($entra)
+	echo "$asd[$i] <br/>";
 }
 
 ?>
