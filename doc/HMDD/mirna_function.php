@@ -15,7 +15,7 @@ while(($Line = each($testo))!= null){
         
         $Line=implode($Line);
         while($i<strlen($Line)){
-            if($Line[$i]=="\t" || $Line[$i]=="\n"){
+            if(strcmp($Line[$i],"\t")==0){
                 echo substr($Line,$j,$i)."<br>";
             
              $j=$i+1;   
@@ -23,6 +23,8 @@ while(($Line = each($testo))!= null){
             $i++; 
         }
     }
+    $i=0;
+    $j=0;
 }
 
 ?>

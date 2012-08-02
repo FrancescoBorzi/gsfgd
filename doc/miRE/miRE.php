@@ -5,16 +5,15 @@
  *
  * @author fortunso
  */
-$testo=file("./mir.txt");
-$risultato;
 
-while (($line=each($testo))!=null){
-    $line=implode($line);
-    
-    preg_match_all("((.*?)\\t(.*?)\\n)", $line , $risultato);
-    
-    echo implode($risultato[0])."<br>";
-    
-    }
+$testo=file_get_contents("./mir.txt");
+$asd=split("	", $testo);
+$asd=str_replace("\n2", "<br/>2", $asd);
+$asd=str_replace("\n3", "<br/>3", $asd);
+
+for ($i=0; $i<count($asd); $i++)
+{
+	echo "$asd[$i] <br/>";
+}
   
 ?>
