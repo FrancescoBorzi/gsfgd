@@ -1,7 +1,6 @@
--- DA COMPLETARE
-
 DROP TABLE IF EXISTS mirenviroment;
 CREATE TABLE mirenviroment (
+	mirnaID INT unsigned NOT NULL auto_increment,
 	mirnaGene VARCHAR(20) NOT NULL,
 	mirnaProduct VARCHAR(20),
 	mirnaProductOriginal VARCHAR(20),
@@ -12,6 +11,6 @@ CREATE TABLE mirenviroment (
 	species TEXT,
 	evidence TEXT,
 	pubMedID VARCHAR(8),
-	PRIMARY KEY(mirnaGene)
+	PRIMARY KEY(mirnaID)
 );
 
