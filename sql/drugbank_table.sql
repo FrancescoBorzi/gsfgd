@@ -5,5 +5,6 @@ CREATE TABLE drugbank (
 	name VARCHAR(30),
 	description TEXT,
 	pharmacology TEXT,
+	toxicity TEXT,
 	PRIMARY KEY (id)
 );
