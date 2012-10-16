@@ -1,6 +1,0 @@
-DROP TABLE IF EXISTS omim;
-CREATE TABLE omim (
-	mim VARCHAR(6) NOT NULL COMMENT '10',
-	genesymbols TEXT NOT NULL COMMENT '6',
-	disorders TEXT COMMENT '14 (15) (16)'
-);
