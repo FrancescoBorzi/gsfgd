@@ -3,8 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">  
 	<head>    
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />    
-		<title>SAMM's Project - Custom Query
-		</title>    
+		<title>gsfgd's Project - Home</title>
 		<meta name="keywords" content="" />    
 		<meta name="description" content="" />    
 		<link href="styles.css" rel="stylesheet" type="text/css" />  
@@ -16,15 +15,16 @@
 			</div>      
 			<!-- header begins -->      
 			<div id="header">        
+				
+				<div id="logo">
+					<link href="styles.css" rel="stylesheet" type="text/css" />
+				</div> 
 				<div id="buttons">          
 					<a href="index.php"  title="">Home</a>          
 					<a href="find.php" title="">Search</a>          
 					<a href="list.php" title="">List</a>          
 					<a href="query.php" title="">Custom Query</a>        
-				</div>        
-				<div id="logo">
-					<link href="styles.css" rel="stylesheet" type="text/css" />
-				</div>      
+				</div>        				
 			</div>      
 			<!-- header ends -->      
 			<div id="bar">

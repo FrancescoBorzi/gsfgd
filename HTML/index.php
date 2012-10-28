@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>SAMM's Project - Home</title>
+<title>gsfgd's Project - Home</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="styles.css" rel="stylesheet" type="text/css" />
@@ -11,23 +11,25 @@
 <body>
 
 <div id="main">
-<div id="maintop"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
+<div id="maintop"><link href="HTML/styles.css" rel="stylesheet" type="text/css" /></div>
 <!-- header begins -->
 <div id="header">
-	<div id="buttons">
+	
+       <div id="logo"><link href="HTML/styles.css" rel="stylesheet" type="text/css" /></div>
+       <div id="buttons">
 		<a href="index.php"  title="">Home</a>
 		<a href="find.php" title="">Search</a>
 		<a href="list.php" title="">List</a>
    		<a href="query.php" title="">Custom Query</a>
 	</div>
-       <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
 </div>
 <!-- header ends -->
 <!-- content begins -->
 <div id="content">
     <div class="tit"><h1>HOME PAGE</h1></div>
-        <div id="home-descr">
-          <H2 align="left"><b><br />Welcome!<br /><br /></b></H2>
+        <div id="home-descr" align="center">
+          <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
+	  <div  align="justify">
             Our site maintains a database containing various information of genetic diseases, drugs and genes. There are three main functions:<br />
 			<ul>
 			  <li><b>Search by tag:</b> you can select to execute a query on our database, choosing among the available options. The queries are grouped by the entities involved;</li>
@@ -55,8 +57,8 @@
             <b><u>About us:</u></b><br /><br />
 			The site was created by four students of the University of Catania:<br />
 			<ul>
-				<li>Calì Salvatore</li>
-				<li>Borzì Francesco</li>
+				<li>Cali' Salvatore</li>
+				<li>Borzi' Francesco</li>
 				<li>Gelardi Gabriele</li>
 				<li>Dario Lanza</li>
 				<li>GARMANA E' FUORI</li>
@@ -65,7 +67,8 @@
             <b><u>Contact:</u></b><br /><br />
             <a href="mailto:EMAIL">EMAIL</a>
             <br /><br />
-    </div>
+	</div>
+   </div>
 </div>
 
 <!-- content ends -->
