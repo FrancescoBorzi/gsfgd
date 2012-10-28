@@ -11,7 +11,7 @@
 <body>
 
 <div id="main">
-<div id="maintop"><img src="HTML/images/header.jpg" width="100%" height="20px"/></div>
+<div id="maintop"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
 <!-- header begins -->
 <div id="header">
 	<div id="buttons">
@@ -20,7 +20,7 @@
 		<a href="list.php" title="">List</a>
    		<a href="query.php" title="">Custom Query</a>
 	</div>
-       <div id="logo"><img src="images/header.jpg" width="100%" height="100%"/></div>
+       <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
 </div>
 <!-- header ends -->
 <!-- content begins -->

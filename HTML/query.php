@@ -12,7 +12,7 @@
 	<body>    
 		<div id="main">      
 			<div id="maintop">
-				<img src="images/header.jpg" width="100%" height="20px"/>
+				<link href="styles.css" rel="stylesheet" type="text/css" />
 			</div>      
 			<!-- header begins -->      
 			<div id="header">        
@@ -23,7 +23,7 @@
 					<a href="query.php" title="">Custom Query</a>        
 				</div>        
 				<div id="logo">
-					<img src="images/header.jpg" width="100%" height="100%"/>
+					<link href="styles.css" rel="stylesheet" type="text/css" />
 				</div>      
 			</div>      
 			<!-- header ends -->      
