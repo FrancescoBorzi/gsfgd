@@ -115,8 +115,9 @@ html, body {
 #buttons {
 	width: 100%;
 	height: 18%;
-	background: url(images/menu.jpg) repeat-x;
+	background: url(images/Bbackground.jpg) repeat-x;
 	text-align: center;
+	
 }
 #buttons a {
 	font-family: Tahoma, Arial, Helvetica, sans-serif;

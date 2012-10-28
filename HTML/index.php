@@ -17,7 +17,7 @@
 	
        <div id="logo"><link href="HTML/styles.css" rel="stylesheet" type="text/css" /></div>
        <div id="buttons">
-		<a href="index.php"  title="">Home</a>
+		<a href="index.php" title="">Home </a>
 		<a href="find.php" title="">Search</a>
 		<a href="list.php" title="">List</a>
    		<a href="query.php" title="">Custom Query</a>
