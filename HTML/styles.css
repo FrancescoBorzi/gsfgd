@@ -1,0 +1,208 @@
+/*Design by FlashTemplatesDesign.comhttp://www.flashtemplatesdesign.com/Released for free under a Creative Commons Attribution 3.0 License*/
+* {
+	border: 0;
+	margin: 0;
+}
+
+#home-descr{
+	width:65%;
+	float:float;
+	margin-left:10px;
+	font-size: 15px;
+	color: #DDD;
+	text-shadow: 2px 2px 2px #000;
+}
+
+img {
+	border: 0px;
+}
+#table-left {
+	width: 23%;
+	border: 0;
+	vertical-align: top;
+	background-image: url(images/left_bg.jpg);
+	background-size: contain;
+}
+#table-right {
+	width: 70%;
+	border: 0;
+	vertical-align: top;
+	font-size: 15px;
+	color: #DDD;
+	text-shadow: 2px 2px 2px #000;
+}
+#descr {
+/* Descrizione informazioni */
+	font-weight: bold;
+	color: #52ABED;
+	/*color: #1B7BC2;
+*/
+}
+#lt1 {
+/* link type 1 - chiaro */
+	/*color: #64BDDF;
+*/
+	color: #BCDDF5;
+	text-decoration: none;
+}
+#lt1:hover {
+	text-decoration: underline;
+}
+#lt2 {
+/* link type 2 - scuro */
+	color: #2491E1;
+	text-decoration: underline;
+}
+#lt3 {
+/* Descrizione query */
+	text-decoration: none;
+}
+a, a:visited {
+	color: inherit;
+}
+#title {
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: underline;
+	color: #137BBB;
+}
+body {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #000000;
+	width: 100%;
+	background-size: cover;
+	background-image: url(images/header.jpg);
+	background-repeat: repeat-y;
+	background-position: top center;
+	margin-top: 20px;
+}
+#bg {
+	background: url(images/bg_img.jpg) center top no-repeat;
+}
+html, body {
+	height: 100%;
+}
+#maintop {
+	width: 100%;
+	height: 24px;
+}
+#main {
+	width: 100%;
+	margin: 0px auto;
+	padding: 0px 0px 0px 0px;
+	height: 100%;
+	padding-bottom: 19px;
+/* altezza del footer */
+}
+#header {
+	width: 100%;
+	height: 200px;
+	margin: 0px auto;
+	background: #FFFFFF;
+}
+#logo {
+	text-align: right;
+	height: 80%;
+	width: 100%;
+}
+#buttons {
+	width: 100%;
+	height: 18%;
+	background: url(images/menu.jpg) repeat-x;
+	text-align: center;
+}
+#buttons a {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	float: left;
+	width: 20%;
+	height: 80%;
+	text-decoration: none;
+	color: #0C3452;
+	/*color: #395878;
+*/
+	padding-top: 8px;
+	padding-left: 20px;
+	text-align: center;
+}
+#buttons a:hover {
+	text-decoration: underline;
+	background: url(images/fish_but.gif) 5px 15px no-repeat;
+}
+#content {
+	width: 100%;
+	height: 100%;
+}
+H1 {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #0C3452;
+	background: url(images/fish_tit.gif) 8px 7px no-repeat;
+	height: 23px;
+	padding-left: 24px;
+	padding-top: 4px;
+}
+#bar {
+	background: url(images/bar_bg.jpg) repeat-x;
+	height: 20px;
+	padding-left: 24px;
+	padding-top: 4px;
+	margin-bottom: 4px;
+}
+.tit {
+	background: url(images/tit_bg.jpg) top repeat-x;
+	color: #000000;
+}
+.read {
+	text-align: right;
+	padding-right: 20px;
+}
+textarea {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 10px;
+	width: 360px;
+	height: 250px;
+	border: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #395878;
+}
+.btn {
+	-moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #C0DFFF), color-stop(1, #718FB0) );
+	background: -moz-linear-gradient( center top, #C0DFFF 5%, #718FB0 100% );
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#C0DFFF', endColorstr='#718FB0');
+	background-color: #C0DFFF;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #84bbf3;
+	display: inline-block;
+	color: #ffffff;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #528ecc;
+}
+.btn:hover {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #718FB0), color-stop(1, #C0DFFF) );
+	background: -moz-linear-gradient( center top, #718FB0 5%, #C0DFFF 100% );
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#718FB0', endColorstr='#C0DFFF');
+	background-color: #718FB0;
+}
+.btn:active {
+	position: relative;
+	top: 1px;
+}
