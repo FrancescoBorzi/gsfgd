@@ -20,6 +20,7 @@ img {
 	width: 23%;
 	border: 0;
 	vertical-align: top;
+	
 	background-image: url(images/left_bg.jpg);
 	background-size: contain;
 }
@@ -64,6 +65,7 @@ a, a:visited {
 	text-align: center;
 	font-size: 22px;
 	font-weight: bold;
+	
 }
 a:hover {
 	text-decoration: underline;
@@ -113,9 +115,10 @@ html, body {
 	width: 100%;
 }
 #buttons {
-	width: 100%;
+	width: 50%;
+	margin: 0px auto;
 	height: 18%;
-	background: url(images/Bbackground.jpg) repeat-x;
+	background: url(images/Bbackground.jpg);
 	text-align: center;
 	
 }
@@ -163,6 +166,7 @@ H1 {
 .tit {
 	background: url(images/tit_bg.jpg) top repeat-x;
 	color: #000000;
+	
 }
 .read {
 	text-align: right;

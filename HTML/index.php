@@ -26,7 +26,7 @@
 <!-- header ends -->
 <!-- content begins -->
 <div id="content">
-    <div class="tit"><h1>HOME PAGE</h1></div>
+    <div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>
         <div id="home-descr" align="center">
           <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
 	  <div  align="justify">
