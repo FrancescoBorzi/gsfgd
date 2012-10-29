@@ -11,11 +11,11 @@
 <body>
 
 <div id="main">
-<div id="maintop"><link href="HTML/styles.css" rel="stylesheet" type="text/css" /></div>
+<div id="maintop"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
 <!-- header begins -->
 <div id="header">
 	
-       <div id="logo"><link href="HTML/styles.css" rel="stylesheet" type="text/css" /></div>
+       <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
        <div id="buttons">
 		<a href="index.php" title="">Home </a>
 		<a href="find.php" title="">Search</a>

@@ -106,7 +106,7 @@ html, body {
 	width: 100%;
 	height: 200px;
 	margin: 0px auto;
-	background: #FFFFFF;
+	background: url(images/Bbackground.jpg);
 }
 #logo {
 	background: url("images/dna.jpg");
@@ -118,7 +118,6 @@ html, body {
 	width: 50%;
 	margin: 0px auto;
 	height: 18%;
-	background: url(images/Bbackground.jpg);
 	text-align: center;
 	
 }
