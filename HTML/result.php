@@ -41,10 +41,10 @@
                 mysql_select_db("my_db",$conn) or die ("Select error" . mysql_error() );
                 
                 //$query= $_POST["testo"];
-                $query="SELECT * FROM mirenviroment";
+                $query="SELECT * FROM drugbank";
                 $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
                 
-                $res_count = mysql_fetch_row($risultato);
+                /*$res_count = mysql_fetch_row($risultato);
 
                 // numero totale di records
                 $tot_records = $res_count[0];
@@ -58,7 +58,7 @@
                 // pagina corrente
                 //$current_page =$_GET['page'];
                 //if (!$current_page) $current_page = 1;
-                 $current_page= isset($_GET['page']) && $_GET['page'] > 1 ? (int) $_GET['page'] : 1;
+                $current_page= isset($_GET['page']) && $_GET['page'] > 1 ? (int) $_GET['page'] : 1;
 
                 // primo parametro di LIMIT
                 $primo = ($current_page-1) * $per_page;
@@ -88,11 +88,11 @@
                 //include(“paginazione_2.php”);
 
                 // in questa cella inseriamo la paginazione
-                echo " <tr>\n <td height=\'50\' valign=\'bottom\' align=\'center\'>$paginazione</td>\n";
+                echo " <tr>\n <td height=\"50\" valign=\"bottom\" align=\"center\">$paginazione</td>\n";
 
                 echo " </tr>\n</table>\n</div>";
                 
-                
+                */
                 /*
                 $x_pag=20;
                 $pag = isset($_GET['page']) && $_GET['page'] > 1 ? (int) $_GET['page'] : 1;
@@ -110,7 +110,7 @@
                 $rs = mysql_query($query." LIMIT $first, $x_pag")or die("Query 2 fallita: " . mysql_error() );
                 $nr = mysql_num_rows($rs);
                 for($x = 0; $x < $nr; $x++){
-                      $linea=array();
+                    $linea=array();
                     echo "<table>\n"; 
                     while ($linea = mysql_fetch_array($rs)) { 
                             echo "\t<tr>\n"; 
@@ -141,7 +141,56 @@
             */
                 // Chiudo la connessione ad DB
 
+                $res_count = mysql_num_rows($risultato);
                 
+                // numero totale di records
+                $tot_records = $res_count;
+                echo "row : ".$res_count."<br>";
+                // risultati per pagina(secondo parametro di LIMIT)
+                $per_page = 10;
+
+                // numero totale di pagine
+                $tot_pages = ceil($tot_records / $per_page);
+
+                // pagina corrente
+                if (isset($_GET["page"])) { $current_page =$_GET["page"]; } else { $current_page =1; }; 
+
+                // primo parametro di LIMIT
+                $primo = ($current_page - 1) * $per_page;
+                //$primo=$primo-1;
+                
+                echo "current page: ".$current_page."<br>";
+                 echo "primo page: ".$primo."<br>";
+                 
+                echo "<div align=\"center\">\n<table>\n";
+
+                // esecuzione seconda query con LIMIT
+                $query_limit = mysql_query($query." LIMIT $primo, $per_page") or die("Query 2 fallita: " . mysql_error() );
+                while($results = mysql_fetch_array($query_limit)) {
+                echo " <tr>\n <td>";
+                 $linea=array();
+                    echo "<table>\n"; 
+                    while ($linea = mysql_fetch_array($query_limit)) { 
+                            echo "\t<tr>\n"; 
+                            $index=count($linea)/2;
+                            for ($i = 0; $i < $index; $i++){
+                            echo "\t\t<td>$linea[$i]</td>\n";
+                            }
+                            echo "\t</tr>\n"; 
+                    } 
+                    echo"</table>\n"; 
+                    echo "</td>\n </tr>\n";
+                echo "</td>\n </tr>\n";
+                }
+
+                // includiamo uno dei files contenenti la paginazione, commentate l’altro ovviamente
+                include("pagination.php");
+                //include(“paginazione_2.php”);
+
+                // in questa cella inseriamo la paginazione
+                echo " <tr>\n <td height=\"50\" valign=\"bottom\" align=\"center\">$paginazione</td>\n";
+
+                echo " </tr>\n</table>\n</div>";
                 
                 mysql_close();
 	               
