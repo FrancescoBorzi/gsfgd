@@ -41,15 +41,15 @@
                 mysql_select_db("my_db",$conn) or die ("Select error" . mysql_error() );
                 
                 //$query= $_POST["testo"];
-                $query="SELECT * FROM drugbank";
+                $query="SELECT * FROM mirenviroment";
                 $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
 	
                 $linea=array();
 		echo "<table>\n"; 
 		while ($linea = mysql_fetch_array($risultato)) { 
 			echo "\t<tr>\n"; 
-                        $index=count($linea);
-			for ($i = 0; $i < 6; $i++){
+                        $index=count($linea)/2;
+			for ($i = 0; $i < $index; $i++){
                         echo "\t\t<td>$linea[$i]</td>\n";
                         }
 			echo "\t</tr>\n"; 
