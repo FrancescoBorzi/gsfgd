@@ -46,7 +46,7 @@
 								</tr>                
 								<tr>                 
                                   <td>                    
-									<form action="result-query.php" enctype="multipart/form-data" method="POST">                      
+									<form action="resul.php" enctype="multipart/form-data" method="POST">                      
 										<div align="center">
 										  <textarea rows="20" cols="50" name="testo"></textarea>	                       
 										  <input class="btn" type="submit" name="submit" value="run" style="width:50%" onclick="this.form.target='_blank';return true;"/>
