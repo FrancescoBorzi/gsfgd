@@ -41,14 +41,13 @@
                 mysql_select_db("my_db",$conn) or die ("Select error" . mysql_error() );
                 
                 //$query= $_POST["testo"];
-                $query="SELECT * FROM drugbank";
+                $query="SELECT * FROM mirenviroment";
                 $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
                               
                 $res_count = mysql_num_rows($risultato);
                 
                 // numero totale di records
                 $tot_records = $res_count;
-                echo "row : ".$res_count."<br>";
                 // risultati per pagina(secondo parametro di LIMIT)
                 $per_page = 10;
 
@@ -61,10 +60,7 @@
                 // primo parametro di LIMIT
                 $primo = ($current_page - 1) * $per_page;
                 //$primo=$primo-1;
-                
-                echo "current page: ".$current_page."<br>";
-                 echo "primo page: ".$primo."<br>";
-                 
+                                            
                 echo "<div align=\"center\">\n<table>\n";
 
                 // esecuzione seconda query con LIMIT
@@ -72,7 +68,7 @@
                 while($results = mysql_fetch_array($query_limit)) {
                 echo " <tr>\n <td>";
                  $linea=array();
-                    echo "<table>\n"; 
+                    echo "<table style=\"border-color=\"red\" border-width=\"2px\";\">\n"; 
                     while ($linea = mysql_fetch_array($query_limit)) { 
                             echo "\t<tr>\n"; 
                             $index=count($linea)/2;
