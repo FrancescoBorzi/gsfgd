@@ -42,11 +42,11 @@
 			/*foreach ($linea as $valore_colonna) { 
 				echo "\t\t<td>$valore_colonna</td>\n"; 
 			} */
-                        for ($i = 0; $i < count($linea); $i++) {
+                        for ($i = 0; $i < count($linea); $i++)
                         echo "\t\t<td>$linea[$i]</td>\n";
                         
 			echo "\t</tr>\n"; 
-		} 
+                } 
 		echo"</table>\n"; 
                 ?>
 
