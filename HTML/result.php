@@ -30,21 +30,28 @@
           <H2 align="center"><b><br />RESULT QUERY<br /><br /></b></H2>
 	  <div  align="justify">
                 <?php
-
                 
-                $query= $_POST["testo"];
-	
+                $conn=  mysql_connect("localhost","root","");
+                
+                if(!$conn){
+                    die('Not Connected'.mysql_errno());
+                    
+                }
+                
+                mysql_select_db("my_db",$conn) or die ("Select error" . mysql_error() );
+                
+                //$query= $_POST["testo"];
+                $query="SELECT * FROM drugbank";
                 $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
 	
+                $linea=array();
 		echo "<table>\n"; 
-		while ($linea = mysql_fetch_array($risultato, MYSQL_ASSOC)) { 
+		while ($linea = mysql_fetch_array($risultato)) { 
 			echo "\t<tr>\n"; 
-			/*foreach ($linea as $valore_colonna) { 
-				echo "\t\t<td>$valore_colonna</td>\n"; 
-			} */
-                        for ($i = 0; $i < count($linea); $i++)
+                        $index=count($linea);
+			for ($i = 0; $i < 6; $i++){
                         echo "\t\t<td>$linea[$i]</td>\n";
-                        
+                        }
 			echo "\t</tr>\n"; 
                 } 
 		echo"</table>\n"; 
