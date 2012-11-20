@@ -31,7 +31,23 @@
 	  <div  align="justify">
                 <?php
 
-                echo $_POST['testo'];
+                
+                $query= $_POST["testo"];
+	
+                $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
+	
+		echo "<table>\n"; 
+		while ($linea = mysql_fetch_array($risultato, MYSQL_ASSOC)) { 
+			echo "\t<tr>\n"; 
+			/*foreach ($linea as $valore_colonna) { 
+				echo "\t\t<td>$valore_colonna</td>\n"; 
+			} */
+                        for ($i = 0; $i < count($linea); $i++)
+                        echo "\t\t<td>$linea[$i]</td>\n";
+                        
+			echo "\t</tr>\n"; 
+                } 
+		echo"</table>\n"; 
                 ?>
 
 	</div>
