@@ -42,7 +42,7 @@
                 
                 //$query= $_POST["testo"];
                 $query="SELECT * FROM mirenviroment";
-                /*$risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
+                $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
                 
                 $res_count = mysql_fetch_row($risultato);
 
@@ -56,8 +56,9 @@
                 $tot_pages = ceil($tot_records / $per_page);
 
                 // pagina corrente
-                $current_page =$_GET['pag'];
-                if (!$current_page) $current_page = 1;
+                //$current_page =$_GET['page'];
+                //if (!$current_page) $current_page = 1;
+                 $current_page= isset($_GET['page']) && $_GET['page'] > 1 ? (int) $_GET['page'] : 1;
 
                 // primo parametro di LIMIT
                 $primo = ($current_page-1) * $per_page;
@@ -69,16 +70,16 @@
                 while($results = mysql_fetch_array($query_limit)) {
                     echo " <tr>\n <td>";
                      $linea=array();
-                    echo "<table>\n"; 
+                    echo "<table><tr>"; 
                     while ($linea = mysql_fetch_array($query_limit)) { 
-                            echo "\t<tr>\n"; 
+                         
                             $index=count($linea)/2;
                             for ($i = 0; $i < $index; $i++){
-                            echo "\t\t<td>$linea[$i]</td>\n";
-                            }
-                            echo "\t</tr>\n"; 
+                            echo "<td>$linea[$i]</td>";
+                            }echo "<tr><tr>";
+                             
                     } 
-                    echo"</table>\n"; 
+                    echo"</table></tr>"; 
                     echo "</td>\n </tr>\n";
                 }
 
@@ -90,7 +91,9 @@
                 echo " <tr>\n <td height=\'50\' valign=\'bottom\' align=\'center\'>$paginazione</td>\n";
 
                 echo " </tr>\n</table>\n</div>";
-                */
+                
+                
+                /*
                 $x_pag=20;
                 $pag = isset($_GET['page']) && $_GET['page'] > 1 ? (int) $_GET['page'] : 1;
                 $all_rows = mysql_num_rows(mysql_query($query));
@@ -123,6 +126,8 @@
 
                 // Se le pagine totali sono più di 1...
                 // stampo i link per andare avanti e indietro tra le diverse pagine!
+                $all_pages=5;
+                $pag=$current_page;
                 if ($all_pages > 1){
                   if ($pag > 1){
                     echo "<a href=\"" . $_SERVER['PHP_SELF'] . "?pag=" . ($pag - 1) . "\">";
@@ -133,7 +138,7 @@
                     echo "Pagina Avanti</a>";
                   } 
                 }
-
+            */
                 // Chiudo la connessione ad DB
 
                 
