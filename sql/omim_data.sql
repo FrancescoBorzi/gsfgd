@@ -2855,7 +2855,8 @@ INSERT INTO omim VALUES
 ('176930','THPH1','Thrombophilia due to thrombin defect, 188050 (3); {Stroke, ischemic, susceptibility to}, 601367 (3); {Pregnancy loss, recurrent, susceptibility'),
 ('176930','F2','to, 2}, 614390 (3)'),
 ('176930','RPRGL2','to, 2}, 614390 (3)'),
-('176930','THPH1','to, 2}, 614390 (3)'),
+('176930','THPH1','to, 2}, 614390 (3)');
+INSERT INTO omim VALUES
 ('176941','TYK2','Tyrosine kinase 2 deficiency, 611521 (3)'),
 ('176943','BBDS','(3); Apert syndrome, 101200 (3); Saethre-Chotzen syndrome, 101400 (3);'),
 ('176943','BEK','(3); Apert syndrome, 101200 (3); Saethre-Chotzen syndrome, 101400 (3);'),
@@ -4523,7 +4524,8 @@ INSERT INTO omim VALUES
 ('300576','ZDHHC15','Mental retardation, X-linked 91, 300577 (3)'),
 ('300578','CXDELp11.3','Chromosome Xp11.3 deletion syndrome (4)'),
 ('300578','DELXp11.3','Chromosome Xp11.3 deletion syndrome (4)'),
-('300579','KIAA1202','Stocco dos Santos X-linked mental retardation syndrome, 300434 (3)'),
+('300579','KIAA1202','Stocco dos Santos X-linked mental retardation syndrome, 300434 (3)');
+INSERT INTO omim VALUES
 ('300579','SDSX','Stocco dos Santos X-linked mental retardation syndrome, 300434 (3)'),
 ('300579','SHROOM4','Stocco dos Santos X-linked mental retardation syndrome, 300434 (3)'),
 ('300580','CFTDX','Myopathy, congenital, with fiber-type disproportion, X-linked (2)'),
@@ -6284,7 +6286,8 @@ INSERT INTO omim VALUES
 ('601607','RTPS1','Rhabdoid tumors, somatic, 609322 (3); Rhabdoid predisposition'),
 ('601607','SMARCB1','Rhabdoid tumors, somatic, 609322 (3); Rhabdoid predisposition'),
 ('601607','SNF5','Rhabdoid tumors, somatic, 609322 (3); Rhabdoid predisposition'),
-('601607','INI1','syndrome 1, 609322 (3); Mental retardation, autosomal dominant 15, 614608 (3)'),
+('601607','INI1','syndrome 1, 609322 (3); Mental retardation, autosomal dominant 15, 614608 (3)');
+INSERT INTO omim VALUES
 ('601607','MRD15','syndrome 1, 609322 (3); Mental retardation, autosomal dominant 15, 614608 (3)'),
 ('601607','RDT','syndrome 1, 609322 (3); Mental retardation, autosomal dominant 15, 614608 (3)'),
 ('601607','RTPS1','syndrome 1, 609322 (3); Mental retardation, autosomal dominant 15, 614608 (3)'),
@@ -7967,7 +7970,8 @@ INSERT INTO omim VALUES
 ('603967','NAC1A','Hyperkalemic periodic paralysis, type 2, 170500 (3); Paramyotonia'),
 ('603967','SCN4A','Hyperkalemic periodic paralysis, type 2, 170500 (3); Paramyotonia'),
 ('603967','HOKPP2','Hypokalemic periodic paralysis, type 2, 613345 (3)'),
-('603967','HYPP','Hypokalemic periodic paralysis, type 2, 613345 (3)'),
+('603967','HYPP','Hypokalemic periodic paralysis, type 2, 613345 (3)');
+INSERT INTO omim VALUES
 ('603967','NAC1A','Hypokalemic periodic paralysis, type 2, 613345 (3)'),
 ('603967','SCN4A','Hypokalemic periodic paralysis, type 2, 613345 (3)'),
 ('603968','POLH','Xeroderma pigmentosum, variant type, 278750 (3)'),
@@ -9918,7 +9922,8 @@ INSERT INTO omim VALUES
 ('606945','LDLCQ2','level QTL2, 143890 (3)'),
 ('606945','LDLR','level QTL2, 143890 (3)'),
 ('606953','GALE','Galactose epimerase deficiency, 230350 (3)'),
-('606960','ITS','Insulinoma (1)'),
+('606960','ITS','Insulinoma (1)');
+INSERT INTO omim VALUES
 ('606963','COPD','Pulmonary disease, chronic obstructive, severe early-onset (2)'),
 ('606967','LCAT','Norum disease, 245900 (3); Fish-eye disease, 136120 (3)'),
 ('606972','EIG2','{Epilepsy, idiopathic generalized, susceptibility to, 2} (2)'),
@@ -11616,7 +11621,8 @@ INSERT INTO omim VALUES
 ('610071','HRPT3','Hyperparathyroidism 3 (2)'),
 ('610079','AIS6','{Autoimmune disease, susceptibility to, 6}, 613551 (3)'),
 ('610079','SIAE','{Autoimmune disease, susceptibility to, 6}, 613551 (3)'),
-('610099','MPD3','Myopathy, distal 3 (2)'),
+('610099','MPD3','Myopathy, distal 3 (2)');
+INSERT INTO omim VALUES
 ('610113','ADAMTSL4','Ectopia lentis, isolated, autosomal recessive, 225100 (3)'),
 ('610113','TSRC1','Ectopia lentis, isolated, autosomal recessive, 225100 (3)'),
 ('610114','STQTL8','{Stature QTL 8} (2)'),
@@ -12648,7 +12654,8 @@ INSERT INTO omim VALUES
 ('612944','RNASE6PL','Leukoencephalopathy, cystic, without megalencephaly, 612951 (3)'),
 ('612944','RNASET2','Leukoencephalopathy, cystic, without megalencephaly, 612951 (3)'),
 ('612950','PSORS12','{Psoriasis susceptibility 12} (2)'),
-('612957','B6QTL1','{Vitamin B6 plasma level QTL 1} (2)'),
+('612957','B6QTL1','{Vitamin B6 plasma level QTL 1} (2)');
+INSERT INTO omim VALUES
 ('612967','BMIQ15','[Body mass index QTL 15] (2)'),
 ('612968','CATC3','Cataract, autosomal recessive congenital 3 (2)'),
 ('612971','PDZD7','(3); Usher syndrome, type IIC, GPR98/PDZD7 digenic, 605472 (3)'),
