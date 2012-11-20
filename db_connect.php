@@ -4,10 +4,10 @@
 // bisogna ovviamente modificare username, password e il nome del database con i vostri dati
 // ATTENZIONE: quando fate i commit escludete questo file altrimenti vengono committati i vostri dati!!!
 
-$mysql_host="127.0.0.1";
-$mysql_username="root";
+$mysql_host="localhost";
+$mysql_username="gsfgdproject";
 $mysql_password="";
-$database="progetto";
+$database="my_gsfgdproject";
 $connect=mysql_connect ($mysql_host, $mysql_username, $mysql_password);
 $createdb=mysql_query("CREATE DATABASE IF NOT EXISTS $database")or die(mysql_error());
 $connectdb=mysql_select_db("$database", $connect);
