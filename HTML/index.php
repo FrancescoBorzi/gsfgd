@@ -49,9 +49,10 @@
             <b><u>Data source:</u></b><br /><br />
 			The data relating the drugs, genes and diseases are derived from databases residing in the following sites:<br />
 			<ul>
-				<li><a href="http://www.drugbank.ca/" target="_blank">www.drugbank.ca</a></li>
-				<li><a href="http://www.genome.jp/" target="_blank">www.genome.jp</a></li>
-				<li><a href="http://www.genenames.org/" target="_blank">www.genenames.org</a></li>
+				<li><a href="http://www.drugbank.ca/" target="_blank">DrugBank</a></li>
+				<li><a href="http://www.omim.org/" target="_blank">OMIM</a></li>
+				<li><a href="http://202.38.126.151/hmdd/tools/miren.html" target="_blank">miREnvironment</a></li>
+				<li><a href="http://202.38.126.151/hmdd/mirna/md/" target="_blank">HMDD</a></li>
 			</ul>
             <br /><br />
             <b><u>About us:</u></b><br /><br />
@@ -65,7 +66,7 @@
 			</ul>
             <br /><br />
             <b><u>Contact:</u></b><br /><br />
-            <a href="mailto:EMAIL">EMAIL</a>
+            <a href="mailto:gsfgdproject@gmail.com">Our EMAIL : gsfgdproject@gmail.com</a>
             <br /><br />
 	</div>
    </div>
