@@ -21,7 +21,7 @@
 				</div> 
 				<div id="buttons">          
 					<a href="index.php"  title="">Home</a>          
-					<a href="find.php" title="">Search</a>          
+					<a href="search.php" title="">Search</a>          
 					<a href="list.php" title="">List</a>          
 					<a href="query.php" title="">Custom Query</a>        
 				</div>        				
