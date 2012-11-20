@@ -63,15 +63,10 @@
 						<td id="table-right">
                           <div style="margin:10px">
                           	<h2><b>Database's tables:<br /><br /></b></h2>
-                            <p><strong>atc_code</strong> (<u>association_id</u>, atc_code, drug_id);<br />
-                              <strong>category</strong> (<u>membership_id</u>, category, drug_id);<br />
-                              <strong>cure</strong>  (<u>cure_id</u>, drug_id, partner, action, position);<br />
-                              <strong>disease </strong>(<u>disease_id</u>, name, code, path, type, subtype);<br />
-                              <strong>drug</strong>  (<u>drug_id</u>, type, name, description, toxicity, pharmacology, smiles,  molecular_formula);<br />
-                              <strong>gene</strong>  (<u>gene_id</u>, hgnc_id, name,  hgncNotAvaible, partner);<br />
-                              <strong>gene_disease</strong> (<u>gene_disease_id</u>, disease_name, hgnc_id, gene_behavior, ko);<br />
-                              <strong>interaction</strong> (<u>interaction_id</u>, drug_1, drug_2, description);</p>
-                          </div>
+                            <p><strong>drugbank</strong> (<u>id</u>, type,name, description, pahrmacology, toxicity);<br /><br />
+                              <strong>hgnc</strong> (<u>id</u>, Approved_symbol, Approved_name, Status, Previous_symbols, Previous_names, Synonyms, Name_synonyms, Chromosome,  Accession_numbers, Entrez_geneId, Ensembl_geneId, Refseq_id, Omim_id, Ucsc_id);<br /><br />
+                              <strong>hmdd_disease</strong>  (<u>mirna </u>,<u> disease</u>);<br /><br />
+                              </div>
                         </td>                          
 						<!-- END RIGHT (Risultato query) -->                          
 					</tr>                          
