@@ -31,14 +31,7 @@
 	  <div  align="justify">
                 <?php
                 
-                $conn=  mysql_connect("localhost","root","");
-                
-                if(!$conn){
-                    die('Not Connected'.mysql_errno());
-                    
-                }
-                
-                mysql_select_db("my_db",$conn) or die ("Select error" . mysql_error() );
+                include "db_connect.php";
                 
                 //$query= $_POST["testo"];
                 $query="SELECT * FROM mirenviroment";
