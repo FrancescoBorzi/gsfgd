@@ -30,24 +30,69 @@
           <H2 align="center"><b><br />RESULT QUERY<br /><br /></b></H2>
 	  <div  align="justify">
                 <?php
-
                 
-                $query= $_POST["testo"];
-	
+                $conn=  mysql_connect("localhost","root","");
+                
+                if(!$conn){
+                    die('Not Connected'.mysql_errno());
+                    
+                }
+                
+                mysql_select_db("my_db",$conn) or die ("Select error" . mysql_error() );
+                
+                //$query= $_POST["testo"];
+                $query="SELECT * FROM mirenviroment";
                 $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
-	
-		echo "<table>\n"; 
-		while ($linea = mysql_fetch_array($risultato, MYSQL_ASSOC)) { 
-			echo "\t<tr>\n"; 
-			/*foreach ($linea as $valore_colonna) { 
-				echo "\t\t<td>$valore_colonna</td>\n"; 
-			} */
-                        for ($i = 0; $i < count($linea); $i++)
-                        echo "\t\t<td>$linea[$i]</td>\n";
-                        
-			echo "\t</tr>\n"; 
-                } 
-		echo"</table>\n"; 
+                              
+                $res_count = mysql_num_rows($risultato);
+                
+                // numero totale di records
+                $tot_records = $res_count;
+                // risultati per pagina(secondo parametro di LIMIT)
+                $per_page = 10;
+
+                // numero totale di pagine
+                $tot_pages = ceil($tot_records / $per_page);
+
+                // pagina corrente
+                if (isset($_GET["page"])) { $current_page =$_GET["page"]; } else { $current_page =1; }; 
+
+                // primo parametro di LIMIT
+                $primo = ($current_page - 1) * $per_page;
+                //$primo=$primo-1;
+                                            
+                echo "<div align=\"center\">\n<table>\n";
+
+                // esecuzione seconda query con LIMIT
+                $query_limit = mysql_query($query." LIMIT $primo, $per_page") or die("Query 2 fallita: " . mysql_error() );
+                while($results = mysql_fetch_array($query_limit)) {
+                echo " <tr>\n <td>";
+                 $linea=array();
+                    echo "<table style=\"border-color=\"red\" border-width=\"2px\";\">\n"; 
+                    while ($linea = mysql_fetch_array($query_limit)) { 
+                            echo "\t<tr>\n"; 
+                            $index=count($linea)/2;
+                            for ($i = 0; $i < $index; $i++){
+                            echo "\t\t<td>$linea[$i]</td>\n";
+                            }
+                            echo "\t</tr>\n"; 
+                    } 
+                    echo"</table>\n"; 
+                    echo "</td>\n </tr>\n";
+                echo "</td>\n </tr>\n";
+                }
+
+                // includiamo uno dei files contenenti la paginazione, commentate l’altro ovviamente
+                include("pagination.php");
+                //include(“paginazione_2.php”);
+
+                // in questa cella inseriamo la paginazione
+                echo " <tr>\n <td height=\"50\" valign=\"bottom\" align=\"center\">$paginazione</td>\n";
+
+                echo " </tr>\n</table>\n</div>";
+                
+                mysql_close();
+	               
                 ?>
 
 	</div>
