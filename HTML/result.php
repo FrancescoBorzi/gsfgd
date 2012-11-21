@@ -33,8 +33,8 @@
                 
                 include "db_connect.php";
                 
-                //$query= $_POST["testo"];
-                $query="SELECT * FROM mirenviroment";
+		$query=$_GET["testo"];
+		//$query="SELECT * FROM mirenviroment ORDER BY mirnaID";
                 $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
                               
                 $res_count = mysql_num_rows($risultato);
@@ -75,9 +75,9 @@
                 echo "</td>\n </tr>\n";
                 }
 
-                // includiamo uno dei files contenenti la paginazione, commentate l’altro ovviamente
+                // includiamo uno dei files contenenti la paginazione, commentate lâaltro ovviamente
                 include("pagination.php");
-                //include(“paginazione_2.php”);
+                //include(âpaginazione_2.phpâ);
 
                 // in questa cella inseriamo la paginazione
                 echo " <tr>\n <td height=\"50\" valign=\"bottom\" align=\"center\">$paginazione</td>\n";
