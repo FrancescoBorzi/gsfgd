@@ -31,7 +31,8 @@
 			</div>      
 			<!-- content begins -->      
 			<div id="content">        
-				<!-- Tabella contenente le due colonne principali -->        
+				<!-- Tabella contenente le due colonne principali -->  
+				<center>      
 				<table width=65% border=0px style="vertical-align:text-top">            
 					<tr>              
 						<!-- BEING LEFT-->             
@@ -73,7 +74,8 @@
 						<!-- END RIGHT (Risultato query) -->                          
 					</tr>                          
 				</table>                          
-				<!-- Fine Tabella principale -->                          
+				<!-- Fine Tabella principale -->
+			</center>                          
 			</div>                          
 			<!-- content ends -->    
 		</div>    
