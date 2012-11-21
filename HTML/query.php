@@ -47,10 +47,10 @@
 								</tr>                
 								<tr>                 
                                   <td>                    
-									<form action="result.php" enctype="multipart/form-data" method="POST">                      
+									<form action="result.php" enctype="multipart/form-data" method="GET">                      
 										<div align="center">
 										  <textarea rows="20" cols="50" name="testo"></textarea>	                       
-										  <input class="btn" type="submit" name="submit" value="run" style="width:50%" onclick="this.form.target='_blank';return true;"/>
+										  <input class="btn" type="submit" name="submit" value="run" style="width:50%"/>
 									  </div> 
                                      
 									</form>
@@ -63,6 +63,7 @@
 						<!-- BEING RIGHT (Risultato query) -->                          
 						<td id="table-right">
                           <div style="margin:10px">
+                          <br>
                           	<h2><b>Database's tables:<br /><br /></b></h2>
                             <p><strong>drugbank</strong> (<u>id</u>, type,name, description, pahrmacology, toxicity);<br /><br />
                               <strong>hgnc</strong> (<u>id</u>, Approved_symbol, Approved_name, Status, Previous_symbols, Previous_names, Synonyms, Name_synonyms, Chromosome,  Accession_numbers, Entrez_geneId, Ensembl_geneId, Refseq_id, Omim_id, Ucsc_id);<br /><br />

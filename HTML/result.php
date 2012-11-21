@@ -54,14 +54,14 @@
                 $primo = ($current_page - 1) * $per_page;
                 //$primo=$primo-1;
                                             
-                echo "<div align=\"center\">\n<table>\n";
+                //echo "<div align=\"center\">\n<table border=\"1\" style=\"border-color:#00ff00;\">\n";
 
                 // esecuzione seconda query con LIMIT
                 $query_limit = mysql_query($query." LIMIT $primo, $per_page") or die("Query 2 fallita: " . mysql_error() );
                 while($results = mysql_fetch_array($query_limit)) {
                 echo " <tr>\n <td>";
                  $linea=array();
-                    echo "<table style=\"border-color=\"red\" border-width=\"2px\";\">\n"; 
+                    echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n"; 
                     while ($linea = mysql_fetch_array($query_limit)) { 
                             echo "\t<tr>\n"; 
                             $index=count($linea)/2;
@@ -75,9 +75,9 @@
                 echo "</td>\n </tr>\n";
                 }
 
-                // includiamo uno dei files contenenti la paginazione, commentate lâaltro ovviamente
+                // includiamo uno dei files contenenti la paginazione, commentate l’altro ovviamente
                 include("pagination.php");
-                //include(âpaginazione_2.phpâ);
+                //include(“paginazione_2.php”);
 
                 // in questa cella inseriamo la paginazione
                 echo " <tr>\n <td height=\"50\" valign=\"bottom\" align=\"center\">$paginazione</td>\n";
