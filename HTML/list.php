@@ -40,7 +40,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <form action="list.php" method="post" enctype="application/x-www-form-urlencoded" name="liistForm">
+                    <form action="lista.php" method="post" enctype="application/x-www-form-urlencoded" name="liistForm">
                       <table width="100%">
                         <tr><td><input class="btn" name="list" type="submit" value="Drugs" style="width:100%"/></td></tr>
                         <tr><td><input class="btn" name="list" type="submit" value="Genes" style="width:100%"/></td></tr>
