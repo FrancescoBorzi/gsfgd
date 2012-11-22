@@ -26,13 +26,15 @@
       <div id="bar"></div>
       <!-- content begins -->
       <div id="content">
-           <?php
+          <div align ="center">  
+         <?php
                                
                                 for($index = 65; $index<91;$index++) {
                                     echo"<input type=\"submit\" value=&#$index style=\"10%:10%\"/>";
                                  }
                                
                                ?>
+              </div>
         <!-- Tabella contenente le due colonne principali -->
         <table width=65% border=0px style="vertical-align:text-top"> 
           <tr> 
@@ -64,7 +66,7 @@
             </td>
             <!-- END LEFT-->
             <!-- BEING RIGHT (Risultato query) -->
-            <td id="table-right">
+            <td id="table-right" align ="center">
               Choose an option.</td>
             <!-- END RIGHT (Risultato query) -->
           </tr>

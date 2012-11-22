@@ -22,28 +22,24 @@
         </div>
       </div>
       <!-- header ends -->
-      <div id="bar"></div><H2 align="center"><b><br />List<br /><br /></b></H2>
-                    
-                    <div  align="center">
-                        <form action="alfabeto.php" method="post" enctype="application/x-www-form-urlencoded" name="alfabeto">
-                            <table>
-                               <?php
+      <div id="bar"></div>
+      <!-- content begins -->
+      <div id="content">
+          <div align ="center">  
+         <?php
                                
                                 for($index = 65; $index<91;$index++) {
-                                    echo"<input type=\"submit\" value=&#$index style=\"width:100%\"/>";
+                                    echo"<input type=\"submit\" value=&#$index style=\"10%:10%\"/>";
                                  }
                                
                                ?>
-                            </table
-                        </form>
-      <!-- content begins -->
-      <div id="content" align="left">
-          
+              </div>
         <!-- Tabella contenente le due colonne principali -->
         <table width=65% border=0px style="vertical-align:text-top"> 
           <tr> 
             <!-- BEING LEFT-->
-            <td id="table-left" >
+            <td id="table-left">
+              <!-- BEING "ELENCA" -->
               <!-- BEING "ELENCA" -->
               <table width="100%" height="100%"> 
                 <tr>
