@@ -34,21 +34,8 @@
                 include "db_connect.php";
                 
 		$query=$_GET["testo"];
-		//$query="SELECT * FROM mirenviroment ORDER BY mirnaID";
-                $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
-                
-                /*$linea=array();
-                    echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n"; 
-                    while ($linea = mysql_fetch_array($risultato)) { 
-                            echo "\t<tr>\n"; 
-                            $index=count($linea)/2;
-                            for ($i = 0; $i < $index; $i++){
-                            echo "\t\t<td>$linea[$i]</td>\n";
-                            }
-                            echo "\t</tr>\n"; 
-                    } 
-                    echo"</table>\n"; 
-                */
+		$risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
+                                
                 $res_count = mysql_num_rows($risultato);
                 
                 // numero totale di records
@@ -67,7 +54,6 @@
                                          
                 // esecuzione seconda query con LIMIT
                 $query_limit = mysql_query($query) or die("Query 2 fallita: " . mysql_error() );
-                while($results = mysql_fetch_array($query_limit)) {
                     $linea=array();
                     echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n"; 
                     while ($linea = mysql_fetch_array($query_limit)) { 
@@ -80,7 +66,7 @@
                     } 
                     echo"</table>\n"; 
                     echo "</td>\n </tr>\n";
-                }
+                
 
                 // includiamo uno dei files contenenti la paginazione, commentate l’altro ovviamente
                 include("pagination.php");
