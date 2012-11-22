@@ -26,12 +26,20 @@
       <div id="bar"></div>
       <!-- content begins -->
       <div id="content">
+           <?php
+                               
+                                for($index = 65; $index<91;$index++) {
+                                    echo"<input type=\"submit\" value=&#$index style=\"10%:10%\"/>";
+                                 }
+                               
+                               ?>
         <!-- Tabella contenente le due colonne principali -->
         <table width=65% border=0px style="vertical-align:text-top"> 
           <tr> 
             <!-- BEING LEFT-->
             <td id="table-left">
               <!-- BEING "ELENCA" -->
+              
               <table width="100%" height="100%"> 
                 <tr>
                   <td>

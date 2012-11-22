@@ -27,27 +27,13 @@
                     <div  align="center">
                         <form action="alfabeto.php" method="post" enctype="application/x-www-form-urlencoded" name="alfabeto">
                             <table>
-                                <input  type="submit" value="A" style="10%:10%"/>
-                                <input  type="submit" value="B" style="10%:10%"/>
-                                <input  type="submit" value="C" style="10%:10%"/>
-                                <input  type="submit" value="D" style="10%:10%"/>
-                                <input  type="submit" value="E" style="10%:10%"/>
-                                <input  type="submit" value="F" style="10%:10%"/>
-                                <input  type="submit" value="G" style="10%:10%"/>
-                                <input  type="submit" value="H" style="10%:10%"/>
-                                <input  type="submit" value="I" style="10%:10%"/>
-                                <input  type="submit" value="L" style="10%:10%"/>
-                                <input  type="submit" value="M" style="10%:10%"/>
-                                <input  type="submit" value="N" style="10%:10%"/>
-                                <input  type="submit" value="O" style="10%:10%"/>
-                                <input  type="submit" value="P" style="10%:10%"/>
-                                <input  type="submit" value="Q" style="10%:10%"/>
-                                <input  type="submit" value="R" style="10%:10%"/>
-                                <input  type="submit" value="S" style="10%:10%"/>
-                                <input  type="submit" value="T" style="10%:10%"/>
-                                <input  type="submit" value="U" style="10%:10%"/>
-                                <input  type="submit" value="V" style="10%:10%"/>
-                                <input  type="submit" value="Z" style="10%:10%"/>
+                               <?php
+                               
+                                for($index = 65; $index<91;$index++) {
+                                    echo"<input type=\"submit\" value=&#$index style=\"width:100%\"/>";
+                                 }
+                               
+                               ?>
                             </table
                         </form>
       <!-- content begins -->
