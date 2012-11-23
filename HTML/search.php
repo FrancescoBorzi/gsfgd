@@ -33,30 +33,7 @@
             <!-- BEING LEFT-->
             <td id="table-left">
               <!-- BEING "CERCA TRAMITE TAG" -->
-              <table width="100%"> 
-                <tr>
-                  <td>
-                    <div class="tit"><h1>SEARCH BY TAGS</h1></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <font size="3">
-                      <input id="Checkbox1" type="checkbox" size="10px" onclick="setState(this)"/>
-                      &nbsp;Drugs<br />
-                      <input id="Checkbox2" type="checkbox" size="10px" onclick="setState(this)"/>
-                      &nbsp;Genes<br />
-                      <input id="Checkbox3" type="checkbox" size="10px" onclick="setState(this)"/>
-                      &nbsp;Diseases                    
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div id="divQueryDescription" style="vertical-align:sub"></div>
-                  </td>
-                </tr>
-              </table>
+             
              
             </td>
             <!-- END LEFT-->
