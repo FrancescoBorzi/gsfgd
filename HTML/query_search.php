@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
@@ -51,25 +52,21 @@
                   </form>
                 <?php
                 include "db_connect.php";
-                    $linea = array();
-                    $table = $_POST["tabs"];
-                    $query = "SHOW COLUMNS FROM $table";
-                   
-                    $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
-                                        
-                    echo "<form action=\"query_search.php\" method=\"post\">";
-                    echo"<select  name=\"fields\">";
-                    $index=count($linea)/2;
-                    echo $index."<br>";
-                    while($linea = mysql_fetch_assoc($risultato)){
-                          echo"<option>".$linea['Field']."</option>";
-                    }
-                    echo"</select>";
-                    echo "<input type=\"submit\" />";
-                    echo"</form>";
-                    setcookie("table", $table);
-                     
-               
+                                       
+                    $query_final = mysql_query("SELECT ". $_POST['fields']." FROM ".$_COOKIE['table']) or die("Query 2 fallita: " . mysql_error() );
+                    $linea=array();
+                    echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n"; 
+                    while ($linea = mysql_fetch_array($query_final)) { 
+                        echo "\t<tr>\n"; 
+                        $index=count($linea)/2;
+                        for ($i = 0; $i < $index; $i++){
+                            echo "\t\t<td>$linea[$i]</td>\n";
+                        }
+                        echo "\t</tr>\n"; 
+                    } 
+                    echo"</table>\n"; 
+                    echo "</td>\n </tr>\n";
+                    
                  ?>
              </td>
             <!-- END RIGHT (Risultato query) -->
