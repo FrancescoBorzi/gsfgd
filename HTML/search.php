@@ -65,25 +65,35 @@
               No operation performed.<br>Please select one or more tag and chose an operation from the available.
                  <select  name="tabs">
                         <option> Drugbank </option>
-                        <option> Hmdd Disease </option>
+                        <option> Hmdd_Disease </option>
                         <option> Mirenviroment </option>
                         <option> Omim </option>
                        
                 </select>
                 <?php
-                    $risultato = array();
+                    $linea = array();
                     $table = $_GET['tabs'];
                     if( $table == "Drugbank"){
                         $query = "SHOW COLUMNS FROM drugbank";
-                        $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
-                        <option> Drugbank </option>
-                        
-                        
                     }
+                    elseif( $table == "Hmdd_Disease"){
+                        $query = "SHOW COLUMNS FROM hmdd_disease";
+                    }
+                    elseif( $table == "Mirenviroment"){
+                        $query = "SHOW COLUMNS FROM mirenviroment";
+                    }
+                    elseif( $table == "Omim"){
+                        $query = "SHOW COLUMNS FROM omim";
+                    }
+                    $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
+                    $linea = mysql_fetch_array($query);
+                    echo"<select  name=\"fields\">";
+                    for($i = 0; $i<count($linea);$i++){
+                        echo"<option>$linea[$i]</option>";
+                    }
+                    echo"</select>";
                 ?>
-                <select  name="fields">
-                        
-                </select>
+                
             
             </td>
             <!-- END RIGHT (Risultato query) -->
