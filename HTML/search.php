@@ -7,7 +7,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="query_desc.js"></script>
+    
   </head>
   <body>
     <div id="main">
@@ -71,10 +71,14 @@
                        
                 </select>
                 <?php
-                    $fields = array();
-                    $table = $_GET["tabs"];
+                    $risultato = array();
+                    $table = $_GET['tabs'];
                     if( $table == "Drugbank"){
-                        echo "";
+                        $query = "SHOW COLUMNS FROM drugbank";
+                        $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
+                        <option> Drugbank </option>
+                        
+                        
                     }
                 ?>
                 <select  name="fields">
