@@ -5,7 +5,7 @@
 // ATTENZIONE: quando fate i commit escludete questo file altrimenti vengono committati i vostri dati!!!
 
 $mysql_host="localhost";
-$mysql_username="gsfgdproject";
+$mysql_username="root";
 $mysql_password="";
 $database="my_gsfgdproject";
 $connect=mysql_connect ($mysql_host, $mysql_username, $mysql_password);

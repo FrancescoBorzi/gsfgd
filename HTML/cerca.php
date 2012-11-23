@@ -38,7 +38,6 @@
             <!-- END LEFT-->
             <!-- BEING RIGHT (Risultato query) -->
             <td id="table-right" align ="center">
-              No operation performed.<br>Please select one or more tag and chose an operation from the available.
                   <form action="cerca.php" method="post">
                   <select name="tabs">
                         <option> drugbank </option>
@@ -59,8 +58,7 @@
                                         
                     echo "<form action=\"query_search.php\" method=\"post\">";
                     echo"<select  name=\"fields\">";
-                    $index=count($linea)/2;
-                    echo $index."<br>";
+                    $index=count($linea)/2; //MISTERO DELLA FEDE.
                     while($linea = mysql_fetch_assoc($risultato)){
                           echo"<option>".$linea['Field']."</option>";
                     }
