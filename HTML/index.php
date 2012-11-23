@@ -21,6 +21,7 @@
 		<a href="search.php" title="">Search</a>
 		<a href="list.php" title="">List</a>
    		<a href="query.php" title="">Custom Query</a>
+                
 	</div>
 </div>
 <!-- header ends -->

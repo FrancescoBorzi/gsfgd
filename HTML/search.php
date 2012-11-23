@@ -42,7 +42,13 @@
                 <tr>
                   <td>
                     <font size="3">
-                      <input id="Checkbox1" type="checkbox" size="10px" onclick="setState(this)"/>&nbsp;Drugs<br><input id="Checkbox2" type="checkbox" size="10px" onclick="setState(this)"/>&nbsp;Genes<br><input id="Checkbox3" type="checkbox" size="10px" onclick="setState(this)"/>&nbsp;Diseases                    </font>
+                      <input id="Checkbox1" type="checkbox" size="10px" onclick="setState(this)"/>
+                      &nbsp;Drugs<br />
+                      <input id="Checkbox2" type="checkbox" size="10px" onclick="setState(this)"/>
+                      &nbsp;Genes<br />
+                      <input id="Checkbox3" type="checkbox" size="10px" onclick="setState(this)"/>
+                      &nbsp;Diseases                    
+                    </font>
                   </td>
                 </tr>
                 <tr>
@@ -51,14 +57,37 @@
                   </td>
                 </tr>
               </table>
+             
             </td>
             <!-- END LEFT-->
             <!-- BEING RIGHT (Risultato query) -->
-            <td id="table-right">
-              No operation performed.<br>Please select one or more tag and chose an operation from the available.</td>
+            <td id="table-right" align ="center">
+              No operation performed.<br>Please select one or more tag and chose an operation from the available.
+                 <select  name="tabs">
+                        <option> Drugbank </option>
+                        <option> Hmdd Disease </option>
+                        <option> Mirenviroment </option>
+                        <option> Omim </option>
+                       
+                </select>
+                <?php
+                    $fields = array();
+                    $table = $_GET["tabs"];
+                    if( $table == "Drugbank"){
+                        echo "";
+                    }
+                ?>
+                <select  name="fields">
+                        
+                </select>
+            
+            </td>
             <!-- END RIGHT (Risultato query) -->
+                
+
           </tr>
         </table>
+         
         <!-- Fine Tabella principale -->
 
       </div>
