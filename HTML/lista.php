@@ -73,7 +73,7 @@
                         <tr><td><input class="btn" type="button" style="width:100%" OnClick="preparasql('hmdd_disease');" value="Diseases" /></td></tr>
                         <tr><td><input class="btn" type="button" style="width:100%" OnClick="preparasql('mirenviroment');" value="Mirna" /></td></tr>                      
                       </table>
-		      <input type="text" name="table" style="display:;" value="">
+		      <input type="text" name="table" style="display" value="">
                     </form>
                   </td>
                 </tr>
@@ -142,14 +142,14 @@
 	    echo"</table>\n"; 
 	    echo "</td>\n </tr>\n";
 
-	// includiamo uno dei files contenenti la paginazione, commentate l’altro ovviamente
+	// includiamo uno dei files contenenti la paginazione
 	include("pagination.php");
-	//include(“paginazione_2.php”);
 
-	// in questa cella inseriamo la paginazione
+        // in questa cella inseriamo la paginazione
 	echo " <tr>\n <td height=\"50\" valign=\"bottom\" align=\"center\">$paginazione</td>\n";
 	echo " </tr>\n</table>\n</div>";
 	echo "<br/><br/><br/><br/>";
+  
 	mysql_close();
 	?>
 	</div>

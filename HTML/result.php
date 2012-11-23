@@ -68,9 +68,8 @@
                     echo "</td>\n </tr>\n";
                 
 
-                // includiamo uno dei files contenenti la paginazione, commentate l’altro ovviamente
+                // includiamo uno dei files contenenti la paginazione
                 include("pagination.php");
-                //include(“paginazione_2.php”);
 
                 // in questa cella inseriamo la paginazione
                 echo " <tr>\n <td height=\"50\" valign=\"bottom\" align=\"center\">$paginazione</td>\n";

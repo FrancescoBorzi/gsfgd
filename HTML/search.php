@@ -40,28 +40,17 @@
             <!-- BEING RIGHT (Risultato query) -->
             <td id="table-right" align ="center">
               No operation performed.<br>Please select one or more tag and chose an operation from the available.
-                 <select  name="tabs">
+                  <form action="cerca.php" method="post">
+                  <select name="tabs">
                         <option> drugbank </option>
                         <option> hmdd_disease </option>
                         <option> mirenviroment </option>
                         <option> omim </option>
                         <option> hgnc </option>
-                       
                 </select>
-                <?php
-                    $linea = array();
-                    $table = $_GET['tabs'];
-                    $query = "SHOW COLUMNS FROM $table";
-                   
-                    $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
-                    $linea = mysql_fetch_array($query);
-                    echo"<select  name=\"fields\">";
-                    for($i = 0; $i<count($linea);$i++){
-                        echo"<option>$linea[$i]</option>";
-                    }
-                    echo"</select>";
-                ?>
-                
+                  <input type="submit" />
+                  </form>
+                                
             
             </td>
             <!-- END RIGHT (Risultato query) -->
