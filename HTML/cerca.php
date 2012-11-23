@@ -57,16 +57,21 @@
                     $query = "SHOW COLUMNS FROM $table";
                    
                     $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
-                    $linea = mysql_fetch_array($risultato);
+                    
+                    
+                    echo "<form action=\"cerca.php\" method=\"post\">";
                     echo"<select  name=\"fields\">";
-                    for($i = 0; $i<count($linea);$i++){
-                        echo"<option>$linea[$i]</option>";
+                    $index=count($linea)/2;
+                    echo $index."<br>";
+                    while($linea = mysql_fetch_assoc($risultato)){
+                          echo"<option>".$linea['Field']."</option>";
+                        
                     }
                     echo"</select>";
+                    echo "<input type=\"submit\" />";
+                    echo"</form>";
                 ?>
-                
-            
-            </td>
+             </td>
             <!-- END RIGHT (Risultato query) -->
                 
 
