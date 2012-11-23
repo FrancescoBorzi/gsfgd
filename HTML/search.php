@@ -64,27 +64,18 @@
             <td id="table-right" align ="center">
               No operation performed.<br>Please select one or more tag and chose an operation from the available.
                  <select  name="tabs">
-                        <option> Drugbank </option>
-                        <option> Hmdd_Disease </option>
-                        <option> Mirenviroment </option>
-                        <option> Omim </option>
+                        <option> drugbank </option>
+                        <option> hmdd_disease </option>
+                        <option> mirenviroment </option>
+                        <option> omim </option>
+                        <option> hgnc </option>
                        
                 </select>
                 <?php
                     $linea = array();
                     $table = $_GET['tabs'];
-                    if( $table == "Drugbank"){
-                        $query = "SHOW COLUMNS FROM drugbank";
-                    }
-                    elseif( $table == "Hmdd_Disease"){
-                        $query = "SHOW COLUMNS FROM hmdd_disease";
-                    }
-                    elseif( $table == "Mirenviroment"){
-                        $query = "SHOW COLUMNS FROM mirenviroment";
-                    }
-                    elseif( $table == "Omim"){
-                        $query = "SHOW COLUMNS FROM omim";
-                    }
+                    $query = "SHOW COLUMNS FROM $table";
+                   
                     $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
                     $linea = mysql_fetch_array($query);
                     echo"<select  name=\"fields\">";
