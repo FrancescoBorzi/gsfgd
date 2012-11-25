@@ -38,35 +38,67 @@
             <!-- END LEFT-->
             <!-- BEING RIGHT (Risultato query) -->
             <td id="table-right" align ="center">
-                  <form action="cerca.php" method="post">
-                  <select name="tabs">
-                        <option> drugbank </option>
-                        <option> hmdd_disease </option>
-                        <option> mirenviroment </option>
-                        <option> omim </option>
-                        <option> hgnc </option>
-                </select>
-                  <input type="submit" />
-                  </form>
+                  
+                                
                 <?php
                 include "db_connect.php";
+                    $arraytab = array();
+                    $arraytab[0]="drugbank";
+                    $arraytab[1]="hmdd_disease";
+                    $arraytab[2]="mirenviroment";
+                    $arraytab[3]="omim";
+                    $arraytab[4]="hgnc";
+                    
+                    $word="";
+                    
+                    if(isset($_POST['words']) )
+                        $word = $_POST['words'];
+                    elseif(isset($_COOKIE['words']))
+                        $word = $_COOKIE['words'];
+                   
+                        
+                    
                     $linea = array();
                     $table = $_POST["tabs"];
                     $query = "SHOW COLUMNS FROM $table";
-                   
                     $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
-                                        
+                    
                     echo "<form action=\"query_search.php\" method=\"post\">";
-                    echo"<select  name=\"fields\">";
-                    $index=count($linea)/2; //MISTERO DELLA FEDE.
-                    while($linea = mysql_fetch_assoc($risultato)){
-                          echo"<option>".$linea['Field']."</option>";
+                    echo "<input type=\"text\" name=\"word\" value=\"".$word."\"/>";
+                    echo "<input type=\"submit\" value=\"Search\"/><br />";
+                    echo "</form>";
+                    
+                    
+                    echo "<form action=\"cerca.php\" method=\"post\">";
+                    echo "<select  name=\"tabs\" onchange='submit()'>";
+                    for($i=0;$i<5;$i++){//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
+                        if($table == $arraytab[$i])
+                            echo"<option selected ='selected'> ".$arraytab[$i]." </option>";
+                        else
+                            echo"<option> ".$arraytab[$i]." </option>";
                     }
                     echo"</select>";
-                    echo "<input type=\"submit\" />";
+                    
+                    echo"<select  name=\"fields\">";
+                    
+                    $textfields="<select  name=\"fields\">";// LA VAR. textfields CONTIENE I CAMPI TROVATI SOTTOFORMA DI STRINGA.
+                    while($linea = mysql_fetch_assoc($risultato)){
+                          $textfields.="<option>";
+                          $textfields.=$linea['Field'];
+                          $textfields.="</option>";
+                          echo"<option>".$linea['Field']."</option>";
+                    }
+                    $textfields.="</select>"; 
+               
+                    echo"</select>";
                     echo"</form>";
-                    setcookie("table", $table);
                      
+                    setcookie("table", $table);
+                    setcookie("textfields",$textfields);
+                    setcookie("words",$word);
+                    if(isset($_POST['fields']))
+                        setcookie("fields",$_POST["fields"]);
+                    
                
                  ?>
              </td>

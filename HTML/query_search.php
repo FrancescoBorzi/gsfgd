@@ -39,20 +39,29 @@
             <!-- END LEFT-->
             <!-- BEING RIGHT (Risultato query) -->
             <td id="table-right" align ="center">
-                  <form action="cerca.php" method="post">
-                  <select name="tabs">
-                        <option> drugbank </option>
-                        <option> hmdd_disease </option>
-                        <option> mirenviroment </option>
-                        <option> omim </option>
-                        <option> hgnc </option>
-                </select>
-                  <input type="submit" />
-                  </form>
-                <?php
+                 <?php   
+                    $word = $_POST['word'];
+                    
+                    echo "<form action=\"query_search.php\" method=\"post\">";
+                    echo "<input type=\"text\" name=\"word\" value=\"$word\"/>";
+                    echo "<input type=\"button\" value=\"Search\"/><br />";
+                    echo"<select  name=\"tabs\" >";
+                        echo"<option> drugbank </option>";
+                        echo"<option> hmdd_disease </option>";
+                        echo"<option> mirenviroment </option>";
+                        echo"<option> omim </option>";
+                        echo"<option> hgnc </option>";
+                    echo"</select>";
+                    
+                    
+                    echo $_COOKIE['textfields'];
+                    echo "<input type=\"submit\"/>";
+                    echo "</form>";
+                    
                 include "db_connect.php";
-                                       
-                    $query_final = mysql_query("SELECT ". $_POST['fields']." FROM ".$_COOKIE['table']) or die("Query 2 fallita: " . mysql_error() );
+                    echo $_COOKIE['fields'];
+                    echo $_COOKIE['table'];
+                    $query_final = mysql_query("SELECT ". $_COOKIE['fields']." FROM ".$_COOKIE['table']) or die("Query 2 fallita: " . mysql_error() );
                     $linea=array();
                     echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n"; 
                     while ($linea = mysql_fetch_array($query_final)) { 

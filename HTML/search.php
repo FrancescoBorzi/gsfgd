@@ -33,21 +33,32 @@
             <!-- BEING LEFT-->
             <td id="table-left">
               <!-- BEING "CERCA TRAMITE TAG" -->
+             <script type="text/javascript">
+             function select(){
+                 
              
-             
+             }
+             </script>
             </td>
             <!-- END LEFT-->
             <!-- BEING RIGHT (Risultato query) -->
             <td id="table-right" align ="center">
+                  
+                
                   <form action="cerca.php" method="post">
-                  <select name="tabs">
+                  <input type="text" name="words"/>
+                  <input type="button" value="Search"/> <br />
+                  <select name="tabs" onchange ='submit()'>
+                        
                         <option> drugbank </option>
                         <option> hmdd_disease </option>
                         <option> mirenviroment </option>
                         <option> omim </option>
                         <option> hgnc </option>
                 </select>
-                  <input type="submit" />
+                <select name="fields" disabled>
+                        <option> None </option>
+                </select>
                   </form>
                                 
             
