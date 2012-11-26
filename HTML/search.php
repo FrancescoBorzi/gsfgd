@@ -33,33 +33,109 @@
             <!-- BEING LEFT-->
             <td id="table-left">
               <!-- BEING "CERCA TRAMITE TAG" -->
-             <script type="text/javascript">
-             function select(){
-                 
-             
-             }
-             </script>
             </td>
             <!-- END LEFT-->
             <!-- BEING RIGHT (Risultato query) -->
             <td id="table-right" align ="center">
                   
                 
-                  <form action="cerca.php" method="post">
-                  <input type="text" name="words"/>
-                  <input type="button" value="Search"/> <br />
-                  <select name="tabs" onchange ='submit()'>
+            <script type="text/javascript">
+            function Load(page)
+            {
+                document.getElementById(page)="query_search.php";
+
+            }
+            function showSelected()
+            {
+                var table = document.getElementById('tabs');
+                var fields = document.getElementById('fields');
+                var indexf = fields.selectedIndex;
+                var index = table.selectedIndex;
+                
+                var txt = document.getElementById('table');
+                var txtf = document.getElementById('fields');
+                txt.value = table.options[index].text; 
+                
+               
+            }
+            </script>       
+                
+                
+                
+                <?php
+                include "db_connect.php";
+                    $arraytab = array();
+                    $arraytab[0]="drugbank";
+                    $arraytab[1]="hmdd_disease";
+                    $arraytab[2]="mirenviroment";
+                    $arraytab[3]="omim";
+                    $arraytab[4]="hgnc";
+                    
+                    
+                    
+                   
                         
-                        <option> drugbank </option>
-                        <option> hmdd_disease </option>
-                        <option> mirenviroment </option>
-                        <option> omim </option>
-                        <option> hgnc </option>
-                </select>
-                <select name="fields" disabled>
-                        <option> None </option>
-                </select>
-                  </form>
+                    
+                    
+                    $table;
+                    if(isset($_POST["tabs"]))
+                        $table = $_POST["tabs"];
+                    else 
+                        $table="drugbank";
+                    
+                   
+                    $query = "SHOW COLUMNS FROM $table";
+                    $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
+                    
+                   
+                    //BUONO NON TOCCARE 
+                    $page = "cerca.php";
+                    $word ;
+                    if(isset($_POST['word']))
+                        $word = $_POST['word'];
+                    else
+                        $word="";
+                    //
+                    
+                    echo "<form name=\"sel\" action=$page method=\"post\">";
+                    echo "<input type=\"text\" name=\"word\" value=\"$word\"/>";
+                    echo "<input type=\"submit\" name=\"go\" value=\"Search\"/ onclick=\"Load();\"><br />";
+                    
+                    echo "<select  name=\"tabs\" onchange='submit();'>";
+                    for($i=0;$i<5;$i++){//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
+                        if($table == $arraytab[$i])
+                            echo"<option selected ='selected'> ".$arraytab[$i]." </option>";
+                        else
+                            echo"<option> ".$arraytab[$i]." </option>";
+                    }
+                    echo"</select>";
+                    
+                    echo"<select  name=\"fields\">";
+                    
+                    $textfields="<select  name=\"fields\">";// LA VAR. textfields CONTIENE I CAMPI TROVATI SOTTOFORMA DI STRINGA.
+                    $linea = array();
+                    while($linea = mysql_fetch_assoc($risultato)){
+                          $textfields.="<option>";
+                          $textfields.=$linea['Field'];
+                          $textfields.="</option>";
+                          echo"<option>".$linea['Field']."</option>";
+                    }
+                    $textfields.="</select>"; 
+               
+                    echo"</select>";
+                    echo"</form>";
+                    
+                    echo " $table";
+                 
+                    
+                    setcookie("table", $table);
+                    setcookie("textfields",$textfields);
+                    setcookie("words",$word);
+                    if(isset($_POST['fields']))
+                        setcookie("fields",$_POST["fields"]);
+                    
+               
+                 ?>
                                 
             
             </td>
