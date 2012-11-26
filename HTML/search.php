@@ -67,7 +67,12 @@
                         $table = $_POST["tabs"];
                     else 
                         $table="drugbank";
-                    $field="id";
+                    
+                    if(isset($_POST["fields"]))
+                        $field = $_POST["fields"];
+                    else 
+                        $field= "id";
+                    
                    
                    
                     
@@ -83,9 +88,9 @@
                     $flag=0;
                     echo "<form name=\"sel\" action=\"search.php\" method=\"post\">";
                     echo "<input id=\"word\" type=\"text\" name=\"word\" value=\"$word\"/>";
-                    echo "<input id=\"go\"type=\"submit\" value=\"Search\"  /><br />";
+                    echo "<input id=\"go\"type=\"submit\" value=\"Search\" OnSubmit=\"$flag=1;\" /><br />";
                     
-                    echo "<p id=\"q\"></p>";
+                   
                     
                     echo "<select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                     for($i=0;$i<5;$i++){//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
@@ -112,10 +117,6 @@
                     echo"</select>";
                     echo"</form>";
                     
-                    if(isset($_POST["fields"]))
-                        $field = $_POST["fields"];
-                    else 
-                        $field= "id";
                     
                    
                     //ESECUZIONE QUERY
