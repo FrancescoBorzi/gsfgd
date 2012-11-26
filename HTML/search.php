@@ -105,7 +105,7 @@
                         $word = $_POST['word'];
                     else
                         $word="";
-                    //
+                    
                     
                     echo "<form name=\"sel\" action=$page method=\"post\">";
                     echo "<input type=\"text\" name=\"word\" value=\"$word\"/>";
