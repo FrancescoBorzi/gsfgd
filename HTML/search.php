@@ -89,7 +89,7 @@
                     
                    
                     //BUONO NON TOCCARE 
-                    $page = "cerca.php";
+                    $page = "search.php";
                     $word ;
                     if(isset($_POST['word']))
                         $word = $_POST['word'];
