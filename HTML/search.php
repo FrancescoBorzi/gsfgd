@@ -40,21 +40,27 @@
                   
                 
             <script type="text/javascript">
-            function Load(page)
+            function Load()
             {
-                document.getElementById(page)="query_search.php";
+               <?
+                    $page="query_search.php";
+                    
+               ?>
 
             }
             function showSelected()
             {
+                
                 var table = document.getElementById('tabs');
                 var fields = document.getElementById('fields');
+                
                 var indexf = fields.selectedIndex;
                 var index = table.selectedIndex;
                 
-                var txt = document.getElementById('table');
+                var txt =document.getElementById('tabs');
                 var txtf = document.getElementById('fields');
                 txt.value = table.options[index].text; 
+                txtf.value = fields.options[indexf].text; 
                 
                
             }
@@ -64,6 +70,10 @@
                 
                 <?php
                 include "db_connect.php";
+                
+                    $provatabella ="";
+                    $provacampo="";
+                
                     $arraytab = array();
                     $arraytab[0]="drugbank";
                     $arraytab[1]="hmdd_disease";
@@ -72,17 +82,17 @@
                     $arraytab[4]="hgnc";
                     
                     
-                    
-                   
-                        
-                    
-                    
                     $table;
                     if(isset($_POST["tabs"]))
                         $table = $_POST["tabs"];
                     else 
                         $table="drugbank";
-                    
+                    $field;
+                    if(isset($_POST["fields"]))
+                        $field = $_POST["fields"];
+                    else 
+                        $field="id";
+                   
                    
                     $query = "SHOW COLUMNS FROM $table";
                     $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
@@ -99,9 +109,9 @@
                     
                     echo "<form name=\"sel\" action=$page method=\"post\">";
                     echo "<input type=\"text\" name=\"word\" value=\"$word\"/>";
-                    echo "<input type=\"submit\" name=\"go\" value=\"Search\"/ onclick=\"Load();\"><br />";
+                    echo "<input type=\"submit\" name=\"go\" value=\"Search\"/ onclick='$page=\"query_search.php\"; '><br />";
                     
-                    echo "<select  name=\"tabs\" onchange='submit();'>";
+                    echo "<select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                     for($i=0;$i<5;$i++){//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
                         if($table == $arraytab[$i])
                             echo"<option selected ='selected'> ".$arraytab[$i]." </option>";
@@ -110,22 +120,31 @@
                     }
                     echo"</select>";
                     
-                    echo"<select  name=\"fields\">";
+                    echo"<select id=\"fields\" name=\"fields\">";
                     
-                    $textfields="<select  name=\"fields\">";// LA VAR. textfields CONTIENE I CAMPI TROVATI SOTTOFORMA DI STRINGA.
+                    $textfields="<select id=\"fields\" name=\"fields\">";// LA VAR. textfields CONTIENE I CAMPI TROVATI SOTTOFORMA DI STRINGA.
                     $linea = array();
+                    
                     while($linea = mysql_fetch_assoc($risultato)){
+                        if($field == $linea['Field']){
+                          $textfields.="<option selected='selected'>";
+                          $textfields.=$linea['Field'];
+                          $textfields.="</option>";
+                          echo"<option selected='selected'>".$linea['Field']."</option>";
+                        }
+                        else{
                           $textfields.="<option>";
                           $textfields.=$linea['Field'];
                           $textfields.="</option>";
-                          echo"<option>".$linea['Field']."</option>";
+                          echo"<option >".$linea['Field']."</option>";
+                        }
                     }
                     $textfields.="</select>"; 
-               
                     echo"</select>";
                     echo"</form>";
                     
-                    echo " $table";
+                   
+                   
                  
                     
                     setcookie("table", $table);
