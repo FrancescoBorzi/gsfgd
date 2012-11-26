@@ -40,9 +40,9 @@
                   
                 
             <script type="text/javascript">
-            function Load()
+            function load()
             {
-               window.location.href ="query_search.php"; 
+             
             }
            
             </script>       
@@ -67,11 +67,11 @@
                         $table = $_POST["tabs"];
                     else 
                         $table="drugbank";
-                    
+                    $field="id";
                    
                    
                     
-                    
+                   
                    
                     //BUONO NON TOCCARE 
                     $word ;
@@ -80,11 +80,12 @@
                     else
                         $word="";
                     
-                    
+                    $flag=0;
                     echo "<form name=\"sel\" action=\"search.php\" method=\"post\">";
                     echo "<input id=\"word\" type=\"text\" name=\"word\" value=\"$word\"/>";
                     echo "<input id=\"go\"type=\"submit\" value=\"Search\"  /><br />";
-                   
+                    
+                    echo "<p id=\"q\"></p>";
                     
                     echo "<select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                     for($i=0;$i<5;$i++){//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
@@ -100,34 +101,25 @@
                     $linea = array();
                     
                     echo"<select id=\"fields\" name=\"fields\">";
-                    $textfields="<select id=\"fields\" name=\"fields\">";// LA VAR. textfields CONTIENE I CAMPI TROVATI SOTTOFORMA DI STRINGA.
-                    
                     while($linea = mysql_fetch_assoc($risultato)){
                         if($field == $linea['Field']){
-                          $textfields.="<option selected='selected'>";
-                          $textfields.=$linea['Field'];
-                          $textfields.="</option>";
                           echo"<option selected='selected'>".$linea['Field']."</option>";
                         }
                         else{
-                          $textfields.="<option>";
-                          $textfields.=$linea['Field'];
-                          $textfields.="</option>";
                           echo"<option >".$linea['Field']."</option>";
                         }
                     }
-                    $textfields.="</select>"; 
                     echo"</select>";
                     echo"</form>";
-                    $field;
+                    
                     if(isset($_POST["fields"]))
                         $field = $_POST["fields"];
                     else 
-                        $field=$fields;
+                        $field= "id";
                     
-                  
+                   
                     //ESECUZIONE QUERY
-                    if($flag == 0){
+                    if($flag == 1){
                        
                         $query_final = mysql_query("SELECT ".$field." FROM ".$table." WHERE ".$field." LIKE '%".$word."%'") or die("Query 2 fallita: " . mysql_error() );
                         $linea=array();
