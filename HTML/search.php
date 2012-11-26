@@ -42,28 +42,9 @@
             <script type="text/javascript">
             function Load()
             {
-               <?
-                    $page="query_search.php";
-                    
-               ?>
-
+               window.location.href ="query_search.php"; 
             }
-            function showSelected()
-            {
-                
-                var table = document.getElementById('tabs');
-                var fields = document.getElementById('fields');
-                
-                var indexf = fields.selectedIndex;
-                var index = table.selectedIndex;
-                
-                var txt =document.getElementById('tabs');
-                var txtf = document.getElementById('fields');
-                txt.value = table.options[index].text; 
-                txtf.value = fields.options[indexf].text; 
-                
-               
-            }
+           
             </script>       
                 
                 
@@ -71,8 +52,7 @@
                 <?php
                 include "db_connect.php";
                 
-                    $provatabella ="";
-                    $provacampo="";
+                   
                 
                     $arraytab = array();
                     $arraytab[0]="drugbank";
@@ -87,19 +67,13 @@
                         $table = $_POST["tabs"];
                     else 
                         $table="drugbank";
-                    $field;
-                    if(isset($_POST["fields"]))
-                        $field = $_POST["fields"];
-                    else 
-                        $field="id";
+                    
                    
                    
-                    $query = "SHOW COLUMNS FROM $table";
-                    $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
+                    
                     
                    
                     //BUONO NON TOCCARE 
-                    $page = "search.php";
                     $word ;
                     if(isset($_POST['word']))
                         $word = $_POST['word'];
@@ -107,9 +81,10 @@
                         $word="";
                     
                     
-                    echo "<form name=\"sel\" action=$page method=\"post\">";
-                    echo "<input type=\"text\" name=\"word\" value=\"$word\"/>";
-                    echo "<input type=\"submit\" name=\"go\" value=\"Search\"/ onclick='$page=\"query_search.php\"; '><br />";
+                    echo "<form name=\"sel\" action=\"search.php\" method=\"post\">";
+                    echo "<input id=\"word\" type=\"text\" name=\"word\" value=\"$word\"/>";
+                    echo "<input id=\"go\"type=\"submit\" value=\"Search\"  /><br />";
+                   
                     
                     echo "<select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                     for($i=0;$i<5;$i++){//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
@@ -120,10 +95,12 @@
                     }
                     echo"</select>";
                     
-                    echo"<select id=\"fields\" name=\"fields\">";
-                    
-                    $textfields="<select id=\"fields\" name=\"fields\">";// LA VAR. textfields CONTIENE I CAMPI TROVATI SOTTOFORMA DI STRINGA.
+                    $query = "SHOW COLUMNS FROM $table";
+                    $risultato = mysql_query($query) or die("Query fallita: " . mysql_error() );
                     $linea = array();
+                    
+                    echo"<select id=\"fields\" name=\"fields\">";
+                    $textfields="<select id=\"fields\" name=\"fields\">";// LA VAR. textfields CONTIENE I CAMPI TROVATI SOTTOFORMA DI STRINGA.
                     
                     while($linea = mysql_fetch_assoc($risultato)){
                         if($field == $linea['Field']){
@@ -142,16 +119,31 @@
                     $textfields.="</select>"; 
                     echo"</select>";
                     echo"</form>";
+                    $field;
+                    if(isset($_POST["fields"]))
+                        $field = $_POST["fields"];
+                    else 
+                        $field=$fields;
                     
-                   
-                   
-                 
+                  
+                    //ESECUZIONE QUERY
+                    if($flag == 0){
+                       
+                        $query_final = mysql_query("SELECT ".$field." FROM ".$table." WHERE ".$field." LIKE '%".$word."%'") or die("Query 2 fallita: " . mysql_error() );
+                        $linea=array();
+                        echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n"; 
+                        while ($linea = mysql_fetch_array($query_final)) { 
+                            echo "\t<tr>\n"; 
+                            $index=count($linea)/2;
+                            for ($i = 0; $i < $index; $i++){
+                                echo "\t\t<td>$linea[$i]</td>\n";
+                            }
+                            echo "\t</tr>\n"; 
+                        } 
+                        echo"</table>\n"; 
+                        echo "</td>\n </tr>\n";
+                   }
                     
-                    setcookie("table", $table);
-                    setcookie("textfields",$textfields);
-                    setcookie("words",$word);
-                    if(isset($_POST['fields']))
-                        setcookie("fields",$_POST["fields"]);
                     
                
                  ?>
