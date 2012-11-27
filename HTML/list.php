@@ -84,7 +84,13 @@
             <!-- END LEFT-->
             <!-- BEING RIGHT (Risultato query) -->
             <td id="table-right" align ="center">
-              Choose an option.
+                <div class="boximg_list">
+                    <div class="boxtesto_list">
+                        <span class="testo">
+                           Select a bottom to start listing items
+                        </span>
+                    </div>
+                </div>
             </td>
             <!-- END RIGHT (Risultato query) -->
           </tr>

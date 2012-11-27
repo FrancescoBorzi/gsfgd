@@ -107,7 +107,7 @@ html, body {
 	width: 100%;
 	height: 200px;
 	margin: 0px auto;
-	background: url(images/b2.jpg);
+	background: url(images/c.jpg);
 }
 /*#logo {
 	background: url("images/h2.jpg");
@@ -212,4 +212,64 @@ textarea {
 .btn:active {
 	position: relative;
 	top: 1px;
+}
+
+
+/*SFONDO TRASPARENTE*/
+.boximg {
+  position: relative;
+  width: 1000px; /* Stessa larghezza dell'immagine */
+  height: 720px; /* Stessa altezza dell'immagine */
+}
+div.boxtesto {
+  position: absolute;
+  bottom: -250px;
+  left: 180px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
+  /* Per IE 5.5, 6 e 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* Per IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+span.testo {
+  padding: 10px;
+  color: #FFFFFF;
+  font: bold 16px/20px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+}
+div.boxtesto_query{
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
+  /* Per IE 5.5, 6 e 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* Per IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.boximg_query{
+  position: relative;
+  width: 600px; /* Stessa larghezza dell'immagine */
+  height: 400px; /* Stessa altezza dell'immagine */
+}
+div.boxtesto_list{
+  position: absolute;
+  bottom: 200px;
+  left: 100px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
+  /* Per IE 5.5, 6 e 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* Per IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.boximg_list{
+  position: relative;
+  width: 400px; /* Stessa larghezza dell'immagine */
+  height: 200px; /* Stessa altezza dell'immagine */
 }

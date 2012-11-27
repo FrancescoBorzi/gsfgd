@@ -60,19 +60,27 @@
 							<!-- END "TITOLO" -->
                         </td>                          
 						<!-- END LEFT-->                          
-						<!-- BEING RIGHT (Risultato query) -->                          
-						<td id="table-right">
+						<!-- BEING RIGHT (Risultato query) -->      
+                                                
+                                              
+			<td id="table-right"> 
+                        <div class="boximg_query">
+                        <div class="boxtesto_query"> 
                           <div style="margin:10px">
-                          <br>
+                          <span class="testo"><br>
                           	<h2><b>Database's tables:<br /><br /></b></h2>
                             <p><strong>drugbank</strong> (<u>id</u>, type,name, description, pahrmacology, toxicity);<br /><br />
                               <strong>hgnc</strong> (<u>id</u>, Approved_symbol, Approved_name, Status, Previous_symbols, Previous_names, Synonyms, Name_synonyms, Chromosome,  Accession_numbers, Entrez_geneId, Ensembl_geneId, Refseq_id, Omim_id, Ucsc_id);<br /><br />
                               <strong>hmdd_disease</strong>  (<u>mirna</u>,<u> disease</u>);<br /><br />
 			<strong>mirenviroment</strong>  (<u>mirnaID</u>, mirnaGene, mirnaProduct, mirnaProductOriginal, phenotype, environmentalFactor, conditionOfEF, sample,  species, evidence, pubMedID);<br /><br />
                               <strong>omim</strong>  (<u>mim</u>, genesymbols, disorders);<br /><br />
-			</div>
+			</span>
+                              </div>
+                        </div>
+                        </div>
                         </td>                          
-						<!-- END RIGHT (Risultato query) -->                          
+		      
+                                <!-- END RIGHT (Risultato query) -->                          
 					</tr>                          
 				</table>                          
 				<!-- Fine Tabella principale -->
