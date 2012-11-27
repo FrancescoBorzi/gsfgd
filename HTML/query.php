@@ -22,7 +22,7 @@
 			<a href="index.php"  title="">Home</a>          
 			<a href="search.php" title="">Search</a>          
 			<a href="list.php" title="">List</a>          
-			<a href="query.php" title="">Custom Query</a>        
+			<a href="query.php" title="" style="display:block;font-size:70px;">Query</a>        
                     </div>        				
 		</div>      
 			<!-- header ends -->      
@@ -46,7 +46,7 @@
 						<form action="result.php" enctype="multipart/form-data" method="GET">                      
                                                     <div align="center">
 							<textarea rows="20" cols="50" name="testo"></textarea>	                       
-								 <input class="btn" type="submit" name="submit" value="run" style="width:50%"/>
+								 <input class="pulsante" type="submit" name="submit" value="run" style="width:50%"/>
                                                     </div> 
                                      
 						</form>

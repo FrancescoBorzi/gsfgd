@@ -20,9 +20,9 @@
                 <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
                 <div id="buttons">
                     <a href="index.php" title="">Home </a>
-                    <a href="search.php" title="">Search</a>
+                    <a href="search.php" title="" style="display:block;font-size:70px;">Search</a>
                     <a href="list.php" title="">List</a>
-                    <a href="query.php" title="">Custom Query</a>
+                    <a href="query.php" title="">Query</a>
                 </div>
             </div>
             <!-- header ends -->

@@ -22,8 +22,8 @@
 	<div id="buttons">
           <a href="index.php"  title="">Home</a>
           <a href="search.php" title="">Search</a>
-          <a href="list.php" title="">List</a>
-          <a href="query.php" title="">Custom Query</a>
+          <a href="list.php" title="" style="display:block;font-size:70px;">List</a>
+          <a href="query.php" title="">Query</a>
         </div>
       </div>
       <!-- header ends -->
@@ -62,19 +62,19 @@
               <table width="100%" height="100%"> 
                 <tr>
                   <td>
-                    <div class="tit"><h1>LIST</h1></div>
+                    
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <form action="lista.php" method="get" enctype="application/x-www-form-urlencoded" name="liistForm">
                       <table width="100%">
-                        <tr><td><input class="btn" type="button" style="width:100%" OnClick="preparasql('drugbank');" value="Drugs" /></td></tr>
-                        <tr><td><input class="btn" type="button" style="width:100%" OnClick="preparasql('omim');" value="Mim" /></td></tr>
-                        <tr><td><input class="btn" type="button" style="width:100%" OnClick="preparasql('hmdd_disease');" value="Diseases" /></td></tr>
-                        <tr><td><input class="btn" type="button" style="width:100%" OnClick="preparasql('mirenviroment');" value="Mirna" /></td></tr>                      
+                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('drugbank');" value="Drugs" /></td></tr>
+                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('omim');" value="Mim" /></td></tr>
+                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('hmdd_disease');" value="Diseases" /></td></tr>
+                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('mirenviroment');" value="Mirna" /></td></tr>                      
                       </table>
-		      <input type="text" name="table" style="display" value="">
+		      <input type="hidden" name="table" style="display" value="">
                     </form>
                   </td>
                 </tr>

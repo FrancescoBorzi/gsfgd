@@ -17,17 +17,17 @@
 	
        <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
        <div id="buttons">
-		<a href="index.php" title="">Home </a>
+		<a href="index.php" title="" style="display:block;font-size:70px;" >Home </a>
 		<a href="search.php" title="">Search</a>
 		<a href="list.php" title="">List</a>
-   		<a href="query.php" title="">Custom Query</a>
+   		<a href="query.php" title="">Query</a>
                 
 	</div>
 </div>
 <!-- header ends -->
 <!-- content begins -->
 <div id="content">
-    <div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>
+    <!--<div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>-->
         <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
        <div class="boximg">
             <div class="boxtesto">
