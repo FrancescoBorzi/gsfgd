@@ -41,11 +41,9 @@
                         </td>
                         <!-- END LEFT-->
                         <!-- BEING RIGHT (Risultato query) -->
-                        <td id="table-right" align ="center">
+                        <td id="table-right_search" align ="center">
                             <?php
                             include "db_connect.php";
-
-
 
                             $arraytab = array();
                             $arraytab[0] = "drugbank";
@@ -53,7 +51,6 @@
                             $arraytab[2] = "mirenviroment";
                             $arraytab[3] = "omim";
                             $arraytab[4] = "hgnc";
-
 
                             $table;
                             if (isset($_POST["tabs"]))
@@ -65,11 +62,6 @@
                                 $field = $_POST["fields"];
                             else
                                 $field = "id";
-
-
-
-
-
 
                             //BUONO NON TOCCARE 
                             $word;

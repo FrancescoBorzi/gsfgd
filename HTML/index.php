@@ -28,10 +28,11 @@
 <!-- content begins -->
 <div id="content">
     <!--<div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>-->
-        <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
        <div class="boximg">
             <div class="boxtesto">
-                <span class="testo">Our website menage a database that includes drugs, diseases, miRNA, you can choose this main function:<br />
+                <span class="testo">
+                    <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
+                    Our website menage a database that includes drugs, diseases, miRNA, you can choose this main function:<br />
 			<ul>
 			  <li><b>Search:</b><br/>select a table's field, and write a word on the text-area, this ones will be  
                                               searched in all the table's field.

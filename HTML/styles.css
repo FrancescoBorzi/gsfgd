@@ -31,6 +31,14 @@ img {
 	/*color: #DDD;
 	text-shadow: 2px 2px 2px #000;   OMBREGGIATURAAAAAAAA */
 }
+#table-right_search{
+	width: 70%;
+	border: 6000;
+	vertical-align: top;
+	font-size: 15px;
+	/*color: #DDD;
+	text-shadow: 2px 2px 2px #000;   OMBREGGIATURAAAAAAAA */
+}
 #descr {
 /* Descrizione informazioni */
 	font-weight: bold;
@@ -238,7 +246,7 @@ textarea {
 }
 div.boxtesto {
   position: absolute;
-  bottom: -250px;
+  bottom: -420px;
   left: 180px;
   width: 100%;
   background: rgb(0, 0, 0);

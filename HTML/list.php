@@ -83,7 +83,7 @@
             </td>
             <!-- END LEFT-->
             <!-- BEING RIGHT (Risultato query) -->
-            <td id="table-right" align ="center">
+               <td id="table-right" align ="center">
                 <div class="boximg_list">
                     <div class="boxtesto_list">
                         <span class="testo">
