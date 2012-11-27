@@ -130,8 +130,8 @@
 				 
 	// esecuzione seconda query con LIMIT
 	$query_limit = mysql_query($query." LIMIT $primo, $per_page");
-	 
-        echo "<div style=\"width: 100%; overflow: auto;\">
+	  
+        echo "<div style=\"margin-left: 10px; margin-right: 33390px;width: 100%; overflow: auto;\">
              <table id=\"drugs\" class=\"standard\">
               <tr>";
         
