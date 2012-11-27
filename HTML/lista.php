@@ -1,37 +1,32 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>gsfgd's Project - Home</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <link href="styles.css" rel="stylesheet" type="text/css" />
-    <link href="public-15e2edc39baf5ed7d17adffcf905c0a1.css" media="screen" rel="stylesheet" type="text/css" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>gsfgd's Project - Home</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="public-15e2edc39baf5ed7d17adffcf905c0a1.css" media="screen" rel="stylesheet" type="text/css" />
 
-    <!--<style type="text/css">
-    a { color:white; }
-    a:hover { color:#00ff00; }
-    body { color:#00ff00; }
-    </style>-->
-  </head>
-  <body>
-    <div id="main">
-      <div id="maintop"></div>
-      <!-- header begins -->
-      <div id="header">
-        
-        <div id="logo"></div>
-	<div id="buttons">
-          <a href="index.php"  title="">Home</a>
-          <a href="search.php" title="">Search</a>
-          <a href="list.php" title="">List</a>
-          <a href="query.php" title="">Custom Query</a>
-        </div>
-      </div>
-      <!-- header ends -->
-      <div id="bar"></div>
-      <!-- content begins -->
+</head>
+<body>
+
+<div id="main">
+<div id="maintop"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
+<!-- header begins -->
+<div id="header">
+	
+       <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
+       <div id="buttons">
+		<a href="index.php" title="">Home </a>
+		<a href="search.php" title="">Search</a>
+		<a href="list.php" title="">List</a>
+   		<a href="query.php" title="">Custom Query</a>
+	</div>
+</div>
+<!-- header ends -->
+<!-- content begins -->
       <div id="content">
           <div align ="center">  
          <?php
