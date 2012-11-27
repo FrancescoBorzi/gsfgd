@@ -37,18 +37,6 @@
                         <!-- END LEFT-->
                         <!-- BEING RIGHT (Risultato query) -->
                         <td id="table-right" align ="center">
-
-
-                            <script type="text/javascript">
-                                function load()
-                                {
-             
-                                }
-           
-                            </script>       
-
-
-
                             <?php
                             include "db_connect.php";
 
@@ -124,23 +112,21 @@
                                     $query_final = mysql_query("SELECT * FROM " . $table . " WHERE " . $field . " = " . $word . "") or die("Query 2 fallita: " . mysql_error());
                                 else
                                     $query_final = mysql_query("SELECT * FROM " . $table . " WHERE " . $field . " LIKE '%" . $word . "%'") or die("Query 2 fallita: " . mysql_error());
-                              if(mysql_num_rows($query_final) > 0){
-                                echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n";
-                                while ($linea = mysql_fetch_array($query_final)) {
-                                    echo "\t<tr>\n";
-                                    $index = count($linea) / 2;
-                                    for ($i = 0; $i < $index; $i++) {
-                                        echo "\t\t<td>$linea[$i]</td>\n";
+                                if (mysql_num_rows($query_final) > 0) {
+                                    echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n";
+                                    while ($linea = mysql_fetch_array($query_final)) {
+                                        echo "\t<tr>\n";
+                                        $index = count($linea) / 2;
+                                        for ($i = 0; $i < $index; $i++) {
+                                            echo "\t\t<td>$linea[$i]</td>\n";
+                                        }
+                                        echo "\t</tr>\n";
                                     }
-                                    echo "\t</tr>\n";
+                                    echo"</table>\n";
+                                    echo "</td>\n </tr>\n";
+                                } else {
+                                    echo "NOT FOUND";
                                 }
-                                echo"</table>\n";
-                                echo "</td>\n </tr>\n";
-                              }
-                              else
-                              {
-                                  echo "NOT FOUND";
-                              }
                             }
                             ?>
 
