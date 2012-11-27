@@ -61,7 +61,7 @@
 			<ul>
 				<li>Cali' Salvatore</li>
 				<li>Borzi' Francesco</li>
-				<li>Gelardi Gabriele</li>
+				<li>Gay Gabriele</li>
 				<li>Dario Lanza</li>
 				<li>GARMANA E' FUORI</li>
 			</ul>

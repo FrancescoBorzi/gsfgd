@@ -94,6 +94,7 @@
                             $linea = array();
 
                             echo"<select id=\"fields\" name=\"fields\">";
+                            
                             while ($linea = mysql_fetch_assoc($risultato)) {
                                 if ($field == $linea['Field']) {
                                     echo"<option selected='selected'>" . $linea['Field'] . "</option>";
@@ -114,6 +115,9 @@
                                     $query_final = mysql_query("SELECT * FROM " . $table . " WHERE " . $field . " LIKE '%" . $word . "%'") or die("Query 2 fallita: " . mysql_error());
                                 if (mysql_num_rows($query_final) > 0) {
                                     echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n";
+                                    echo "\t<tr>\n"; 
+                                    echo $linea['Field'];
+                                    echo "\t</tr>\n";
                                     while ($linea = mysql_fetch_array($query_final)) {
                                         echo "\t<tr>\n";
                                         $index = count($linea) / 2;
