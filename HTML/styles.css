@@ -3,7 +3,6 @@
 	border: 0;
 	margin: 0;
 }*/
-
 #home-descr{
 	width:50%;
 	float:float;
@@ -29,15 +28,15 @@ img {
 	border: 0;
 	vertical-align: top;
 	font-size: 15px;
-	color: #DDD;
-	text-shadow: 2px 2px 2px #000;
+	/*color: #DDD;
+	text-shadow: 2px 2px 2px #000;   OMBREGGIATURAAAAAAAA */
 }
 #descr {
 /* Descrizione informazioni */
 	font-weight: bold;
 	color: #52ABED;
 	/*color: #1B7BC2;
-*/
+
 }
 #lt1 {
 /* link type 1 - chiaro */
@@ -236,7 +235,7 @@ div.boxtesto {
 span.testo {
   padding: 10px;
   color: #FFFFFF;
-  font: bold 16px/20px Helvetica, Sans-Serif;
+  font: bold 16px/20px Arial, Helvetica, sans-serif;
   letter-spacing: -1px;
 }
 div.boxtesto_query{

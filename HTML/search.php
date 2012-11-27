@@ -28,7 +28,10 @@
             <!-- header ends -->
             <div id="bar"></div>
             <!-- content begins -->
-            <div id="content">
+                <div id="content">
+                    <div id="home-descr" align="center">
+                        <H2 align="center"><b><br />SEARCH<br /><br /></b></H2>
+                    </div>
                 <!-- Tabella contenente le due colonne principali -->
                 <table width=65% border=0px style="vertical-align:text-top"> 
                     <tr> 
