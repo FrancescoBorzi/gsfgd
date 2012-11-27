@@ -29,7 +29,7 @@
 <!-- content begins -->
 <div id="content">
         <div id="home-descr" align="center">
-          <H2 align="center"><b><br />RESULT QUERY<br /><br /></b></H2>
+          <H2 align="center"><b><br />RESULT QUERY<br /><br /></b></H2></div>
 	  <div  align="justify">
                 <?php
                 
@@ -103,11 +103,9 @@
 
 	</div>
    </div>
-</div>
 
 <!-- content ends -->
 </div>
-
 </body>
 </html>
 
