@@ -241,7 +241,7 @@ span.testo {
 }
 div.boxtesto_query{
   position: absolute;
-  bottom: 0px;
+  bottom: -50px;
   left: 30px;
   width: 100%;
   background: rgb(0, 0, 0);
