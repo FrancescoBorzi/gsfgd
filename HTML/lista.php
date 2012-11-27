@@ -46,7 +46,7 @@
 	echo '<div id="letters">';
 		for($index = 65; $index<91;$index++)
 		{
-			echo "<a href=\"http://gsfgdproject.altervista.org/HTML/lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
+			echo "<a href=\"lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
 		}
 	echo "</div>";
        ?>
@@ -101,7 +101,7 @@
 		for (var i = 65; i < 91; i++)
 		{
 			var sql="SELECT * FROM "+table+" WHERE "+name+" LIKE '&#"+i+"%' ORDER BY "+name;
-			document.getElementById("letters").innerHTML+="<a href=\"http://gsfgdproject.altervista.org/HTML/lista.php?table="+table+"&lettera=&#"+i+"&testo="+sql+"\"><input type=\"button\" value=&#"+i+" style=\"10%:10%\"/></a>";
+			document.getElementById("letters").innerHTML+="<a href=\"lista.php?table="+table+"&lettera=&#"+i+"&testo="+sql+"\"><input type=\"button\" value=&#"+i+" style=\"10%:10%\"/></a>";
 		}
 	}
 	</script>
