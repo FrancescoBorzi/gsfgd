@@ -90,11 +90,11 @@ body {
 html, body {
 	height: 100%;
 }
-#maintop {
-	background: url("images/up.jpg");
+/*#maintop {
+	background: url("images/dna.jpg");
 	width: 100%;
 	height: 24px;
-}
+}*/
 #main {
 	width: 100%;
 	margin: 0px auto;
@@ -107,14 +107,14 @@ html, body {
 	width: 100%;
 	height: 200px;
 	margin: 0px auto;
-	background: url(images/Bbackground.jpg);
+	background: url(images/b2.jpg);
 }
-#logo {
-	background: url("images/dna.jpg");
+/*#logo {
+	background: url("images/h2.jpg");
 	text-align: right;
 	height: 80%;
 	width: 100%;
-}
+}*/
 #buttons {
 	width: 50%;
 	margin: 0px auto;
