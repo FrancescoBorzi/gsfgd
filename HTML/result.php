@@ -7,6 +7,8 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="public-15e2edc39baf5ed7d17adffcf905c0a1.css" media="screen" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 
@@ -55,28 +57,39 @@
                 // esecuzione seconda query con LIMIT
                 $query_limit = mysql_query($query." LIMIT $primo, $per_page") or die("Query 2 fallita: " . mysql_error() );
                     $linea=array();
-                    echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n"; 
+                    echo "<div style=\"width: 100%; overflow: auto;\">
+                           <table id=\"drugs\" class=\"standard\">
+                            <tr>";
+                    
                     $num_field=  mysql_num_fields($query_limit);
                     $i=0;
-                    echo "<tr>";
+                    //STAMPO CAMPI TABELLE
                     while($i<$num_field){
-                    echo "<td>".  strtoupper(mysql_field_name($query_limit, $i))."</td>";
-                    $i++;
-                    
+                        echo "<th>". strtoupper(mysql_field_name($query_limit, $i))."</th>";
+                        $i++;
                     }
                     echo "</tr>";
+                    
+                    $odds_orNOt=1;
                     while ($linea = mysql_fetch_array($query_limit)) { 
                         echo "\t<tr>\n"; 
                         $index=count($linea)/2;
-                        for ($i = 0; $i < $index; $i++){
-                            echo "\t\t<td>$linea[$i]</td>\n";
+                       if($odds_orNOt%2==0){  
+                            echo "<tr class=\"odd\">";
+                            for ($i = 0; $i < $index; $i++) {
+                                echo "<td>".$linea[$i]."</td>";
+                            }echo "</tr>";
                         }
-                        echo "\t</tr>\n"; 
+                        else {
+                            echo "<tr class=\"even\">";
+                            for ($i = 0; $i < $index; $i++) {
+                                echo "<td>".$linea[$i]."</td>";
+                            }echo "</tr>";
+                        }
+                       $odds_orNOt++;
                     } 
                     echo"</table>\n"; 
-                    echo "</td>\n </tr>\n";
-                
-
+                                    
                 // includiamo uno dei files contenenti la paginazione
                 include("pagination.php");
 

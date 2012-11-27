@@ -7,11 +7,13 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
+    <link href="public-15e2edc39baf5ed7d17adffcf905c0a1.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <!--<style type="text/css">
     a { color:white; }
     a:hover { color:#00ff00; }
     body { color:#00ff00; }
-    </style>
+    </style>-->
   </head>
   <body>
     <div id="main">
@@ -129,23 +131,36 @@
 				 
 	// esecuzione seconda query con LIMIT
 	$query_limit = mysql_query($query." LIMIT $primo, $per_page");
-	     echo "<table width=\"40%\" border=\"1\" style=\"border-color:#00ff00;\">\n"; 
-	     $num_field=  mysql_num_fields($query_limit);
+	 
+        echo "<div style=\"width: 100%; overflow: auto;\">
+             <table id=\"drugs\" class=\"standard\">
+              <tr>";
+        
+        $num_field=  mysql_num_fields($query_limit);
                     $i=0;
-                    echo "<tr>";
-                    while($i<$num_field){
-                    echo "<td>".  strtoupper(mysql_field_name($query_limit, $i))."</td>";
-                    $i++;
-                    
-                    }
-                    echo "</tr>";
+         //STAMPO CAMPI TABELLE
+         while($i<$num_field){
+            echo "<th>". strtoupper(mysql_field_name($query_limit, $i))."</th>";
+            $i++;
+         }
+         echo "</tr>";
+         $odds_orNOt=1;
             while ($linea = mysql_fetch_array($query_limit)) { 
 		echo "\t<tr>\n"; 
 		$index=count($linea)/2;
-		for ($i = 0; $i < $index; $i++){
-		    echo "\t\t<td style=\"color:#00ff00;\">$linea[$i]</td>\n";
-		}
-		echo "\t</tr>\n"; 
+		  if($odds_orNOt%2==0){  
+                            echo "<tr class=\"odd\">";
+                            for ($i = 0; $i < $index; $i++) {
+                                echo "<td>".$linea[$i]."</td>";
+                            }echo "</tr>";
+                        }
+                        else {
+                            echo "<tr class=\"even\">";
+                            for ($i = 0; $i < $index; $i++) {
+                                echo "<td>".$linea[$i]."</td>";
+                            }echo "</tr>";
+                        }
+                       $odds_orNOt++;
 	    } 
 	    echo"</table>\n"; 
 	    echo "</td>\n </tr>\n";

@@ -7,6 +7,8 @@
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <link href="styles.css" rel="stylesheet" type="text/css" />
+        <link href="public-15e2edc39baf5ed7d17adffcf905c0a1.css" media="screen" rel="stylesheet" type="text/css" />
+
 
     </head>
     <body>
@@ -77,9 +79,6 @@
                             echo "<form name=\"sel\" action=\"search.php\" method=\"post\">";
                             echo "<input id=\"word\" type=\"text\" name=\"word\" value=\"$word\"/>";
                             echo "<input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /><br />";
-
-
-
                             echo "<select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                             for ($i = 0; $i < 5; $i++) {//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
                                 if ($table == $arraytab[$i])
@@ -114,28 +113,40 @@
                                 else
                                     $query_final = mysql_query("SELECT * FROM " . $table . " WHERE " . $field . " LIKE '%" . $word . "%'") or die("Query 2 fallita: " . mysql_error());
                                 if (mysql_num_rows($query_final) > 0) {
-                                    echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n";
-                                    echo "\t<tr>\n"; 
-                                    echo $linea['Field'];
-                                    echo "\t</tr>\n";
                                     
+                                     echo "<div style=\"width: 100%; overflow: auto;\">
+                                        <table id=\"drugs\" class=\"standard\">
+                                        <tr>";
+                                                                 
+                                    //echo $linea['Field'];
+                                 
                                     $num_field=  mysql_num_fields($query_final);
                                     $i=0;
-                                    echo "<tr>";
+                                    //STAMPO CAMPI TABELLE
                                     while($i<$num_field){
-                                        echo "<td>".  strtoupper(mysql_field_name($query_final, $i))."</td>";
+                                        echo "<th>". strtoupper(mysql_field_name($query_final, $i))."</th>";
                                         $i++;
                                     }
                                     echo "</tr>";
+                                    //fine tabella nome campi
                                     
+                                    $odds_orNOt=1;
                                     while ($linea = mysql_fetch_array($query_final)) {
                                         echo "\t<tr>\n";
                                         $index = count($linea) / 2;
-                                        for ($i = 0; $i < $index; $i++) {
-                                            echo "\t\t<td>$linea[$i]</td>\n";
-                                        }
-                                        echo "\t</tr>\n";
-                                    }
+                                      if($odds_orNOt%2==0){  
+                                            echo "<tr class=\"odd\">";
+                                            for ($i = 0; $i < $index; $i++) {
+                                               echo "<td>".$linea[$i]."</td>";
+                                            }echo "</tr>";
+                                      }
+                                      else {echo "<tr class=\"even\">";
+                                            for ($i = 0; $i < $index; $i++) {
+                                               echo "<td>".$linea[$i]."</td>";
+                                            }echo "</tr>";
+                                      }
+                                      $odds_orNOt++;
+                                 }
                                     echo"</table>\n";
                                     echo "</td>\n </tr>\n";
                                 } else {
