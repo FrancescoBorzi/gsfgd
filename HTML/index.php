@@ -31,18 +31,19 @@
         <div id="home-descr" align="center">
           <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
 	  <div  align="justify">
-            Our site maintains a database containing various information of genetic diseases, drugs and genes. There are three main functions:<br />
+           Our website menage a database that includes drugs, diseases, miRNA, you can choose this main function:<br />
 			<ul>
-			  <li><b>Search:</b>  select a table's field, and write a word on the text-area, this ones will be  
+			  <li><b>Search:</b><br/>select a table's field, and write a word on the text-area, this ones will be  
                                               searched in all the table's field.
                           </li>
-                          <li><b>List:</b> show item inside selected tables sorted alphabetically, depending 
+                          <li><b>List:</b><br/>show item inside selected tables sorted alphabetically, depending 
                                             on the selected letter that you choose.
                           </li>
-			  <li><b>Custom query:</b> you can write your own query, being careful to make NO mistakes.
+			  <li><b>Custom query:</b><br/>you can write your own query, being careful to make NO mistakes.<br/>
+                                                    Of course will be shown all tables attributes.
                           </li>
-		    </ul>
-            <br />Clicking on "Custom Query" you can also see the list of tables with their attributes.
+                        </ul>
+            <br/>
    			<br /><br />
    			<b><u>Database structure:</u></b><br /><br />
 			Our database not only contains information on drugs, genes and diseases, it also stores two main relationships between them:<br />
@@ -52,8 +53,8 @@
 			</ul>
             <br />The information regarding the interactions between drugs are contained in the "interaction" table, while in the tables "category" and "atc_code" are present, respectively, membership categories and the ATC-codes of each drug.
             <br /><br />
-            <b><u>Data source:</u></b><br /><br />
-			The data relating the drugs, genes and diseases are derived from databases residing in the following sites:<br />
+            <b><u>Net Source:</u></b><br /><br />
+			All our material come from this sites:<br />
 			<ul>
 				<li><a href="http://www.drugbank.ca/" target="_blank">DrugBank</a></li>
 				<li><a href="http://www.omim.org/" target="_blank">OMIM</a></li>
