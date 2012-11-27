@@ -17,6 +17,7 @@
 	
        <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
        <div id="buttons">
+           
 		<a href="index.php" title="" style="display:block;font-size:70px;" >Home </a>
 		<a href="search.php" title="">Search</a>
 		<a href="list.php" title="">List</a>
@@ -26,8 +27,11 @@
 </div>
 <!-- header ends -->
 <!-- content begins -->
-<div id="content">
+<div aligh="center" id="content">
     <!--<div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>-->
+        <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
+    <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="right" scrollAmount="20" width="100%" height="400"><a><img src="images/5.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/4.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/3.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/1.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/h2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" ></a></marquee>
+
        <div class="boximg">
             <div class="boxtesto">
                 <span class="testo">
