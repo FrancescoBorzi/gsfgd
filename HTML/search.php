@@ -118,15 +118,16 @@
                                     echo "\t<tr>\n"; 
                                     echo $linea['Field'];
                                     echo "\t</tr>\n";
-                                     $num_field=  mysql_num_fields($query_final);
+                                    
+                                    $num_field=  mysql_num_fields($query_final);
                                     $i=0;
                                     echo "<tr>";
                                     while($i<$num_field){
-                                    echo "<td>".  strtoupper(mysql_field_name($query_final, $i))."</td>";
-                                    $i++;
-
+                                        echo "<td>".  strtoupper(mysql_field_name($query_final, $i))."</td>";
+                                        $i++;
                                     }
                                     echo "</tr>";
+                                    
                                     while ($linea = mysql_fetch_array($query_final)) {
                                         echo "\t<tr>\n";
                                         $index = count($linea) / 2;
