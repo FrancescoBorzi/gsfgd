@@ -103,7 +103,7 @@
 		for (var i = 65; i < 91; i++)
 		{
 			var sql="SELECT * FROM "+table+" WHERE "+name+" LIKE '&#"+i+"%' ORDER BY "+name;
-			document.getElementById("letters").innerHTML+="<a href=\"http://gsfgdproject.altervista.org/HTML/lista.php?table="+table+"&lettera=&#"+i+"&testo="+sql+"\"><input type=\"button\" value=&#"+i+" style=\"10%:10%\"/></a>";
+			document.getElementById("letters").innerHTML+="<a href=\"lista.php?table="+table+"&lettera=&#"+i+"&testo="+sql+"\"><input type=\"button\" value=&#"+i+" style=\"10%:10%\"/></a>";
 		}
 	}
 	</script>
