@@ -56,6 +56,15 @@
                 $query_limit = mysql_query($query." LIMIT $primo, $per_page") or die("Query 2 fallita: " . mysql_error() );
                     $linea=array();
                     echo "<table border=\"1\" style=\"border-color:#00ff00;\">\n"; 
+                    $num_field=  mysql_num_fields($query_limit);
+                    $i=0;
+                    echo "<tr>";
+                    while($i<$num_field){
+                    echo "<td>".  strtoupper(mysql_field_name($query_limit, $i))."</td>";
+                    $i++;
+                    
+                    }
+                    echo "</tr>";
                     while ($linea = mysql_fetch_array($query_limit)) { 
                         echo "\t<tr>\n"; 
                         $index=count($linea)/2;
