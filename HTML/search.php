@@ -109,7 +109,7 @@
                                     $query_final = mysql_query("SELECT * FROM " . $table . " WHERE " . $field . " LIKE '%" . $word . "%'") or die("Query 2 fallita: " . mysql_error());
                                 if (mysql_num_rows($query_final) > 0) {
                                     
-                                     echo "<div style=\"margin-left: 60px; margin-right: 90px; width: 100%;\">
+                                     echo "<div style=\"margin-left: 57px; margin-right: 90px; width: 105%;\">
                                         <table id=\"drugs\" class=\"standard\">
                                         <tr>";
                                                                  

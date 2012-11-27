@@ -30,7 +30,7 @@
 <div id="content">
         <div id="home-descr" align="center">
           <H2 align="center"><b><br />RESULT QUERY<br /><br /></b></H2></div>
-	  <div style="margin-left: 60px; margin-right: 90px">
+	  <div style="width: 100%;margin-left: 60px;  margin-right: auto;">
                 <?php
                 
                 include "db_connect.php";
