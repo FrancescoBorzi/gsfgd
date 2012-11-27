@@ -33,9 +33,14 @@
 	  <div  align="justify">
             Our site maintains a database containing various information of genetic diseases, drugs and genes. There are three main functions:<br />
 			<ul>
-			  <li><b>Search by tag:</b> you can select to execute a query on our database, choosing among the available options. The queries are grouped by the entities involved;</li>
-			  <li><b>List:</b> you can list all the diseases (in alphabetical order and grouped into types and subtypes), all the genes (in alphabetical order) and all the drugs (in alphabetical order and grouped into categories);</li>
-			  <li><b>Custom query:</b> the user has the possibility to manually write a query in SQL code.</li>
+			  <li><b>Search:</b>  select a table's field, and write a word on the text-area, this ones will be  
+                                              searched in all the table's field.
+                          </li>
+                          <li><b>List:</b> show item inside selected tables sorted alphabetically, depending 
+                                            on the selected letter that you choose.
+                          </li>
+			  <li><b>Custom query:</b> you can write your own query, being careful to make NO mistakes.
+                          </li>
 		    </ul>
             <br />Clicking on "Custom Query" you can also see the list of tables with their attributes.
    			<br /><br />
@@ -57,13 +62,13 @@
 			</ul>
             <br /><br />
             <b><u>About us:</u></b><br /><br />
-			The site was created by four students of the University of Catania:<br />
+			The site was created by five students of the University of Catania:<br />
 			<ul>
-				<li>Cali' Salvatore</li>
-				<li>Borzi' Francesco</li>
-				<li>Gay Gabriele</li>
+				<li>Salvatore Cali'</li>
+				<li>Francesco Borzi' </li>
+				<li>Gabriele Gelardi</li>
 				<li>Dario Lanza</li>
-				<li>GARMANA E' FUORI</li>
+				<li>Germana Natalia La Rocca</li>
 			</ul>
             <br /><br />
             <b><u>Contact:</u></b><br /><br />
