@@ -43,7 +43,7 @@
                                                     Of course will be shown all tables attributes.
                           </li>
                         </ul>
-            <br/>
+                        <br/>
    			<br /><br />
    			<b><u>Database structure:</u></b><br /><br />
 			Our database not only contains information on drugs, genes and diseases, it also stores two main relationships between them:<br />
