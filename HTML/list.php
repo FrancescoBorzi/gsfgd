@@ -1,11 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>gsfgd's Project - Home</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <link href="styles.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
     a { color:white; }
     a:hover { color:#00ff00; }
@@ -16,16 +11,7 @@
     <div id="main">
       <div id="maintop"></div>
       <!-- header begins -->
-      <div id="header">
-        
-        <div id="logo"></div>
-	<div id="buttons">
-          <a href="index.php"  title="">Home</a>
-          <a href="search.php" title="">Search</a>
-          <a href="list.php" title="" style="display:block;font-size:70px;">List</a>
-          <a href="query.php" title="">Query</a>
-        </div>
-      </div>
+      <?php include "header.php"; ?>
       <!-- header ends -->
       <div id="bar"></div>
       <!-- content begins -->
@@ -69,10 +55,10 @@
                   <td>
                     <form action="lista.php" method="get" enctype="application/x-www-form-urlencoded" name="liistForm">
                       <table width="100%">
-                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('drugbank');" value="Drugs" /></td></tr>
-                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('omim');" value="Mim" /></td></tr>
-                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('hmdd_disease');" value="Diseases" /></td></tr>
-                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('mirenviroment');" value="Mirna" /></td></tr>                      
+                        <tr><td><input class="pulsante" type="button" value="Drugs" OnClick="preparasql('drugbank');"><br/></td></tr>
+                        <tr><td><input class="pulsante" type="button" value="Mim" OnClick="preparasql('omim');"><br/></td></tr>
+                        <tr><td><input class="pulsante" type="button" value="Diseases" OnClick="preparasql('hmdd_disease');"><br/></td></tr>
+                        <tr><td><input class="pulsante" type="button" value="Mirna" OnClick="preparasql('mirenviroment');" /><br/></td></tr>                      
                       </table>
 		      <input type="hidden" name="table" style="display" value="">
                     </form>

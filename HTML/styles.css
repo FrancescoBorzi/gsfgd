@@ -133,6 +133,10 @@ html, body {
         border: solid 3px #bbbbbb;
         background: #0095cd;
         display: block;
+		width:160px;
+		-webkit-border-radius:2em 0;
+		-moz-border-radius:2em 0;
+		border-radius:2em 0;
 }
 .pulsante:hover{
         border: solid 3px #bbbbbb;
