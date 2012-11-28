@@ -11,7 +11,7 @@
 
 
     </head>
-    <body>
+    <body  style="background-image: url(images/b.jpg);">
         <div id="main">
             <div id="maintop"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
             <!-- header begins -->
