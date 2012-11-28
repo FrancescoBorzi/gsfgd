@@ -30,7 +30,16 @@
 <div aligh="center" id="content">
     <!--<div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>-->
         <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
-    <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="right" scrollAmount="20" width="100%" height="400"><a><img src="images/5.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/4.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/3.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/1.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/h2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" ></a></marquee>
+    <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="right" scrollAmount="20" width="100%" height="400">
+	<a>
+	<img src="images/5.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	<img src="images/4.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	<img src="images/3.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	<img src="images/2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	<img src="images/1.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	<img src="images/h2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	</a>
+    </marquee>
 
        <div class="boximg">
             <div class="boxtesto">
