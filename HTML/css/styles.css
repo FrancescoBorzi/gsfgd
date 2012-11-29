@@ -319,4 +319,9 @@ div.boxtesto_list{
 #word {
 	width:450px;
 }
+
+#tags {
+	width:260px;
+}
+
 .ui-autocomplete { height: 200px; overflow-y: scroll; overflow-x: hidden;}

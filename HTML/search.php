@@ -19,7 +19,7 @@
                         <H2 align="center"><b><br />SEARCH<br /><br /></b></H2>
                     </div>
                 <!-- Tabella contenente le due colonne principali -->
-                <table width=65% border=0px style="vertical-align:text-top"> 
+                <table width="65%" border="0px" style="vertical-align:text-top"> 
                     <tr> 
                         <!-- BEING LEFT-->
                         <td id="table-left">
@@ -64,9 +64,10 @@
                            
                             echo "<form name=\"sel\" action=\"search.php\" method=\"post\">";
                             //echo "<div class=\"ui-widget\">";
-                            echo "<input class=\"ui-widget\" id=\"tags\" type=\"text\" name=\"tags\" value=\"$word\" />";
+			    echo "<table>";
+                            echo "<tr><td><input class=\"ui-widget\" id=\"tags\" type=\"text\" name=\"tags\" value=\"$word\" /></td>";
                             //echo "</div>";
-                            echo "<select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
+                            echo "<tr><td><select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                             for ($i = 0; $i < 5; $i++) {//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
                                 if ($table == $arraytab[$i])
                                     echo"<option selected ='selected'> " . $arraytab[$i] . " </option>";
@@ -97,9 +98,8 @@
                                 $field = $linea2['Field'];
                                 
                             }
-                            echo"</select>";
-                            
-                            echo "<input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" />";
+                            echo"</select></td>";
+                            echo "<td><input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /></td>";
                             echo"</form>";
                         
                             ?><?
