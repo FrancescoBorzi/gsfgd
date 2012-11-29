@@ -22,7 +22,7 @@
                 include "db_connect.php";
                 
 		$query=$_GET["testo"];
-		$risultato = mysql_query($query) or die("Query fallita: " . mysql_error());
+		$risultato = mysql_query($query) or die("Query fallita: " . mysql_error() ."asd");
                                 
                 $res_count = mysql_num_rows($risultato);
                 
@@ -43,8 +43,8 @@
                 // esecuzione seconda query con LIMIT
                 $query_limit = mysql_query($query." LIMIT $primo, $per_page") or die("Query 2 fallita: " . mysql_error() );
                     $linea=array();
-                    echo "<div style=\"width: 100%; overflow: auto;\">
-                           <table id=\"drugs\" class=\"standard\">
+                   echo "<div style=\"margin-left: -5px; margin-right: 150px;\">
+                        <table id=\"drugs\" class=\"standard\">
                             <tr>";
                     
                     $num_field=  mysql_num_fields($query_limit);

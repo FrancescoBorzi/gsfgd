@@ -286,7 +286,7 @@ div.boxtesto_query{
 div.boxtesto_list{
   position: absolute;
   bottom: 200px;
-  left: 100px;
+  left: -200px;
   width: 100%;
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.6);

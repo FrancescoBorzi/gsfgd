@@ -51,10 +51,10 @@
                   <td>
                     <form action="lista.php" method="get" enctype="application/x-www-form-urlencoded" name="liistForm">
                       <table width="100%">
-                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('drugbank');" value="Drugs" /></td></tr>
-                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('omim');" value="Mim" /></td></tr>
-                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('hmdd_disease');" value="Diseases" /></td></tr>
-                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('mirenviroment');" value="Mirna" /></td></tr>                      
+                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('drugbank');" value="Drugs" /></td>
+                        <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('omim');" value="Mim" /></td>
+                        <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('hmdd_disease');" value="Diseases" /></td>
+                        <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('mirenviroment');" value="Mirna" /></td></tr>                      
                       </table>
 		      <input type="hidden" name="table" style="display" value="">
                     </form>
@@ -113,11 +113,16 @@
 
 	// primo parametro di LIMIT
 	$primo = ($current_page - 1) * $per_page;
-				 
+	include("pagination.php");
+
+        // in questa cella inseriamo la paginazione
+	echo " <tr>\n <td height=\"50\" valign=\"bottom\" align=\"center\">$paginazione</td>\n";
+	echo " </tr>\n</table>\n</div>";
+	echo "<br/><br/><br/><br/>";			 
 	// esecuzione seconda query con LIMIT
 	$query_limit = mysql_query($query." LIMIT $primo, $per_page");
 	  
-        echo "<div style=\"margin-left: 20px;\">
+        echo "<div style=\"margin-left: 60px; margin-right: 90px;\">
              <table id=\"drugs\" class=\"standard\">
               <tr>";
         

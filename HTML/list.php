@@ -55,10 +55,10 @@
                   <td>
                     <form action="lista.php" method="get" enctype="application/x-www-form-urlencoded" name="liistForm">
                       <table width="100%">
-                        <tr><td><input class="pulsante" type="button" value="Drugs" OnClick="preparasql('drugbank');"><br/></td></tr>
-                        <tr><td><input class="pulsante" type="button" value="Mim" OnClick="preparasql('omim');"><br/></td></tr>
-                        <tr><td><input class="pulsante" type="button" value="Diseases" OnClick="preparasql('hmdd_disease');"><br/></td></tr>
-                        <tr><td><input class="pulsante" type="button" value="Mirna" OnClick="preparasql('mirenviroment');" /><br/></td></tr>                      
+                        <tr><td><input class="pulsante" type="button" value="Drugs" OnClick="preparasql('drugbank');"><br/></td>
+                        <td><input class="pulsante" type="button" value="Mim" OnClick="preparasql('omim');"><br/></td>
+                        <td><input class="pulsante" type="button" value="Diseases" OnClick="preparasql('hmdd_disease');"><br/></td>
+                        <td><input class="pulsante" type="button" value="Mirna" OnClick="preparasql('mirenviroment');" /><br/></td></tr>                      
                       </table>
 		      <input type="hidden" name="table" style="display" value="">
                     </form>
@@ -70,13 +70,7 @@
             <!-- END LEFT-->
             <!-- BEING RIGHT (Risultato query) -->
                <td id="table-right" align ="center">
-                <div class="boximg_list">
-                    <div class="boxtesto_list">
-                        <span class="testo">
-                           Select a bottom to start listing items
-                        </span>
-                    </div>
-                </div>
+                
             </td>
             <!-- END RIGHT (Risultato query) -->
           </tr>
