@@ -58,32 +58,34 @@
 
                             $flag = 0;
                             echo "<form name=\"sel\" action=\"search.php\" method=\"post\">";
-                            echo "<input id=\"word\" type=\"text\" name=\"word\" value=\"$word\"/>";
-                            echo "<input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /><br />";
-                            echo "<select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
+			    echo "<table>";
+                            echo "<tr><td><input id=\"word\" type=\"text\" name=\"word\" value=\"$word\" /></td>";
+                            echo "<td><input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /></td></tr>";
+                            echo "<tr><td><select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                             for ($i = 0; $i < 5; $i++) {//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
                                 if ($table == $arraytab[$i])
-                                    echo"<option selected ='selected'> " . $arraytab[$i] . " </option>";
+                                    echo "<option selected ='selected'> " . $arraytab[$i] . " </option>";
                                 else
-                                    echo"<option> " . $arraytab[$i] . " </option>";
+                                    echo "<option> " . $arraytab[$i] . " </option>";
                             }
-                            echo"</select>";
+                            echo "</select>";
 
                             $query = "SHOW COLUMNS FROM $table";
                             $risultato = mysql_query($query) or die("Query fallita: " . mysql_error());
                             $linea = array();
 
-                            echo"<select id=\"fields\" name=\"fields\">";
+                            echo "<select id=\"fields\" name=\"fields\">";
                             
                             while ($linea = mysql_fetch_assoc($risultato)) {
                                 if ($field == $linea['Field']) {
-                                    echo"<option selected='selected'>" . $linea['Field'] . "</option>";
+                                    echo "<option selected='selected'>" . $linea['Field'] . "</option>";
                                 } else {
-                                    echo"<option >" . $linea['Field'] . "</option>";
+                                    echo "<option >" . $linea['Field'] . "</option>";
                                 }
                             }
-                            echo"</select>";
-                            echo"</form>";
+                            echo "</select></td></tr>";
+			    echo "</table>";
+                            echo "</form>";
 
 
 
@@ -128,7 +130,7 @@
                                       }
                                       $odds_orNOt++;
                                  }
-                                    echo"</table>\n";
+                                    echo "</table>\n";
                                     echo "</td>\n </tr>\n";
                                 } else {
                                     echo "NOT FOUND";
