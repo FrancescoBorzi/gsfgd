@@ -68,8 +68,8 @@
 
                             //BUONO NON TOCCARE 
                             $word;
-                            if (isset($_POST['word'])){
-                                $word = $_POST['word'];
+                            if (isset($_POST['tags'])){
+                                $word = $_POST['tags'];
                                 
                             }
                             else
@@ -87,7 +87,7 @@
                             
                             echo "<input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /><br />";
                             echo "<div class=\"ui-widget\">";
-                            echo "<input id=\"tags\" />";
+                            echo "<input id=\"tags\" type=\"text\" name=\"tags\" value=\"$word\" />";
                             echo "</div>";
                             echo "<select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                             for ($i = 0; $i < 5; $i++) {//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
@@ -100,15 +100,20 @@
 
                             $query = "SHOW COLUMNS FROM $table";
                             $risultato = mysql_query($query) or die("Query fallita: " . mysql_error());
-                            $linea = array();
-
-                            echo"<select id=\"fields\" name=\"fields\">";
                             
+                            $r2=mysql_query($query) or die("Query fallita: " . mysql_error());
+                            $linea = array();
+                            $tmp= mysql_fetch_array($r2);
+                            $field=$tmp[0];
+                            
+                            echo"<select id=\"fields\" name=\"fields\" onchange='submit();'>";
                             while ($linea = mysql_fetch_assoc($risultato)) {
                                 if ($field == $linea['Field']) {
                                     echo"<option selected='selected'>" . $linea['Field'] . "</option>";
+                                    
                                 } else {
                                     echo"<option >" . $linea['Field'] . "</option>";
+                                    
                                 }
                             }
                             echo"</select>";
@@ -116,7 +121,7 @@
                             ?><?
                             echo $field."<br>";
                             echo $table."<br>";
-                            $arr=mysql_query("SELECT name FROM drugbank ORDER BY name")or die("Query fallita: " . mysql_error());
+                            $arr=mysql_query("SELECT $field FROM $table")or die("Query fallita: " . mysql_error());
                             
                             echo "SELECT ".$field ." FROM ".$table;
                             $ciao2=array();
@@ -128,16 +133,7 @@
                                   $tot++;
                                 }
                             } 
-                            /* for ($i = 0; $i < count($ciao2); $i++) {
-                                  
-                                  echo $ciao2[$i]."<br>";
-                                 
-                                }
-                            echo $ciao2[0];
-                             echo $ciao2[1];
-                            echo $ciao2[2];
-                            echo count($ciao2);
-                            */?>
+                            ?>
                       <script language="javascript">
                       $(function() {
 
