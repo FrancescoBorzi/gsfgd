@@ -151,8 +151,7 @@
                       });
                     
                     </script>
-                    </td></tr>
-                    <tr><td>
+                   
                          <?
                             //ESECUZIONE QUERY
                             if (isset($_POST["go"])) {
