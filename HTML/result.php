@@ -36,7 +36,7 @@
                 include "db_connect.php";
                 
 		$query=$_GET["testo"];
-		$risultato = mysql_query($query) or die("Query fallita: " . mysql_error() ."asd");
+		$risultato = mysql_query($query) or die("Query fallita: " . mysql_error());
                                 
                 $res_count = mysql_num_rows($risultato);
                 
