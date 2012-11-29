@@ -7,10 +7,10 @@
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <link href="styles.css" rel="stylesheet" type="text/css" />
-        <link href="public-15e2edc39baf5ed7d17adffcf905c0a1.css" media="screen" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="jquery-ui.css" />
-        <script src="jquery-1.8.3.js"></script>
-        <script src="jquery-ui.js"></script> 
+        <link href="styleTable.css" media="screen" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="js/jquery-ui.css" />
+        <script src="js/jquery-1.8.3.js"></script>
+        <script src="js/jquery-ui.js"></script> 
 
     </head>
     <body  style="background-image: url(images/b.jpg);">
