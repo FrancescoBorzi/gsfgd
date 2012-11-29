@@ -67,10 +67,9 @@
                                 
                             $flag = 0;
                             echo "<form name=\"sel\" action=\"search.php\" method=\"post\">";
-                            echo "<input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /><br />";
-                            echo "<div class=\"ui-widget\">";
-                            echo "<input id=\"tags\" type=\"text\" name=\"tags\" value=\"$word\" />";
-                            echo "</div>";
+                            //echo "<div class=\"ui-widget\">";
+                            echo "<input class=\"ui-widget\" id=\"tags\" type=\"text\" name=\"tags\" value=\"$word\" />";
+                            //echo "</div>";
                             echo "<select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                             for ($i = 0; $i < 5; $i++) {//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
                                 if ($table == $arraytab[$i])
@@ -79,6 +78,7 @@
                                     echo"<option> " . $arraytab[$i] . " </option>";
                             }
                             echo"</select>";
+                            
 
                             $query = "SHOW COLUMNS FROM $table";
                             $risultato = mysql_query($query) or die("Query fallita: " . mysql_error());
@@ -102,6 +102,8 @@
                                 
                             }
                             echo"</select>";
+                            
+                            echo "<input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" />";
                             echo"</form>";
                             ?><?
                             //echo $field."<br>";
