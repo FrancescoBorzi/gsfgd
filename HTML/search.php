@@ -83,15 +83,23 @@
                             $query = "SHOW COLUMNS FROM $table";
                             $risultato = mysql_query($query) or die("Query fallita: " . mysql_error());
                            
+                           $flag2=0;
+                            
                             echo"<select id=\"fields\" name=\"fields\" onchange='submit();'>";
                             while ($linea = mysql_fetch_assoc($risultato)) {
                                 if ($field == $linea['Field']) {
                                     echo"<option selected='selected'>" . $linea['Field'] . "</option>";
-                                    
+                                    $flag2=1;
                                 } else {
                                     echo"<option >" . $linea['Field'] . "</option>";
                                     
                                 }
+                            }
+                            if($flag2 ==0){
+                                $risultato2 = mysql_query("SHOW COLUMNS FROM $table") or die("Query fallita: " . mysql_error());
+                                $linea2 = mysql_fetch_assoc($risultato2);
+                                $field = $linea2['Field'];
+                                
                             }
                             echo"</select>";
                             echo"</form>";
