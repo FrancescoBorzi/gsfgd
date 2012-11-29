@@ -318,3 +318,4 @@ div.boxtesto_list{
 #word {
 	width:450px;
 }
+.ui-autocomplete { height: 200px; overflow-y: scroll; overflow-x: hidden;}

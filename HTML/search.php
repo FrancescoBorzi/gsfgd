@@ -2,16 +2,32 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>gsfgd's Project - Home</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link href="styles.css" rel="stylesheet" type="text/css" />
         <link href="public-15e2edc39baf5ed7d17adffcf905c0a1.css" media="screen" rel="stylesheet" type="text/css" />
-
+        <link rel="stylesheet" href="jquery-ui.css" />
+        <script src="jquery-1.8.3.js"></script>
+        <script src="jquery-ui.js"></script> 
 
     </head>
     <body  style="background-image: url(images/b.jpg);">
         <div id="main">
-            <div id="maintop"></div>
+            <div id="maintop"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
             <!-- header begins -->
-<?php include "header.php"; ?>
-<!-- header ends -->
+            <div id="header">
+
+                <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
+                <div id="buttons">
+                    <a href="index.php" title="">Home </a>
+                    <a href="search.php" title="" style="display:block;font-size:70px;">Search</a>
+                    <a href="list.php" title="">List</a>
+                    <a href="query.php" title="">Query</a>
+                </div>
+            </div>
+            <!-- header ends -->
             <div id="bar"></div>
             <!-- content begins -->
                 <div id="content">
@@ -19,7 +35,7 @@
                         <H2 align="center"><b><br />SEARCH<br /><br /></b></H2>
                     </div>
                 <!-- Tabella contenente le due colonne principali -->
-                <table width="65%" border="0px" style="vertical-align:text-top"> 
+                <table width=65% border=0px style="vertical-align:text-top"> 
                     <tr> 
                         <!-- BEING LEFT-->
                         <td id="table-left">
@@ -27,7 +43,8 @@
                         </td>
                         <!-- END LEFT-->
                         <!-- BEING RIGHT (Risultato query) -->
-                        <td id="table-right_search" align ="centerz">
+                      
+                        <td id="table-right_search" align ="center">
                             <?php
                             include "db_connect.php";
 
@@ -51,44 +68,101 @@
 
                             //BUONO NON TOCCARE 
                             $word;
-                            if (isset($_POST['word']))
-                                $word = $_POST['word'];
+                            if (isset($_POST['tags'])){
+                                $word = $_POST['tags'];
+                                
+                            }
                             else
                                 $word = "";
-
+                                
                             $flag = 0;
-                            echo "<form name=\"sel\" action=\"search.php\" method=\"post\">";
-			    echo "<table>";
-                            echo "<tr><td><input id=\"word\" type=\"text\" name=\"word\" value=\"$word\" /></td>";
-                            echo "<td><input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /></td></tr>";
-                            echo "<tr><td><select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
+                            echo "<form name=\"sel\" action=\"search_auto.php\" method=\"post\">";
+                            
+                           
+                            echo "<label for=\"tags\">Tags: </label>";
+                            
+                          
+ 
+                            //echo "<input id=\"word\" type=\"text\" name=\"word\" value=\"$word\"/>";
+                            
+                            echo "<input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /><br />";
+                            echo "<div class=\"ui-widget\">";
+                            echo "<input id=\"tags\" type=\"text\" name=\"tags\" value=\"$word\" />";
+                            echo "</div>";
+                            echo "<select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                             for ($i = 0; $i < 5; $i++) {//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
                                 if ($table == $arraytab[$i])
-                                    echo "<option selected ='selected'> " . $arraytab[$i] . " </option>";
+                                    echo"<option selected ='selected'> " . $arraytab[$i] . " </option>";
                                 else
-                                    echo "<option> " . $arraytab[$i] . " </option>";
+                                    echo"<option> " . $arraytab[$i] . " </option>";
                             }
-                            echo "</select>";
+                            echo"</select>";
 
                             $query = "SHOW COLUMNS FROM $table";
                             $risultato = mysql_query($query) or die("Query fallita: " . mysql_error());
-                            $linea = array();
-
-                            echo "<select id=\"fields\" name=\"fields\">";
                             
+                            /*$r2=mysql_query($query) or die("Query fallita: " . mysql_error());
+                            $linea = array();
+                            $tmp= mysql_fetch_array($r2);
+                            $field=$tmp[0];
+                            */
+                            echo"<select id=\"fields\" name=\"fields\" onchange='submit();'>";
                             while ($linea = mysql_fetch_assoc($risultato)) {
                                 if ($field == $linea['Field']) {
-                                    echo "<option selected='selected'>" . $linea['Field'] . "</option>";
+                                    echo"<option selected='selected'>" . $linea['Field'] . "</option>";
+                                    
                                 } else {
-                                    echo "<option >" . $linea['Field'] . "</option>";
+                                    echo"<option >" . $linea['Field'] . "</option>";
+                                    
                                 }
                             }
-                            echo "</select></td></tr>";
-			    echo "</table>";
-                            echo "</form>";
+                            echo"</select>";
+                            echo"</form>";
+                            ?><?
+                            //echo $field."<br>";
+                            //echo $table."<br>";
+                            $arr=mysql_query("SELECT DISTINCT $field FROM $table")or die("Query fallita: " . mysql_error());
+                            
+                            //echo "SELECT ".$field ." FROM ".$table;
+                            $ciao2=array();
+                            $tot=0;                            
+                           while ($linea = mysql_fetch_array($arr)) { 
+                                $index=count($linea)/2;
+                                for ($i = 0; $i < $index; $i++) {
+                                   $ciao2[$tot]="$linea[$i]";
+                                  $tot++;
+                                }
+                            } 
+                          
+                            ?>
+                      <script language="javascript">
+                      $(function() {
+
+                          <!--	
+                          var variabile=new Array(); 
+                          <?php
+                          for($i=0;$i<count($ciao2);$i++)
+                          {
+                              
+                          ?>	
+                          variabile[<?php echo $i; ?>]="<?php echo "$ciao2[$i]"; ?>";
 
 
+                          <?php
+                          }
+                          ?>
+                          //-->	
 
+                          $( "#tags" ).autocomplete({
+                              source: variabile,
+                              max: 10
+                                                        
+                          });
+                          
+                      });
+  
+                    </script>
+                         <?
                             //ESECUZIONE QUERY
                             if (isset($_POST["go"])) {
                                 if (is_numeric($word))
@@ -130,7 +204,7 @@
                                       }
                                       $odds_orNOt++;
                                  }
-                                    echo "</table>\n";
+                                    echo"</table>\n";
                                     echo "</td>\n </tr>\n";
                                 } else {
                                     echo "NOT FOUND";
@@ -141,7 +215,7 @@
 
                         </td>
                         <!-- END RIGHT (Risultato query) -->
-
+                            
 
                     </tr>
                 </table>
