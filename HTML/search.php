@@ -18,7 +18,7 @@
             <div id="maintop"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
             <!-- header begins -->
             <div id="header">
-
+                 <!-- BOTTONI MENU -->
                 <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
                 <div id="buttons">
                     <a href="index.php" title="">Home </a>
@@ -47,7 +47,7 @@
                         <td id="table-right_search" align ="center">
                             <?php
                             include "db_connect.php";
-
+                            // STRINGHE CONTENUTE NEL CAMPO TABLE DEL MENU A TENDINA
                             $arraytab = array();
                             $arraytab[0] = "drugbank";
                             $arraytab[1] = "hmdd_disease";
@@ -76,15 +76,7 @@
                                 $word = "";
                                 
                             $flag = 0;
-                            echo "<form name=\"sel\" action=\"search_auto.php\" method=\"post\">";
-                            
-                           
-                            echo "<label for=\"tags\">Tags: </label>";
-                            
-                          
- 
-                            //echo "<input id=\"word\" type=\"text\" name=\"word\" value=\"$word\"/>";
-                            
+                            echo "<form name=\"sel\" action=\"search.php\" method=\"post\">";
                             echo "<input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /><br />";
                             echo "<div class=\"ui-widget\">";
                             echo "<input id=\"tags\" type=\"text\" name=\"tags\" value=\"$word\" />";
@@ -100,12 +92,7 @@
 
                             $query = "SHOW COLUMNS FROM $table";
                             $risultato = mysql_query($query) or die("Query fallita: " . mysql_error());
-                            
-                            /*$r2=mysql_query($query) or die("Query fallita: " . mysql_error());
-                            $linea = array();
-                            $tmp= mysql_fetch_array($r2);
-                            $field=$tmp[0];
-                            */
+                           
                             echo"<select id=\"fields\" name=\"fields\" onchange='submit();'>";
                             while ($linea = mysql_fetch_assoc($risultato)) {
                                 if ($field == $linea['Field']) {
@@ -126,7 +113,7 @@
                             //echo "SELECT ".$field ." FROM ".$table;
                             $ciao2=array();
                             $tot=0;                            
-                           while ($linea = mysql_fetch_array($arr)) { 
+                            while ($linea = mysql_fetch_array($arr)) { 
                                 $index=count($linea)/2;
                                 for ($i = 0; $i < $index; $i++) {
                                    $ciao2[$tot]="$linea[$i]";
@@ -174,9 +161,7 @@
                                      echo "<div style=\"margin-left: 57px; margin-right: 90px; width: 105%;\">
                                         <table id=\"drugs\" class=\"standard\">
                                         <tr>";
-                                                                 
-                                    //echo $linea['Field'];
-                                 
+                                   
                                     $num_field=  mysql_num_fields($query_final);
                                     $i=0;
                                     //STAMPO CAMPI TABELLE
@@ -211,8 +196,6 @@
                                 }
                             }
                             ?>
-
-
                         </td>
                         <!-- END RIGHT (Risultato query) -->
                             
