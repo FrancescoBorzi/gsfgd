@@ -13,19 +13,21 @@
 <!-- content begins -->
 <div aligh="center" id="content">
     <!--<div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>-->
-        <H2 align="center"><b><br />Welcome!<br /><br /></b></h2>
-    <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="right" scrollAmount="20" width="100%" height="400">
-	<a>
-	<img src="images/5.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
-	<img src="images/4.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
-	<img src="images/3.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
-	<img src="images/2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
-	<img src="images/1.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
-	<img src="images/h2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
-	</a>
-    </marquee>
+       
+    
 
        <div class="boximg">
+           <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="down" scrollAmount="20" width="400" height="100%">
+	<a>
+	<img src="images/scroll/verticale/b2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
+	<img src="images/scroll/verticale/c2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
+	<img src="images/scroll/verticale/d2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
+	<img src="images/scroll/verticale/e2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
+	<img src="images/scroll/verticale/i2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
+	<img src="images/scroll/verticale/g2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
+        <img src="images/scroll/verticale/h2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
+        </a>
+        </marquee>
             <div class="boxtesto">
                 <span class="testo">
                     <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
