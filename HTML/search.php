@@ -34,7 +34,7 @@
                         <!-- END LEFT-->
                         <!-- BEING RIGHT (Risultato query) -->
                       
-                        <td id="table-right_search" align ="center">
+                        <td id="table-right_search" align ="left">
                             <?php
                             include "db_connect.php";
                             // STRINGHE CONTENUTE NEL CAMPO TABLE DEL MENU A TENDINA
@@ -66,6 +66,8 @@
                                 $word = "";
                                 
                             $flag = 0;
+                    
+                           
                             echo "<form name=\"sel\" action=\"search.php\" method=\"post\">";
                             //echo "<div class=\"ui-widget\">";
                             echo "<input class=\"ui-widget\" id=\"tags\" type=\"text\" name=\"tags\" value=\"$word\" />";
@@ -105,9 +107,9 @@
                             
                             echo "<input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" />";
                             echo"</form>";
+                        
                             ?><?
-                            //echo $field."<br>";
-                            //echo $table."<br>";
+                           
                             $arr=mysql_query("SELECT DISTINCT $field FROM $table")or die("Query fallita: " . mysql_error());
                             
                             //echo "SELECT ".$field ." FROM ".$table;
@@ -147,8 +149,10 @@
                           });
                           
                       });
-  
+                    
                     </script>
+                    </td></tr>
+                    <tr><td>
                          <?
                             //ESECUZIONE QUERY
                             if (isset($_POST["go"])) {
