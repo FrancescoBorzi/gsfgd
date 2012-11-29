@@ -22,7 +22,7 @@
                 <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
                 <div id="buttons">
                     <a href="index.php" title="">Home </a>
-                    <a href="search.php" title="" style="display:block;font-size:70px;">Search</a>
+                    <a href="search_auto.php" title="" style="display:block;font-size:70px;">Search</a>
                     <a href="list.php" title="">List</a>
                     <a href="query.php" title="">Query</a>
                 </div>
@@ -100,30 +100,34 @@
 
                             $query = "SHOW COLUMNS FROM $table";
                             $risultato = mysql_query($query) or die("Query fallita: " . mysql_error());
+                           
                             
-                            /*$r2=mysql_query($query) or die("Query fallita: " . mysql_error());
-                            $linea = array();
-                            $tmp= mysql_fetch_array($r2);
-                            $field=$tmp[0];
-                            */
+                            $flag2=0;
+                            
                             echo"<select id=\"fields\" name=\"fields\" onchange='submit();'>";
                             while ($linea = mysql_fetch_assoc($risultato)) {
                                 if ($field == $linea['Field']) {
                                     echo"<option selected='selected'>" . $linea['Field'] . "</option>";
-                                    
+                                    $flag2=1;
                                 } else {
                                     echo"<option >" . $linea['Field'] . "</option>";
                                     
                                 }
                             }
+                            if($flag2 ==0){
+                                $risultato2 = mysql_query("SHOW COLUMNS FROM $table") or die("Query fallita: " . mysql_error());
+                                $linea2 = mysql_fetch_assoc($risultato2);
+                                $field = $linea2['Field'];
+                                
+                            }
                             echo"</select>";
                             echo"</form>";
                             ?><?
-                            echo $field."<br>";
-                            echo $table."<br>";
+                           
+                           
                             $arr=mysql_query("SELECT $field FROM $table")or die("Query fallita: " . mysql_error());
                             
-                            echo "SELECT ".$field ." FROM ".$table;
+                            
                             $ciao2=array();
                             $tot=0;                            
                            while ($linea = mysql_fetch_array($arr)) { 
@@ -140,15 +144,11 @@
                           <!--	
                           var variabile=new Array(); 
                           <?php
-                          for($i=0;$i<count($ciao2);$i++)
-                          {
-                              
-                          ?>	
-                          variabile[<?php echo $i; ?>]="<?php echo "$ciao2[$i]"; ?>";
-
-
-                          <?php
-                          }
+                            for($i=0;$i<count($ciao2);$i++){
+                                ?>	
+                                    variabile[<?php echo $i; ?>]="<?php echo "$ciao2[$i]"; ?>";
+                                <?php
+                            }
                           ?>
                           //-->	
 

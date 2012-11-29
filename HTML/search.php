@@ -27,7 +27,7 @@
                         </td>
                         <!-- END LEFT-->
                         <!-- BEING RIGHT (Risultato query) -->
-                        <td id="table-right_search" align ="center">
+                        <td id="table-right_search" align ="centerz">
                             <?php
                             include "db_connect.php";
 

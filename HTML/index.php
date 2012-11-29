@@ -17,7 +17,7 @@
     
 
        <div class="boximg">
-           <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="down" scrollAmount="20" width="400" height="100%">
+           <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="down" scrollAmount="90" width="400" height="1100">
 	<a>
 	<img src="images/scroll/verticale/b2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
 	<img src="images/scroll/verticale/c2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
