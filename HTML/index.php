@@ -2,35 +2,28 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>gsfgd's Project - Home</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
 <div id="main">
-<div id="maintop"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
+<div id="maintop"></div>
 <!-- header begins -->
-<div id="header">
-	
-       <div id="logo"><link href="styles.css" rel="stylesheet" type="text/css" /></div>
-       <div id="buttons">
-           
-		<a href="index.php" title="" style="display:block;font-size:70px;" >Home </a>
-		<a href="search.php" title="">Search</a>
-		<a href="list.php" title="">List</a>
-   		<a href="query.php" title="">Query</a>
-                
-	</div>
-</div>
+<?php include "header.php"; ?>
 <!-- header ends -->
 <!-- content begins -->
 <div aligh="center" id="content">
     <!--<div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>-->
-        <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
-    <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="right" scrollAmount="20" width="100%" height="400"><a><img src="images/5.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/4.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/3.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/1.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" > <img src="images/h2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto" border="100" ></a></marquee>
+        <H2 align="center"><b><br />Welcome!<br /><br /></b></h2>
+    <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="right" scrollAmount="20" width="100%" height="400">
+	<a>
+	<img src="images/5.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	<img src="images/4.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	<img src="images/3.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	<img src="images/2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	<img src="images/1.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	<img src="images/h2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto">
+	</a>
+    </marquee>
 
        <div class="boximg">
             <div class="boxtesto">
