@@ -67,7 +67,7 @@
 			    echo "<table>";
                             echo "<tr><td><input class=\"ui-widget\" id=\"tags\" type=\"text\" name=\"tags\" value=\"$word\" /></td>";
                             //echo "</div>";
-                            echo "<tr><td><select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
+                            echo "</tr><tr><td><select  id=\"tabs\" name=\"tabs\" onchange='submit();'>";
                             for ($i = 0; $i < 5; $i++) {//RICORDA L'ELEMENTO SELEZIONATO IN SEARCH.PHP
                                 if ($table == $arraytab[$i])
                                     echo"<option selected ='selected'> " . $arraytab[$i] . " </option>";
@@ -99,7 +99,7 @@
                                 
                             }
                             echo"</select></td>";
-                            echo "<td><input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /></td>";
+                            echo "<td><input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /></td></tr></table>";
                             echo"</form>";
                         
                             ?><?
