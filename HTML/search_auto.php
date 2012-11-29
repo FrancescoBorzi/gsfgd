@@ -154,11 +154,8 @@
 
                           $( "#tags" ).autocomplete({
                               source: variabile,
-                              minChars:1,
-                              matchSubset:1,
-                              matchContains:1,
-                              cacheLength:10,
-                              autoFill:true
+                              max: 10
+                              
                           });
                           
                       });
