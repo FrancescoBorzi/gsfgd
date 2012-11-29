@@ -300,3 +300,21 @@ div.boxtesto_list{
   width: 400px; /* Stessa larghezza dell'immagine */
   height: 200px; /* Stessa altezza dell'immagine */
 }
+
+/* Search */
+#word, #go, #tabs, #fields {
+	color:white;
+    font: bold 22px Arial, Helvetica, sans-serif;
+	border: solid 1px #bbbbbb;
+	background: #0095cd;
+	-webkit-border-radius:2em 0;
+	-moz-border-radius:2em 0;
+}
+
+#fields {
+	width:100px;
+}
+
+#word {
+	width:450px;
+}
