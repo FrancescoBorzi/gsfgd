@@ -2,7 +2,7 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <title>gsfgd's Project - Home</title>
-<link href="styles.css" rel="stylesheet" type="text/css" />
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
 <div id="header">
        <div id="logo"></div>
 	<style type="text/css">

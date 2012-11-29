@@ -13,9 +13,33 @@
 <!-- content begins -->
 <div aligh="center" id="content">
     <!--<div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>-->
-       
-    
-
+       	<link rel="stylesheet" href="css/default.css" type="text/css" />
+	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
+	<center>
+	<div id="wrapper" style="width:700px; height:300px;">
+	<div class="slider-wrapper theme-default">
+	    <div id="slider" class="nivoSlider">
+		<img  src="images/scroll/orizzontale/1.jpg" data-thumb="images/scroll/orizzontale/1.jpg" />
+		<img src="images/scroll/orizzontale/2.jpg" data-thumb="images/scroll/orizzontale/2.jpg"/>
+		<img src="images/scroll/orizzontale/3.jpg" data-thumb="images/scroll/orizzontale/3.jpg" data-transition="slideInLeft" />
+		<img src="images/scroll/orizzontale/4.jpg" data-thumb="images/scroll/orizzontale/4.jpg" />
+		<img src="images/scroll/orizzontale/5.jpg" data-thumb="images/scroll/orizzontale/5.jpg" />
+		<img src="images/scroll/orizzontale/h2.jpg" data-thumb="images/scroll/orizzontale/h2.jpg" />
+	    </div>
+	    <div id="htmlcaption" class="nivo-html-caption">
+	    </div>
+	</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+	<script type="text/javascript">
+	$(window).load(function() {
+	$('#slider').nivoSlider();
+	});
+	</script>
+	</center>
+	<br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/>
        <div class="boximg">
            <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="down" scrollAmount="20" width="400" height="1100">
 	<a>
