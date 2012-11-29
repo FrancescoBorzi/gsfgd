@@ -101,11 +101,11 @@
                             $query = "SHOW COLUMNS FROM $table";
                             $risultato = mysql_query($query) or die("Query fallita: " . mysql_error());
                             
-                            $r2=mysql_query($query) or die("Query fallita: " . mysql_error());
+                            /*$r2=mysql_query($query) or die("Query fallita: " . mysql_error());
                             $linea = array();
                             $tmp= mysql_fetch_array($r2);
                             $field=$tmp[0];
-                            
+                            */
                             echo"<select id=\"fields\" name=\"fields\" onchange='submit();'>";
                             while ($linea = mysql_fetch_assoc($risultato)) {
                                 if ($field == $linea['Field']) {
