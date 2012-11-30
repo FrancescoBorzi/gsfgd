@@ -305,7 +305,7 @@ div.boxtesto_list{
 /* Search */
 #word, #go, #tabs, #fields {
 	color:white;
-    font: bold 22px Arial, Helvetica, sans-serif;
+        font:  15px Arial, Helvetica, sans-serif;
 	border: solid 1px #bbbbbb;
 	background: #0095cd;
 	-webkit-border-radius:2em 0;

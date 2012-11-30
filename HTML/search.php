@@ -13,14 +13,12 @@
             <!-- header begins -->
             <?php include "header.php"; ?>
             <!-- header ends -->
-            <div id="bar"></div>
-            <!-- content begins -->
+            
                 <div id="content">
-                    <div id="home-descr" align="center">
-                        <H2 align="center"><b><br />SEARCH<br /><br /></b></H2>
-                    </div>
+                    <div style=" width: 800px;height: 200px;margin-left:280px;" id="home-descr" align="center" >
+                        <H2  align="center"><b><br />SEARCH<br /><br /></b>
                 <!-- Tabella contenente le due colonne principali -->
-                <table width="65%" border="0px" style="vertical-align:text-top"> 
+                <table > 
                     <tr> 
                         <!-- BEING LEFT-->
                         <td id="table-left">
@@ -83,7 +81,7 @@
                            
                            $flag2=0;
                             
-                            echo"<select id=\"fields\" name=\"fields\" onchange='submit();'>";
+                            echo"<select style=\"width:170px;\" id=\"fields\" name=\"fields\" onchange='submit();'>";
                             while ($linea = mysql_fetch_assoc($risultato)) {
                                 if ($field == $linea['Field']) {
                                     echo"<option selected='selected'>" . $linea['Field'] . "</option>";
@@ -120,6 +118,7 @@
                           
                             ?>
                       <script language="javascript">
+                      
                       $(function() {
 
                           <!--	
@@ -146,10 +145,12 @@
                       });
                     
                     </script>
-                   </td> </tr> <!-- HO MODIFICATO da qui!!--> 
-                   </table> <table>
-                      <tr><td>    
-                              <!-- A QUI !-->
+                   </td> </tr> 
+                   </table>
+                        </H2>
+                    </div>
+                <table>
+                      <tr><td>
                          <?
                             //ESECUZIONE QUERY
                             if (isset($_POST["go"])) {
