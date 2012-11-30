@@ -30,28 +30,27 @@
 	    </div>
 	</div>
 	</div>
+            
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
 	<script type="text/javascript">
 	$(window).load(function() {
 	$('#slider').nivoSlider();
 	});
+        
 	</script>
+        	
+
 	</center>
 	<br/><br/><br/><br/><br/>
 	<br/><br/><br/><br/><br/>
+        <div id="table-left">
+                 <img src="images/scroll/verticale/test2.gif" align="left"  style="margin-left:-350px "<br />
+        </div>
        <div class="boximg">
-           <marquee behavior="scroll" onclick=this.stop() onmouseout=this.start() direction="down" scrollAmount="20" width="400" height="1100">
-	<a>
-	<img src="images/scroll/verticale/b2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
-	<img src="images/scroll/verticale/c2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
-	<img src="images/scroll/verticale/d2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
-	<img src="images/scroll/verticale/e2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
-	<img src="images/scroll/verticale/i2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
-	<img src="images/scroll/verticale/g2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
-        <img src="images/scroll/verticale/h2.jpg" align="100" width="larghezza_pixel_foto" height="altezza_pixel_foto"><br />
-        </a>
-        </marquee>
+           
+	
+        
             <div class="boxtesto">
                 <span class="testo">
                     <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
