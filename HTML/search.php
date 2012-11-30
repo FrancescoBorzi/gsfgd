@@ -146,7 +146,10 @@
                       });
                     
                     </script>
-                   
+                   </td> </tr> <!-- HO MODIFICATO da qui!!--> 
+                   </table> <table>
+                      <tr><td>    
+                              <!-- A QUI !-->
                          <?
                             //ESECUZIONE QUERY
                             if (isset($_POST["go"])) {
