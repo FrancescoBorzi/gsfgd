@@ -45,7 +45,7 @@
 	<br/><br/><br/><br/><br/>
 	<br/><br/><br/><br/><br/>
         <div id="table-left">
-                 <img src="images/scroll/verticale/test2.gif" align="left"  style="margin-left:-350px "<br />
+                 <img src="images/scroll/verticale/dna_moderno.gif" align="left"  style="margin-left:-450px "<br />
         </div>
        <div class="boximg">
            
