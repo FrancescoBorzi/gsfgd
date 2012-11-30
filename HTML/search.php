@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <link href="css/styleTable.css" media="screen" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/jquery-ui.css" />
 	<script src="js/jquery-1.8.3.js"></script>
 	<script src="js/jquery-ui.js"></script> 
@@ -101,7 +102,7 @@
                             echo"</select></td>";
                             echo "<td><input id=\"go\"type=\"submit\" name=\"go\" value=\"Search\" /></td></tr></table>";
                             echo"</form>";
-                        
+                            
                             ?><?
                            
                             $arr=mysql_query("SELECT DISTINCT $field FROM $table")or die("Query fallita: " . mysql_error());
