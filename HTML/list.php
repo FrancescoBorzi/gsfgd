@@ -9,15 +9,15 @@
   </head>
   <body>
     <div id="main">
-      <div id="maintop"></div>
+     
       <!-- header begins -->
       <?php include "header.php"; ?>
       <!-- header ends -->
-      <div id="bar"></div>
+     
       <!-- content begins -->
       <div id="content">
-          <div align ="center">  
-         <?php
+        <div align ="center">  
+        <?php
 	if (isset($_GET["lettera"])) { $lettera =$_GET["lettera"]; } else {  $lettera=$_GET['lettera']="A"; }
 	if (isset($_GET["table"])) { $table =$_GET["table"]; } else {  $table="drugbank"; }
 
@@ -27,31 +27,16 @@
 	else if($table == "mirenviroment") { $name="phenotype"; }
 	else if($table == "omim") { $name="genesymbols"; }
 	
-	$sql="SELECT * FROM $table WHERE $name LIKE '$lettera%' ORDER BY $name";
-	echo '<div id="letters">';
-		for($index = 65; $index<91;$index++)
-		{
-			//echo "<a href=\"http://gsfgdproject.altervista.org/HTML/lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
-                                            
-                }
-                echo "<br>";
-	echo "</div>";
        ?>
-              </div>
+       </div>
         <!-- Tabella contenente le due colonne principali -->
         <table width="65%" border="0px" style="vertical-align:text-top"> 
           <tr> 
             <!-- BEING LEFT-->
             <td id="table-left">
               <!-- BEING "ELENCA" -->
-
-              <table width="100%" height="100%"> 
-                <tr>
-                  <td>
-                    
-                  </td>
-                </tr>
-                <tr>
+              <table width="50%" height="100%" style="margin-left: 310px" > 
+               <tr>
                   <td>
                     <form action="lista.php" method="get" enctype="application/x-www-form-urlencoded" name="liistForm">
                       <table width="100%">
@@ -65,16 +50,22 @@
                   </td>
                 </tr>
               </table>
-              <!-- END "ELENCA" -->
+               <!-- END "ELENCA" -->
             </td>
             <!-- END LEFT-->
-            <!-- BEING RIGHT (Risultato query) -->
-               <td id="table-right" align ="center">
-                
-            </td>
-            <!-- END RIGHT (Risultato query) -->
           </tr>
         </table>
+        <?
+        $sql="SELECT * FROM $table WHERE $name LIKE '$lettera%' ORDER BY $name";
+	echo '<div id="letters" style="margin-left: 250px">';
+            for($index = 65; $index<91;$index++)
+		{
+		//echo "<a href=\"http://gsfgdproject.altervista.org/HTML/lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
+                                            
+                }
+        echo "<br>";
+	echo "</div>";
+        ?>
 	<script type="text/javascript">
 	function preparasql(table)
 	{
