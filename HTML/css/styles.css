@@ -19,7 +19,6 @@ img {
 	width: 23%;
 	border: 0;
 	vertical-align: top;
-	
 	background-image: url(../images/left_bg.jpg);
 	background-size: contain;
 }
@@ -72,7 +71,6 @@ a, a:visited {
 	text-align: center;
 	font-size: 22px;
 	font-weight: bold;
-	
 }
 a:hover {
 	text-decoration: underline;
@@ -121,16 +119,14 @@ html, body {
 	width: 800px;
 	height: 80px;
 	margin: 0px auto;
-
 	background: url(../images/head.png);
 }
 #sub_header{
-        width: 800px;
+	width: 800px;
 	height: 100px;
 	margin: 0px auto;
-        background-repeat: no-repeat;
-        background: url(../images/menu.png);
-    
+	background-repeat: no-repeat;
+	background: url(../images/menu.png);
 }
 /*#logo {
 	background: url("../images/h2.jpg");
@@ -139,24 +135,24 @@ html, body {
 	width: 100%;
 }*/
 .pulsante {
-        outline: none;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        font: bold 18px Arial, Helvetica, sans-serif;
-        color: #fff;
-        padding: 10px 20px;
-        border: solid 3px #bbbbbb;
-        background: #0095cd;
-        display: block;
-		width:160px;
-		-webkit-border-radius:2em 0;
-		-moz-border-radius:2em 0;
-		border-radius:2em 0;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 18px Arial, Helvetica, sans-serif;
+	color: #fff;
+	padding: 10px 20px;
+	border: solid 3px #bbbbbb;
+	background: #0095cd;
+	display: block;
+	width:160px;
+	-webkit-border-radius:2em 0;
+	-moz-border-radius:2em 0;
+	border-radius:2em 0;
 }
 .pulsante:hover{
-        border: solid 3px #bbbbbb;
-        background: #0060cd;
+	border: solid 3px #bbbbbb;
+	background: #0060cd;
 }
 #header a {
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
@@ -166,7 +162,7 @@ html, body {
 	float: left;
 	width: 20%;
 	height: 10%;
-        margin-left:35px;
+	margin-left:35px;
 	text-decoration: none;
 	color: #ffffff;
 	padding-top: 8px;
@@ -275,6 +271,7 @@ textarea {
 .boximg2 {
   margin-right: 30px;
   bottom: 0px;
+  text-align:left;
   position: static;
   width: 700px; /* Stessa larghezza dell'immagine */
   height: 100px; /* Stessa altezza dell'immagine */
@@ -335,7 +332,7 @@ div.boxtesto_list{
 /* Search */
 #word, #go, #tabs, #fields {
 	color:white;
-        font:  15px Arial, Helvetica, sans-serif;
+	font:  15px Arial, Helvetica, sans-serif;
 	border: solid 1px #bbbbbb;
 	background: #0095cd;
 	-webkit-border-radius:2em 0;
