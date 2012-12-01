@@ -272,9 +272,17 @@ textarea {
   width: 800px; /* Stessa larghezza dell'immagine */
   height: 1500px; /* Stessa altezza dell'immagine */
 }
+.boximg2 {
+  margin-right: 30px;
+  bottom: 0px;
+  position: static;
+  width: 700px; /* Stessa larghezza dell'immagine */
+  height: 100px; /* Stessa altezza dell'immagine */
+}
 div.boxtesto {
+  margin-right:40px;
   position: absolute;
-  bottom: 30px;
+  bottom: -5px; /*ALTEZZA BOX NERO*/
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.6);
   /* Per IE 5.5, 6 e 7*/
@@ -283,6 +291,7 @@ div.boxtesto {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 span.testo {
+   
   padding: 10px;
   color: #FFFFFF;
   font: bold 16px/20px Arial, Helvetica, sans-serif;

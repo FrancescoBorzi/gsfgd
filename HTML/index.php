@@ -16,8 +16,8 @@
        	<link rel="stylesheet" href="css/default.css" type="text/css" />
 	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
 	<center>
-        <div class="boximg"> 
-	<div id="wrapper" style="width:700px; height:300px;">
+        <div class="boximg">
+        <div id="wrapper" style="width:700px; height:300px;">
 	<div class="slider-wrapper theme-default">
 	    <div id="slider" class="nivoSlider">
 		<img  src="images/scroll/orizzontale/1.jpg" data-thumb="images/scroll/orizzontale/1.jpg" />
@@ -31,9 +31,11 @@
 	    </div>
 	</div>
 	</div>
+	 
             
+          <div class="boximg2">
            <div class="boxtesto">
-                <span class="testo" >
+                <span class="testo" align="justify">
                     <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
                     Our website menage a database that includes drugs, diseases, miRNA, you can choose this main function:<br />
 			<ul>
@@ -79,9 +81,10 @@
             <b><u>Contact:</u></b><br /><br />
             <a href="mailto:gsfgdproject@gmail.com">Our EMAIL : gsfgdproject@gmail.com</a>
             <br /><br /></span>
-            </div> 
-            
-            
+            </div>
+                </div>
+            </div>
+         
         </div>
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
@@ -92,16 +95,7 @@
         
 	</script> 
         </center>
-	<br/><br/><br/><br/><br/>
-        <div id="table-left">
-                 <img src="images/scroll/verticale/dna_moderno.gif" align="left"  style="margin-left:-450px "<br />
-        </div>
-       
-</div>
- 
-</div>
-
+	     
 <!-- content ends -->
-
 </body>
 </html>
