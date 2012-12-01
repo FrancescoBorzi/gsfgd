@@ -10,4 +10,6 @@
 	<a href="list.php" title="">List</a>
 	<a href="query.php" title="">Query</a>
 </div>
-<div id="sub_header"></div>
+<div id="sub_header">
+    <img src="images/menu.png" style="max-width:800px;"/>
+</div>

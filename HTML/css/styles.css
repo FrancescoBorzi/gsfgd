@@ -122,11 +122,12 @@ html, body {
 	background: url(../images/head.png);
 }
 #sub_header{
-	width: 800px;
-	height: 100px;
+        width: 75%;
+        width: 800px;
+	height: 60px;
 	margin: 0px auto;
 	background-repeat: no-repeat;
-	background: url(../images/menu.png);
+	
 }
 /*#logo {
 	background: url("../images/h2.jpg");
@@ -263,13 +264,14 @@ textarea {
 
 /*SFONDO TRASPARENTE*/
 .boximg {
+  bottom:13px;
   background-image: url(../images/sideb.png);
   position: relative;
-  width: 800px; /* Stessa larghezza dell'immagine */
-  height: 1500px; /* Stessa altezza dell'immagine */
+  width: 770px; /* Stessa larghezza dell'immagine */
+  height: 1600px; /* Stessa altezza dell'immagine */
 }
 .boximg2 {
-  margin-right: 30px;
+  margin-right: 0px;
   bottom: 0px;
   text-align:left;
   position: static;
@@ -279,7 +281,7 @@ textarea {
 div.boxtesto {
   margin-right:40px;
   position: absolute;
-  bottom: -5px; /*ALTEZZA BOX NERO*/
+  bottom: 15px; /*ALTEZZA BOX NERO*/
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.6);
   /* Per IE 5.5, 6 e 7*/
