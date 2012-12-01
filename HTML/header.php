@@ -10,3 +10,4 @@
 	<a href="list.php" title="">List</a>
 	<a href="query.php" title="">Query</a>
 </div>
+<div id="sub_header"></div>
