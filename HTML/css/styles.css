@@ -277,8 +277,8 @@ textarea {
   background-image: url(../images/sideb.png);
   position: relative;
   width: 770px; /* Stessa larghezza dell'immagine */
-  height: 100%; /* Stessa altezza dell'immagine */
-}
+  position: relative;
+ }
 .boximg_red {
   background-image: url(../images/note.png);
   position: relative;
@@ -332,18 +332,6 @@ div.boxtesto_query{
   position: relative;
   width: 550px; /* Stessa larghezza dell'immagine */
   height: 400px; /* Stessa altezza dell'immagine */
-}
-div.boxtesto_list{
-  position: absolute;
-  bottom: 200px;
-  left: -200px;
-  width: 100%;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.6);
-  /* Per IE 5.5, 6 e 7*/
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-  /* Per IE 8*/
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 .boximg_list{
   position: relative;

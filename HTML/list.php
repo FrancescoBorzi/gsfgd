@@ -60,14 +60,15 @@
         </table>
         <?
         $sql="SELECT * FROM $table WHERE $name LIKE '$lettera%' ORDER BY $name";
-	echo '<div id="letters" style="">';
+	
+        echo '<div id="letters" >';
             for($index = 65; $index<91;$index++)
 		{
 		//echo "<a href=\"http://gsfgdproject.altervista.org/HTML/lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
                                             
                 }
         echo "<br>";
-	echo "</div>";
+        echo "</div>";
         ?>
        
                 </div>

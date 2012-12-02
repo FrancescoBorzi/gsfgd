@@ -14,7 +14,7 @@
 <!-- header ends -->
 <!-- content begins -->
       <div id="content">
-         <div class="boximg_query_back" style="position: absolute; top: 35%; margin: -100px 0 0 96px;">
+         <div class="boximg_query_back" style="top: 13%; margin: -100px 0 0 96px;">
             <div align ="center">  
             
                 <?php
