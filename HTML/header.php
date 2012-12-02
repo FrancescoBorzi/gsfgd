@@ -2,6 +2,7 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <title>gsfgd's Project - Home</title>
+<link rel="shortcut ICON" href="../favicon.ico">
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
 <div id="header">
        <div id="logo"></div>
