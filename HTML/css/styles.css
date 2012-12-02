@@ -5,11 +5,10 @@
 }*/
 #home-descr{
 	width:50%;
-	float:float;
-	margin-left:315px;
 	font-size: 15px;
 	color: #DDD;
 	text-shadow: 2px 2px 2px #000;
+	margin-left:10%;
 }
 
 img {
