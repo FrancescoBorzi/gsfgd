@@ -17,7 +17,7 @@
     <div class="boximg_query_back" style="bottom:40px">
         <div id="home-descr" align="center"></div>
         <div class="boximg_blu" style="margin-left: -668px ;width:140px;height: 83px;bottom:-40px">
-          <div class="tit" align="center"><b><br />Result Query<br /><br /></b></div></div>
+          <div class="tit" align="center" style="color:white"><b><br />Result Query<br /><br /></b></div></div>
 	  <div style="width: 100%;margin-left: 60px;  margin-right: auto;">
                <?php
                 

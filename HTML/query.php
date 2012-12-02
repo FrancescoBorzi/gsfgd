@@ -22,9 +22,9 @@
                                     <table width="70%">                  
 					<tr>  
                                             <td>
-                                                <div class="boximg_red" style="width:140px ; margin-left:-25px; bottom:1px">
+                                                <div class="boximg_red" style="width:140px ; margin-left:-25px; bottom:1px; height: 83px">
                                                     
-                                                        <div class="tit"><h1>Custom Query</h1></div>
+                                                         <div class="tit" align="center" style="font-family: Helvetica Neue,Arial,Helvetica,sans-serif; color: white"><b><br />Custom Query<br /><br /></b></div>
                                                         
                                                </div>
                                             </td>                
