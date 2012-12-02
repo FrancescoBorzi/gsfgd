@@ -14,7 +14,9 @@
 <!-- header ends -->
 <!-- content begins -->
       <div id="content">
+         <div class="boximg_query_back" style="position: absolute; top: 35%; margin: -100px 0 0 96px;">
         <div align ="center">  
+            
         <?php
 	if (isset($_GET["lettera"])) { $lettera =$_GET["lettera"]; } else {  $lettera=$_GET['lettera']="A"; }
 	if (isset($_GET["table"])) { $table =$_GET["table"]; } else {  $table="drugbank"; }
@@ -28,12 +30,12 @@
        ?>
        </div>
         <!-- Tabella contenente le due colonne principali -->
-        <table width="65%" border="0px" style="vertical-align:text-top"> 
+        <table width="100%" border="0px" style="vertical-align:text-top"> 
           <tr> 
             <!-- BEING LEFT-->
             <td id="table-left">
               <!-- BEING "ELENCA" -->
-             <table width="80%" height="100%" style="margin-left: 310px" > 
+             <table width="90%" height="100%" style="margin-left: 30px" > 
                <tr>
                   <td>
                     <form action="lista.php" method="get" enctype="application/x-www-form-urlencoded" name="liistForm">
@@ -55,12 +57,12 @@
                 if(isset($_POST['table']))
                     echo $table;
             ?>
-            </td>            <!-- END RIGHT (Risultato query) -->
+                        <!-- END RIGHT (Risultato query) -->
           </tr>
         </table>
         <?
         $sql="SELECT * FROM $table WHERE $name LIKE '$lettera%' ORDER BY $name";
-	echo '<div id="letters" style="margin-left: 250px">';
+	echo '<div id="letters" style="margin-left: 0px">';
             for($index = 65; $index<91;$index++)
 		{
                     echo "<a href=\"lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
@@ -159,9 +161,11 @@
 	mysql_close();
 	?>
 	</div>
+        
         <!-- Fine Tabella principale -->
       </div>
       <!-- content ends -->
     </div>
+</div>
   </body>
 </html>

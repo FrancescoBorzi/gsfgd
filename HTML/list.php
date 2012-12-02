@@ -16,7 +16,9 @@
      
       <!-- content begins -->
       <div id="content">
-        <div align ="center">  
+         
+        <div align ="center"> 
+            <div class="boximg">  
         <?php
 	if (isset($_GET["lettera"])) { $lettera =$_GET["lettera"]; } else {  $lettera=$_GET['lettera']="A"; }
 	if (isset($_GET["table"])) { $table =$_GET["table"]; } else {  $table="drugbank"; }
@@ -28,14 +30,15 @@
 	else if($table == "omim") { $name="genesymbols"; }
 	
        ?>
-       </div>
+       
+       
         <!-- Tabella contenente le due colonne principali -->
         <table width="65%" border="0px" style="vertical-align:text-top"> 
           <tr> 
             <!-- BEING LEFT-->
             <td id="table-left">
               <!-- BEING "ELENCA" -->
-              <table width="50%" height="100%" style="margin-left: 310px" > 
+              <table width="50%" height="100%" > 
                <tr>
                   <td>
                     <form action="lista.php" method="get" enctype="application/x-www-form-urlencoded" name="liistForm">
@@ -57,7 +60,7 @@
         </table>
         <?
         $sql="SELECT * FROM $table WHERE $name LIKE '$lettera%' ORDER BY $name";
-	echo '<div id="letters" style="margin-left: 250px">';
+	echo '<div id="letters" style="">';
             for($index = 65; $index<91;$index++)
 		{
 		//echo "<a href=\"http://gsfgdproject.altervista.org/HTML/lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
@@ -66,6 +69,8 @@
         echo "<br>";
 	echo "</div>";
         ?>
+       
+                </div>
 	<script type="text/javascript">
 	function preparasql(table)
 	{
