@@ -18,7 +18,7 @@
       <div id="content">
          
         <div align ="center"> 
-            <div class="boximg">  
+            <div class="boximg_query_back">  
         <?php
 	if (isset($_GET["lettera"])) { $lettera =$_GET["lettera"]; } else {  $lettera=$_GET['lettera']="A"; }
 	if (isset($_GET["table"])) { $table =$_GET["table"]; } else {  $table="drugbank"; }

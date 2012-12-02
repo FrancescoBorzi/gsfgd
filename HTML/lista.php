@@ -15,22 +15,22 @@
 <!-- content begins -->
       <div id="content">
          <div class="boximg_query_back" style="position: absolute; top: 35%; margin: -100px 0 0 96px;">
-        <div align ="center">  
+            <div align ="center">  
             
-        <?php
-	if (isset($_GET["lettera"])) { $lettera =$_GET["lettera"]; } else {  $lettera=$_GET['lettera']="A"; }
-	if (isset($_GET["table"])) { $table =$_GET["table"]; } else {  $table="drugbank"; }
+                <?php
+                if (isset($_GET["lettera"])) { $lettera =$_GET["lettera"]; } else {  $lettera=$_GET['lettera']="A"; }
+                if (isset($_GET["table"])) { $table =$_GET["table"]; } else {  $table="drugbank"; }
 
 
-	if($table == "drugbank") { $name="name"; }
-	else if($table == "hmdd_disease") { $name="disease"; }
-	else if($table == "mirenviroment") { $name="phenotype"; }
-	else if($table == "omim") { $name="genesymbols"; }
-	
-       ?>
-       </div>
+                if($table == "drugbank") { $name="name"; }
+                else if($table == "hmdd_disease") { $name="disease"; }
+                else if($table == "mirenviroment") { $name="phenotype"; }
+                else if($table == "omim") { $name="genesymbols"; }
+
+               ?>
+            </div>
         <!-- Tabella contenente le due colonne principali -->
-        <table width="100%" border="0px" style="vertical-align:text-top"> 
+         <table width="100%" border="0px" style="vertical-align:text-top"> 
           <tr> 
             <!-- BEING LEFT-->
             <td id="table-left">
@@ -54,6 +54,7 @@
             </td>
             <!-- END LEFT-->
             <?
+            
                 if(isset($_POST['table']))
                     echo $table;
             ?>
@@ -68,7 +69,7 @@
                     echo "<a href=\"lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
 		}
         echo "</div>";
-       ?>
+        ?>
 	<script type="text/javascript">
 	function preparasql(table)
 	{
@@ -82,8 +83,8 @@
 		document.getElementById("letters").innerHTML="";
 		for (var i = 65; i < 91; i++)
 		{
-			var sql="SELECT * FROM "+table+" WHERE "+name+" LIKE '&#"+i+"%' ORDER BY "+name;
-			document.getElementById("letters").innerHTML+="<a href=\"lista.php?table="+table+"&lettera=&#"+i+"&testo="+sql+"\"><input type=\"button\" value=&#"+i+" style=\"10%:10%\"/></a>";
+                    var sql="SELECT * FROM "+table+" WHERE "+name+" LIKE '&#"+i+"%' ORDER BY "+name;
+                    document.getElementById("letters").innerHTML+="<a href=\"lista.php?table="+table+"&lettera=&#"+i+"&testo="+sql+"\"><input type=\"button\" value=&#"+i+" style=\"10%:10%\"/></a>";
 		}
 	}
 	</script>
@@ -120,6 +121,7 @@
         echo "<div style=\"margin-left: 60px; margin-right: 90px;\">
              <table id=\"drugs\" class=\"standard\">
               <tr>";
+        
         
         $num_field=  mysql_num_fields($query_limit);
                     $i=0;
@@ -163,9 +165,9 @@
 	</div>
         
         <!-- Fine Tabella principale -->
-      </div>
+                </div>
       <!-- content ends -->
-    </div>
-</div>
-  </body>
+            </div>
+         </div>
+    </body>
 </html>
