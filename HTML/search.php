@@ -7,7 +7,7 @@
 	<script src="js/jquery-1.8.3.js"></script>
 	<script src="js/jquery-ui.js"></script> 
     </head>
-    <body  style="background-image: url(images/b.jpg);">
+    <body  >
         <div id="main">
             <div id="maintop"></div>
             <!-- header begins -->
