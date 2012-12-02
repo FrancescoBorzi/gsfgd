@@ -15,7 +15,7 @@
             <!-- header ends -->
             
                 <div id="content">
-                    <div style=" width: 800px;height: 200px;margin-left:280px;" id="home-descr" align="center" >
+                    <div style=" width: 800px;height: 200px;" id="home-descr" align="center" >
                         <H2  align="center"><b><br />SEARCH<br /><br /></b>
                 <!-- Tabella contenente le due colonne principali -->
                 <table > 
