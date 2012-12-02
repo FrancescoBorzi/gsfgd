@@ -285,6 +285,11 @@ textarea {
   position: relative;
   
 }
+.boximg_blu {
+  background-image: url(../images/result.png);
+  position: relative;
+  
+}
 .boximg2 {
   margin-right: 0px;
   bottom: 0px;

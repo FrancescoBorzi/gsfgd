@@ -15,8 +15,9 @@
 <!-- content begins -->
    <div id="content"><CENTER>
     <div class="boximg_query_back" style="bottom:40px">
-        <div id="home-descr" align="center">
-          <H2 align="center"><b><br />RESULT QUERY<br /><br /></b></H2></div>
+        <div id="home-descr" align="center"></div>
+        <div class="boximg_blu" style="margin-left: -668px ;width:140px;height: 83px;bottom:-40px">
+          <div class="tit" align="center"><b><br />Result Query<br /><br /></b></div></div>
 	  <div style="width: 100%;margin-left: 60px;  margin-right: auto;">
                <?php
                 
@@ -40,10 +41,10 @@
 
                 // primo parametro di LIMIT
                 $primo = ($current_page - 1) * $per_page;
-                   include("pagination.php");
+                include("pagination.php");
 
                 // in questa cella inseriamo la paginazione
-                echo " <tr>\n <td height=\"50\" valign=\"bottom\" align=\"center\">$paginazione</td>\n";
+                echo " <tr>\n <td height=\"50\" valign=\"bottom\">$paginazione</td>\n";
                 echo " </tr>\n</table>\n</div>";                       
                 // esecuzione seconda query con LIMIT
                 $query_limit = mysql_query($query." LIMIT $primo, $per_page") or die("Query 2 fallita: " . mysql_error() );

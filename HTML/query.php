@@ -24,7 +24,7 @@
                                             <td>
                                                 <div class="boximg_red" style="width:140px ; margin-left:-25px; bottom:1px">
                                                     
-                                                        <div class="tit" ><h1>Custom Query</h1></div>
+                                                        <div class="tit"><h1>Custom Query</h1></div>
                                                         
                                                </div>
                                             </td>                
