@@ -3,7 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <link href="css/styleTable.css" media="screen" rel="stylesheet" type="text/css" />
-
 </head>
 <body>
 
@@ -68,7 +67,7 @@
 		{
                     echo "<a href=\"lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
 		}
-                echo "<br>";
+                echo "<br/>";
                  for($index = 78; $index<91;$index++)
 		{
                     echo "<a href=\"lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
@@ -86,7 +85,13 @@
 		else if(table == "omim") { name="genesymbols"; }
 
 		document.getElementById("letters").innerHTML="";
-		for (var i = 65; i < 91; i++)
+		for (var i = 65; i < 78; i++)
+		{
+                    var sql="SELECT * FROM "+table+" WHERE "+name+" LIKE '&#"+i+"%' ORDER BY "+name;
+                    document.getElementById("letters").innerHTML+="<a href=\"lista.php?table="+table+"&lettera=&#"+i+"&testo="+sql+"\"><input type=\"button\" value=&#"+i+" style=\"10%:10%\"/></a>";
+		}
+		document.getElementById("letters").innerHTML+="<br/>";
+		for (var i = 78; i < 91; i++)
 		{
                     var sql="SELECT * FROM "+table+" WHERE "+name+" LIKE '&#"+i+"%' ORDER BY "+name;
                     document.getElementById("letters").innerHTML+="<a href=\"lista.php?table="+table+"&lettera=&#"+i+"&testo="+sql+"\"><input type=\"button\" value=&#"+i+" style=\"10%:10%\"/></a>";

@@ -8,7 +8,7 @@
        <div id="logo"></div>
 	<a href="index.php" title="" >Home </a>
 	<a  href="search.php" title="">Search</a>
-	<a href="list.php" title="">List</a>
+	<a href="lista.php" title="">List</a>
 	<a href="query.php" title="">Query</a>
 </div>
 <div id="sub_header">
