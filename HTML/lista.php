@@ -63,8 +63,13 @@
         </table>
         <?
         $sql="SELECT * FROM $table WHERE $name LIKE '$lettera%' ORDER BY $name";
-	echo '<div id="letters" style="margin-left: 0px">';
-            for($index = 65; $index<91;$index++)
+	echo '<div id="letters" align="center">';
+            for($index = 65; $index<78;$index++)
+		{
+                    echo "<a href=\"lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
+		}
+                echo "<br>";
+                 for($index = 78; $index<91;$index++)
 		{
                     echo "<a href=\"lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
 		}
@@ -124,7 +129,7 @@
         
         
         $num_field=  mysql_num_fields($query_limit);
-                    $i=0;
+        $i=0;
          //STAMPO CAMPI TABELLE
          while($i<$num_field){
             echo "<th>". strtoupper(mysql_field_name($query_limit, $i))."</th>";

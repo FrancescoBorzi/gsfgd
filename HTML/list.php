@@ -61,13 +61,16 @@
         <?
         $sql="SELECT * FROM $table WHERE $name LIKE '$lettera%' ORDER BY $name";
 	
-        echo '<div id="letters" >';
-            for($index = 65; $index<91;$index++)
+        echo '<div id="letters" align="center">';
+            for($index = 65; $index<78;$index++)
 		{
-		//echo "<a href=\"http://gsfgdproject.altervista.org/HTML/lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
-                                            
-                }
-        echo "<br>";
+                    //echo "<a href=\"lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
+		}
+                echo "<br>";
+                 for($index = 78; $index<91;$index++)
+		{
+                    //echo "<a href=\"lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
+		}
         echo "</div>";
         ?>
        
