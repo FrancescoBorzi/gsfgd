@@ -35,7 +35,8 @@
             
           <div class="boximg2">
            <div class="boxtesto">
-                <span class="testo" align="justify">
+               <div style="margin-left:20px; margin-right: 20px"> <!--DIV CHE ALLONTANA IL TESTO DAL BOX-->
+                <span class="testo" style="m:10px">
                     <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
                     Our website menage a database that includes drugs, diseases, miRNA, you can choose this main function:<br />
 			<ul>
@@ -82,6 +83,7 @@
             <a href="mailto:gsfgdproject@gmail.com">Our EMAIL : gsfgdproject@gmail.com</a>
             <br /><br /></span>
             </div>
+               </div>
                 </div>
             </div>
          

@@ -93,6 +93,7 @@ body {
 body{
   background-image: url(../images/body.png);
   position: relative;
+  overflow:auto;
   /*width: 1000px;  Stessa larghezza dell'immagine 
   height: 720px; /* Stessa altezza dell'immagine */
 }
@@ -197,9 +198,11 @@ H1 {
 	font-weight: bold;
 	color: #ffffff;
 	background: url(../images/fish_tit.gif) 8px 7px no-repeat;
-	height: 23px;
+	height: 80px;
+        width:140px ;
 	padding-left: 24px;
 	padding-top: 4px;
+        
 }
 #bar {
 	background: url(../images/bar_bg.jpg) repeat-x;
@@ -270,6 +273,18 @@ textarea {
   width: 770px; /* Stessa larghezza dell'immagine */
   height: 1600px; /* Stessa altezza dell'immagine */
 }
+.boximg_query_back {
+  bottom:13px;
+  background-image: url(../images/sideb.png);
+  position: relative;
+  width: 770px; /* Stessa larghezza dell'immagine */
+  height: 100%; /* Stessa altezza dell'immagine */
+}
+.boximg_red {
+  background-image: url(../images/note.png);
+  position: relative;
+  
+}
 .boximg2 {
   margin-right: 0px;
   bottom: 0px;
@@ -293,12 +308,13 @@ span.testo {
    
   padding: 10px;
   color: #FFFFFF;
-  font: bold 16px/20px Arial, Helvetica, sans-serif;
-  letter-spacing: -1px;
+  font: bold 16px/20px Arial,Tahoma,Century ;
+  letter-spacing: 0px;
+  
 }
 div.boxtesto_query{
   position: absolute;
-  bottom: -50px;
+  /*bottom: 100px;*/
   left: 30px;
   width: 100%;
   background: rgb(0, 0, 0);
@@ -310,7 +326,7 @@ div.boxtesto_query{
 }
 .boximg_query{
   position: relative;
-  width: 600px; /* Stessa larghezza dell'immagine */
+  width: 550px; /* Stessa larghezza dell'immagine */
   height: 400px; /* Stessa altezza dell'immagine */
 }
 div.boxtesto_list{

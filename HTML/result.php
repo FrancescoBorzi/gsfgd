@@ -13,11 +13,12 @@
 <?php include "header.php"; ?>
 <!-- header ends -->
 <!-- content begins -->
-<div id="content">
+   <div id="content"><CENTER>
+    <div class="boximg_query_back" style="bottom:40px">
         <div id="home-descr" align="center">
           <H2 align="center"><b><br />RESULT QUERY<br /><br /></b></H2></div>
 	  <div style="width: 100%;margin-left: 60px;  margin-right: auto;">
-                <?php
+               <?php
                 
                 include "db_connect.php";
                 
@@ -90,7 +91,7 @@
                 mysql_close();
 	               
                 ?>
-
+          </div>
 	</div>
    </div>
 

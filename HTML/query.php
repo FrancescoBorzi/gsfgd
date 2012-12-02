@@ -10,18 +10,23 @@
 			<?php include "header.php"; ?>
 			<!-- header ends -->      
 		   	<!-- content begins -->      
-                <div id="content">        
+                <div id="content"> 
                     <!-- Tabella contenente le due colonne principali -->  
-                    <center>      
-			<table width="65%" border="0px" style="vertical-align:text-top">            
+                    <center>  
+                       <div class="boximg_query_back">
+                        <table width="65%" border="0px" style="vertical-align:text-top">            
                             <tr>              
 				<!-- BEING LEFT-->             
 				<td id="table-left">              
                                     <!-- BEING "TITOLO" -->              
                                     <table width="70%">                  
 					<tr>  
-                                            <td>                    
-						<div class="tit"><h1>Custom Query</h1></div>
+                                            <td>
+                                                <div class="boximg_red" style="width:140px ; margin-left:-25px; bottom:1px">
+                                                    
+                                                        <div class="tit" ><h1>Custom Query</h1></div>
+                                                        
+                                               </div>
                                             </td>                
 					</tr>                
 					<tr>                 
@@ -41,7 +46,7 @@
                                     <!-- END LEFT-->                          
                                     <!-- BEING RIGHT (Risultato query) -->      
                                 <td id="table-right"> 
-                                    <div class="boximg_query">
+                                    <div class="boximg_query" style="bottom:-20px">
                                         <div class="boxtesto_query"> 
                                             <div style="margin:10px">
                                                 <span class="testo"><br>
@@ -58,11 +63,12 @@
                             </td>                          
                              <!-- END RIGHT (Risultato query) -->                          
                         </tr>                          
-		</table>                          
-				<!-- Fine Tabella principale -->
+		</table>
+              </div> 
+			<!-- Fine Tabella principale -->
             </center>                          
-	</div>                          
-			<!-- content ends -->    
+	                         
+	</div>		<!-- content ends -->    
 	</div>    
 	</body>
 </html>
