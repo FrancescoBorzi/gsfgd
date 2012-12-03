@@ -19,8 +19,7 @@
           <div class="boximg">  
               <div class="boximg_orange"  style="margin-left: -668px ;width:140px;height: 84px;bottom:-40px">
                    <div class="tit" align="center" style="color:white; font-family: Helvetica Neue,Arial,Helvetica,sans-serif;"><b><br />Home<br /><br /></b></div>
-	 
-              </div>
+             </div>
               <br/><br/>
         <div id="wrapper" style="width:700px; height:300px;">
 	<div class="slider-wrapper theme-default">
@@ -32,13 +31,14 @@
 	    </div>	    
 	</div>
 	</div>
-	 
-         <div class="boximg_dnaBack"  style="margin-left: -668px ;width:140px;height: 632px;bottom:-40px">
-         <div class="boximg_dna" style="bottom:100px;"><img src="images/dnaLast.gif" width="70%" height="70%"></img>
+        <div style="margin-left:680px;">
+          <!--<div class="boximg_dnaBack"  style="margin-left: -668px ;width:140px;height: 632px;bottom:-40px">-->
+            <div class="boximg_dna" style="bottom:-200px;"><img src="images/dnaLast.gif" width="40%" height="40%"></img>
+            <!--</div>-->
              </div>
-         </div>
-          <div class="boximg2">
-             <div class="boxtesto" style="bottom:-100px;">
+        </div>
+        <div class="boximg2">
+            <div class="boxtesto" style="bottom:10px;">
                <div style="margin-left:20px; margin-right: 20px;"> <!--DIV CHE ALLONTANA IL TESTO DAL BOX-->
                 <span class="testo" style="m:10px">
                     <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
