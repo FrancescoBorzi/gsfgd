@@ -28,8 +28,8 @@
 	</div>
 	</div>
 	 
-         <div class="boximg_dnaBack"  style="margin-left: -668px ;width:140px;height: 83px;bottom:-40px">
-         <div class="boximg_dna"><img src="images/dnaLast.gif" width="70%" height="70%"></img>
+         <div class="boximg_dnaBack"  style="margin-left: -668px ;width:140px;height: 632px;bottom:-40px">
+         <div class="boximg_dna" style="bottom:100px;"><img src="images/dnaLast.gif" width="70%" height="70%"></img>
              </div>
          </div>
           <div class="boximg2">
