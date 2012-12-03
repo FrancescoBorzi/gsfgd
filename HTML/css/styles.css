@@ -301,6 +301,11 @@ textarea {
   position: relative;
   
 }
+.boximg_orange {
+  background-image: url(../images/orange.png);
+  position: relative;
+  
+}
 .boximg_dna {
 	margin-left: -310px;
 	bottom:-40px;

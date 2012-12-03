@@ -16,7 +16,12 @@
        	<link rel="stylesheet" href="css/default.css" type="text/css" />
 	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
 	<center>
-        <div class="boximg">
+          <div class="boximg">  
+              <div class="boximg_orange"  style="margin-left: -668px ;width:140px;height: 84px;bottom:-40px">
+                   <div class="tit" align="center" style="color:white; font-family: Helvetica Neue,Arial,Helvetica,sans-serif;"><b><br />Home<br /><br /></b></div>
+	 
+              </div>
+              <br/><br/>
         <div id="wrapper" style="width:700px; height:300px;">
 	<div class="slider-wrapper theme-default">
 	    <div id="slider" class="nivoSlider">

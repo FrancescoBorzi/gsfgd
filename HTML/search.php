@@ -17,7 +17,7 @@
             <div id="content" align="center">
                 <div class="boximg_query_back">
                 <div class="boximg_blu" style="margin-left: -668px ;width:140px;height: 83px;bottom:-40px">
-                    <div class="tit" align="center" style="color:white"><b><br />Search<br /><br /></b>
+                    <div class="tit" align="center" style="color:white;font-family: Helvetica Neue,Arial,Helvetica,sans-serif;"><b><br />Search<br /><br /></b>
                     </div>
                 </div>
                 <!-- Tabella contenente le due colonne principali -->
