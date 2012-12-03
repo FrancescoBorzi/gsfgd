@@ -138,38 +138,6 @@
                 nivoRun(slider, kids, settings, 'next');
             });
         }
-        
-        // Add Control nav
-        if(settings.controlNav){
-            vars.controlNavEl = $('<div class="nivo-controlNav"></div>');
-            slider.after(vars.controlNavEl);
-            for(var i = 0; i < kids.length; i++){
-                if(settings.controlNavThumbs){
-                    vars.controlNavEl.addClass('nivo-thumbs-enabled');
-                    var child = kids.eq(i);
-                    if(!child.is('img')){
-                        child = child.find('img:first');
-                    }
-                    if(child.attr('data-thumb')) vars.controlNavEl.append('<a class="nivo-control" rel="'+ i +'"><img src="'+ child.attr('data-thumb') +'" alt="" /></a>');
-                } else {
-                    vars.controlNavEl.append('<a class="nivo-control" rel="'+ i +'">'+ (i + 1) +'</a>');
-                }
-            }
-
-            //Set initial active link
-            $('a:eq('+ vars.currentSlide +')', vars.controlNavEl).addClass('active');
-            
-            $('a', vars.controlNavEl).bind('click', function(){
-                if(vars.running) return false;
-                if($(this).hasClass('active')) return false;
-                clearInterval(timer);
-                timer = '';
-                sliderImg.attr('src', vars.currentImage.attr('src'));
-                vars.currentSlide = $(this).attr('rel') - 1;
-                nivoRun(slider, kids, settings, 'control');
-            });
-        }
-        
         //For pauseOnHover setting
         if(settings.pauseOnHover){
             slider.hover(function(){

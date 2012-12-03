@@ -11,7 +11,7 @@
 <?php include "header.php"; ?>
 <!-- header ends -->
 <!-- content begins -->
-<div aligh="center" id="content">
+<div align="center" id="content">
     <!--<div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>-->
        	<link rel="stylesheet" href="css/default.css" type="text/css" />
 	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
@@ -24,9 +24,7 @@
 		<img src="images/omim2.jpg" title="omim.org/"/>
 		<img src="images/miren2.jpg" title="202.38.126.151/hmdd/mirna/md/"/>
 		<img src="images/human2.jpg" title="202.38.126.151/hmdd/tools/miren.html"/>
-		
-	    </div>
-	    
+	    </div>	    
 	</div>
 	</div>
 	 
