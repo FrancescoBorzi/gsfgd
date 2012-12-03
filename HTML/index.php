@@ -20,15 +20,13 @@
         <div id="wrapper" style="width:700px; height:300px;">
 	<div class="slider-wrapper theme-default">
 	    <div id="slider" class="nivoSlider">
-		<img  src="images/scroll/orizzontale/1.jpg" data-thumb="images/scroll/orizzontale/1.jpg" />
-		<img src="images/scroll/orizzontale/2.jpg" data-thumb="images/scroll/orizzontale/2.jpg"/>
-		<img src="images/scroll/orizzontale/3.jpg" data-thumb="images/scroll/orizzontale/3.jpg" data-transition="slideInLeft" />
-		<img src="images/scroll/orizzontale/4.jpg" data-thumb="images/scroll/orizzontale/4.jpg" />
-		<img src="images/scroll/orizzontale/5.jpg" data-thumb="images/scroll/orizzontale/5.jpg" />
-		<img src="images/scroll/orizzontale/h2.jpg" data-thumb="images/scroll/orizzontale/h2.jpg" />
+		<img  src="images/drugbank2.jpg" title="www.drugbank.ca/" />
+		<img src="images/omim2.jpg" title="omim.org/"/>
+		<img src="images/miren2.jpg" title="202.38.126.151/hmdd/mirna/md/"/>
+		<img src="images/human2.jpg" title="202.38.126.151/hmdd/tools/miren.html"/>
+		
 	    </div>
-	    <div id="htmlcaption" class="nivo-html-caption">
-	    </div>
+	    
 	</div>
 	</div>
 	 
