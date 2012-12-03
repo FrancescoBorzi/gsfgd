@@ -289,6 +289,21 @@ textarea {
   position: relative;
   
 }
+.boximg_yellow {
+  background-image: url(../images/yellow.png);
+  position: relative;
+  
+}
+.boximg_dnaBack {
+  background-image: url(../images/dnaBack.png);
+  position: relative;
+  
+}
+.boximg_dna {
+  background-image: url(../images/dna.png);
+  position: relative;
+  
+}
 .boximg2 {
   margin-right: 0px;
   bottom: 0px;

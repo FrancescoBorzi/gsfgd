@@ -7,16 +7,19 @@
 	<script src="js/jquery-1.8.3.js"></script>
 	<script src="js/jquery-ui.js"></script> 
     </head>
-    <body  >
+    <body>
         <div id="main">
             <div id="maintop"></div>
             <!-- header begins -->
             <?php include "header.php"; ?>
             <!-- header ends -->
             
-                <div id="content">
-                    <div style=" width: 800px;height: 200px;" id="home-descr" align="center" >
-                        <H2  align="center"><b><br />SEARCH<br /><br /></b>
+            <div id="content" align="center">
+                <div class="boximg_query_back">
+                <div class="boximg_blu" style="margin-left: -668px ;width:140px;height: 83px;bottom:-40px">
+                    <div class="tit" align="center" style="color:white"><b><br />Search<br /><br /></b>
+                    </div>
+                </div>
                 <!-- Tabella contenente le due colonne principali -->
                 <table > 
                     <tr> 
@@ -147,8 +150,7 @@
                     </script>
                    </td> </tr> 
                    </table>
-                        </H2>
-                    </div>
+                        
                 <table>
                       <tr><td>
                          <?
@@ -160,7 +162,7 @@
                                     $query_final = mysql_query("SELECT * FROM " . $table . " WHERE " . $field . " LIKE '%" . $word . "%'") or die("Query 2 fallita: " . mysql_error());
                                 if (mysql_num_rows($query_final) > 0) {
                                     
-                                     echo "<div style=\"margin-left: 57px; margin-right: 90px; width: 105%;\">
+                                     echo "<div style=\"margin-left: -260px; margin-right: 90px; width:1300px\">
                                         <table id=\"drugs\" class=\"standard\">
                                         <tr>";
                                    
@@ -210,7 +212,7 @@
             </div>
 
             <!-- content ends -->
-
+            </div>
         </div>
     </body>
 </html>

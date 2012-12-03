@@ -30,9 +30,12 @@
 	</div>
 	</div>
 	 
-            
+         <div class="boximg_dnaBack"  style="margin-left: -668px ;width:140px;height: 83px;bottom:-40px">
+         <div class="boximg_dna" style="margin-left: -310px ;width:234px;height: 497px;bottom:-40px">
+             </div>
+         </div>
           <div class="boximg2">
-           <div class="boxtesto">
+             <div class="boxtesto">
                <div style="margin-left:20px; margin-right: 20px"> <!--DIV CHE ALLONTANA IL TESTO DAL BOX-->
                 <span class="testo" style="m:10px">
                     <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
@@ -84,6 +87,7 @@
                </div>
                 </div>
             </div>
+            </center>
          
         </div>
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
