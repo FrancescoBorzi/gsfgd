@@ -37,7 +37,7 @@
                <div style="margin-left:20px; margin-right: 20px"> <!--DIV CHE ALLONTANA IL TESTO DAL BOX-->
                 <span class="testo" style="m:10px">
                     <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
-                    Our website menage a database that includes drugs, diseases, miRNA, you can choose this main function:<br />
+                    Our website manage a database that includes drugs, diseases, miRNA, you can choose this main function:<br />
 			<ul>
 			  <li><b>Search:</b><br/>select a table's field, and write a word on the text-area, this ones will be  
                                               searched in all the table's field.
