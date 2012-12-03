@@ -33,7 +33,7 @@
                                             <td>                    
 						<form action="result.php" enctype="multipart/form-data" method="GET">                      
                                                     <div align="center">
-							<textarea rows="20" cols="50" name="testo"></textarea>	                       
+							<textarea rows="20" cols="50" name="testo" style="border:2px double #0033FF"></textarea>	                       
 								 <input class="pulsante" type="submit" name="submit" value="run" style="width:50%"/>
                                                     </div> 
                                      

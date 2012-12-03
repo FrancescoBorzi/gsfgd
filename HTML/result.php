@@ -49,7 +49,7 @@
                 // esecuzione seconda query con LIMIT
                 $query_limit = mysql_query($query." LIMIT $primo, $per_page") or die("Query 2 fallita: " . mysql_error() );
                     $linea=array();
-                   echo "<div style=\"margin-left: 60px; margin-right: 90px;\">
+                   echo "<div style=\"margin-left: -260px; margin-right: 90px; width:1300px\">
                         <table id=\"drugs\" class=\"standard\">
                             <tr>";
                     
