@@ -154,6 +154,8 @@ html, body {
 .pulsante:hover{
 	border: solid 3px #bbbbbb;
 	background: #0060cd;
+	-webkit-transform: skew(-5deg,-5deg);
+	-moz-transform: skew(-5deg,-5deg);
 }
 #header a {
 	font-family: Tahoma, Arial, Helvetica, sans-serif;

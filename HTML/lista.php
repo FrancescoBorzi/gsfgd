@@ -39,10 +39,10 @@
                   <td>
                     <form action="lista.php" method="get" enctype="application/x-www-form-urlencoded" name="liistForm">
                       <table width="100%">
-                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('drugbank');" value="Drugs" /></td>
-                        <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('omim');" value="Mim" /></td>
-                        <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('hmdd_disease');" value="Diseases" /></td>
-                        <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('mirenviroment');" value="Mirna" /></td></tr>                      
+                        <tr><td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('drugbank', this.id);" value="Drugs" id="drugs" /></td>
+                        <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('omim', this.id);" value="Mim" id="mim" /></td>
+                        <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('hmdd_disease', this.id);" value="Diseases" id="diseases" /></td>
+                        <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('mirenviroment', this.id);" value="Mirna" id="mirna" /></td></tr>                      
                       </table>
 		      <input type="hidden" name="table" style="display" value="">
                     </form>
@@ -75,8 +75,19 @@
         echo "</div>";
         ?>
 	<script type="text/javascript">
-	function preparasql(table)
+	function preparasql(table, object)
 	{
+		document.getElementById("drugs").style.backgroundColor='#0095cd';
+		document.getElementById("mim").style.backgroundColor='#0095cd';
+		document.getElementById("diseases").style.backgroundColor='#0095cd';
+		document.getElementById("mirna").style.backgroundColor='#0095cd';
+		document.getElementById("drugs").style.borderColor='#bbbbbb';
+		document.getElementById("mim").style.borderColor='#bbbbbb';
+		document.getElementById("diseases").style.borderColor='#bbbbbb';
+		document.getElementById("mirna").style.borderColor='#bbbbbb';
+		document.getElementById(object).style.backgroundColor='red';
+		document.getElementById(object).style.borderColor='orange';
+
 		document.getElementsByName('table')[0].value=table;
 		var name="";
 		if(table == "drugbank") { name="name"; }
