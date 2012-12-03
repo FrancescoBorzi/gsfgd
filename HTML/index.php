@@ -38,8 +38,8 @@
              </div>
          </div>
           <div class="boximg2">
-             <div class="boxtesto">
-               <div style="margin-left:20px; margin-right: 20px"> <!--DIV CHE ALLONTANA IL TESTO DAL BOX-->
+             <div class="boxtesto" style="bottom:-100px;">
+               <div style="margin-left:20px; margin-right: 20px;"> <!--DIV CHE ALLONTANA IL TESTO DAL BOX-->
                 <span class="testo" style="m:10px">
                     <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
                     Our website manage a database that includes drugs, diseases, miRNA, you can choose this main function:<br />
