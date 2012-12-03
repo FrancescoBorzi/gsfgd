@@ -14,6 +14,9 @@
 <!-- content begins -->
       <div id="content">
          <div class="boximg_query_back" style="top: 13%; margin: -100px 0 0 96px;">
+             <div class="boximg_green"  style="margin-left: -21px ;width:140px;height: 84px;bottom:-55px">
+                   <div class="tit" align="center" style="color:white; font-family: Helvetica Neue,Arial,Helvetica,sans-serif;"><b><br />List<br /><br /></b></div>
+             </div><br/><br/><br/>
             <div align ="center">  
             
                 <?php
@@ -44,6 +47,7 @@
                         <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('hmdd_disease', this.id);" value="Diseases" id="diseases" /></td>
                         <td><input class="pulsante" type="button" style="width:100%" OnClick="preparasql('mirenviroment', this.id);" value="Mirna" id="mirna" /></td></tr>                      
                       </table>
+                        <br/>
 		      <input type="hidden" name="table" style="display" value="">
                     </form>
                   </td>
@@ -73,6 +77,7 @@
                     echo "<a href=\"lista.php?table=$table&lettera=&#$index&testo=$sql\"><input type=\"button\" value=&#$index style=\"10%:10%\"/></a>";
 		}
         echo "</div>";
+        echo "<br>";
         ?>
 	<script type="text/javascript">
 	function preparasql(table, object)

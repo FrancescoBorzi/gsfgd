@@ -286,6 +286,11 @@ textarea {
   position: relative;
   
 }
+.boximg_green {
+  background-image: url(../images/green.png);
+  position: relative;
+  
+}
 .boximg_blu {
   background-image: url(../images/result.png);
   position: relative;
