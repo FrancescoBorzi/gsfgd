@@ -101,7 +101,10 @@
 	<div align="center" width="40%">
 	<?php
 	include "db_connect.php";
-	$query=$_GET["testo"];
+        if(isset($_GET["testo"])){
+            $query=$_GET["testo"];
+        
+        //else $query="SELECT * from drugbank";
 	$risultato = mysql_query($query);
 			
 	$res_count = mysql_num_rows($risultato);
@@ -169,7 +172,7 @@
 	echo " <tr>\n <td height=\"50\" valign=\"bottom\" align=\"center\">$paginazione</td>\n";
 	echo " </tr>\n</table>\n</div>";
 	echo "<br/><br/><br/><br/>";
-  
+        }
 	mysql_close();
 	?>
 	</div>
