@@ -22,9 +22,10 @@
 	 
               </div>
               <br/><br/>
-        <div id="wrapper" style="width:700px; height:300px;">
+        <div id="wrapper" style="width:600px; height:300px;">
 	<div class="slider-wrapper theme-default">
 	    <div id="slider" class="nivoSlider">
+    		<img  src="images/Bioinformatics1.jpg" title="WTF" />
 		<img  src="images/drugbank2.jpg" title="www.drugbank.ca/" />
 		<img src="images/omim2.jpg" title="omim.org/"/>
 		<img src="images/miren2.jpg" title="202.38.126.151/hmdd/mirna/md/"/>
