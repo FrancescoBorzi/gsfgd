@@ -17,24 +17,27 @@
 	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
 	<center>
         <div class="boximg">
-        <div id="wrapper" style="width:700px; height:300px;">
-	<div class="slider-wrapper theme-default">
-	    <div id="slider" class="nivoSlider">
-		<img  src="images/scroll/orizzontale/1.jpg" data-thumb="images/scroll/orizzontale/1.jpg" />
-		<img src="images/scroll/orizzontale/2.jpg" data-thumb="images/scroll/orizzontale/2.jpg"/>
-		<img src="images/scroll/orizzontale/3.jpg" data-thumb="images/scroll/orizzontale/3.jpg" data-transition="slideInLeft" />
-		<img src="images/scroll/orizzontale/4.jpg" data-thumb="images/scroll/orizzontale/4.jpg" />
-		<img src="images/scroll/orizzontale/5.jpg" data-thumb="images/scroll/orizzontale/5.jpg" />
-		<img src="images/scroll/orizzontale/h2.jpg" data-thumb="images/scroll/orizzontale/h2.jpg" />
-	    </div>
-	    <div id="htmlcaption" class="nivo-html-caption">
-	    </div>
-	</div>
-	</div>
+            <div id="wrapper" style="width:700px; height:300px;">
+                <div class="slider-wrapper theme-default">
+                    <div id="slider" class="nivoSlider">
+                        <img  src="images/scroll/orizzontale/1.jpg" data-thumb="images/scroll/orizzontale/1.jpg" />
+                        <img src="images/scroll/orizzontale/2.jpg" data-thumb="images/scroll/orizzontale/2.jpg"/>
+                        <img src="images/scroll/orizzontale/3.jpg" data-thumb="images/scroll/orizzontale/3.jpg" data-transition="slideInLeft" />
+                        <img src="images/scroll/orizzontale/4.jpg" data-thumb="images/scroll/orizzontale/4.jpg" />
+                        <img src="images/scroll/orizzontale/5.jpg" data-thumb="images/scroll/orizzontale/5.jpg" />
+                        <img src="images/scroll/orizzontale/h2.jpg" data-thumb="images/scroll/orizzontale/h2.jpg" />
+                    </div>
+                    <div id="htmlcaption" class="nivo-html-caption">
+                    </div>
+                </div>
+            </div>
 	 
-            
+         <div class="boximg_dnaBack"  style="margin-left: -668px ;width:140px;height: 83px;bottom:-40px">
+         <div class="boximg_dna" style="margin-left: -310px ;width:234px;height: 497px;bottom:-40px">
+             </div>
+         </div>
           <div class="boximg2">
-           <div class="boxtesto">
+             <div class="boxtesto">
                <div style="margin-left:20px; margin-right: 20px"> <!--DIV CHE ALLONTANA IL TESTO DAL BOX-->
                 <span class="testo" style="m:10px">
                     <H2 align="center"><b><br />Welcome!<br /><br /></b></H2>
@@ -86,6 +89,7 @@
                </div>
                 </div>
             </div>
+            </center>
          
         </div>
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
