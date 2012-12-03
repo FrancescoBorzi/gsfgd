@@ -361,7 +361,7 @@ div.boxtesto_query{
 	color:white;
 	font:  15px Arial, Helvetica, sans-serif;
 	border: solid 1px #bbbbbb;
-	background: #0095cd;
+	background-color: #0095cd;
 	-webkit-border-radius:2em 0;
 	-moz-border-radius:2em 0;
 }
@@ -376,6 +376,12 @@ div.boxtesto_query{
 
 #tags {
 	width:260px;
+}
+
+option
+{
+	color:white;
+	background-color:#0095aa;
 }
 
 .ui-autocomplete { height: 200px; overflow-y: scroll; overflow-x: hidden;}
