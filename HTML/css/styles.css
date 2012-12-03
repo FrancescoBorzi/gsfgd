@@ -302,11 +302,10 @@ textarea {
   
 }
 .boximg_dna {
-  background-image: url(../images/dnaLast.gif);
-  height: 50%;
-  width: 50%;
-  position: relative;
-  
+	margin-left: -310px;
+	bottom:-40px;
+	position: relative;
+	z-index:-1;
 }
 .boximg2 {
   margin-right: 0px;
