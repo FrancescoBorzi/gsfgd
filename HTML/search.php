@@ -11,7 +11,7 @@
         <div id="main">
             <div id="maintop"></div>
             <!-- header begins -->
-            <?php include "header.php"; ?>
+            <?php include "header.php"; ?> 
             <!-- header ends -->
             
             <div id="content" align="center">
