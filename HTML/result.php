@@ -24,7 +24,7 @@
                 include "db_connect.php";
                 
 		$query=$_GET["testo"];
-		$risultato = mysql_query($query) or die("Query fallita: " . mysql_error() ."asd");
+		$risultato = mysql_query($query) or die("<br/><br/><center>Query fallita: " . mysql_error() ."<br><br><br>Try typing instructions like these: <br> SELECT * FROM drugbank </center><br/>");
                                 
                 $res_count = mysql_num_rows($risultato);
                 
