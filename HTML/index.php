@@ -2,6 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" href="css/default.css" type="text/css" />
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
 </head>
 <body>
 
@@ -11,11 +13,8 @@
 <?php include "header.php"; ?>
 <!-- header ends -->
 <!-- content begins -->
-<div align="center" id="content">
-    <!--<div class="tit"><h1 style="padding-left: 320px;">HOME PAGE</h1></div>-->
-       	<link rel="stylesheet" href="css/default.css" type="text/css" />
-	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
-	<center>
+<div id="content">
+    <CENTER>
           <div class="boximg">  
               <div class="boximg_orange"  style="margin-left: -668px ;width:140px;height: 84px;bottom:-40px">
                    <div class="tit" align="center" style="color:white; font-family: Helvetica Neue,Arial,Helvetica,sans-serif;"><b><br />Home<br /><br /></b></div>
@@ -91,7 +90,7 @@
                </div>
                 </div>
             </div>
-            </center>
+            </CENTER>
          
         </div>
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
