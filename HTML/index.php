@@ -15,7 +15,7 @@
 <!-- content begins -->
 <div id="content">
     <CENTER>
-          <div class="boximg_query_back">  
+          <div class="boximg">  
               <div class="boximg_orange"  style="margin-left: -668px ;width:140px;height: 84px;bottom:-40px">
                    <div class="tit" align="center" style="color:white; font-family: Helvetica Neue,Arial,Helvetica,sans-serif;"><b><br />Home<br /><br /></b></div>
              </div>
