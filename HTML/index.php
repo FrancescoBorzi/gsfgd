@@ -24,11 +24,11 @@
         <div id="wrapper" style="width:600px; height:300px;">
 	<div class="slider-wrapper theme-default">
 	    <div id="slider" class="nivoSlider">
-    		<img  src="images/Bioinformatics1.jpg" title="WTF" />
-		<img  src="images/drugbank2.jpg" title="www.drugbank.ca/" />
-		<img src="images/omim2.jpg" title="omim.org/"/>
-		<img src="images/miren2.jpg" title="202.38.126.151/hmdd/mirna/md/"/>
-		<img src="images/human2.jpg" title="202.38.126.151/hmdd/tools/miren.html"/>
+    		<img  src="images/Bioinformatics1.jpg"  />
+		<a href="http://www.drugbank.ca/" target="_blank"><img  src="images/drugbank2.jpg" title="www.drugbank.ca/" /></a>
+		<a href="http://omim.org/" target="_blank"><img src="images/omim2.jpg" title="omim.org/"/></a>
+		<a href="http://202.38.126.151/hmdd/mirna/md/" target="_blank"><img src="images/miren2.jpg" title="202.38.126.151/hmdd/mirna/md/"/></a>
+		<a href="http://202.38.126.151/hmdd/tools/miren.html" target="_blank"><img src="images/human2.jpg" title="202.38.126.151/hmdd/tools/miren.html"/></a>
 	    </div>	    
 	</div>
 	</div>
