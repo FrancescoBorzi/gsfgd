@@ -55,15 +55,7 @@
                           </li>
                         </ul>
                         <br/>
-   			<br /><br />
-   			<b><u>Database structure:</u></b><br /><br />
-			Our database not only contains information on drugs, genes and diseases, it also stores two main relationships between them:<br />
-			<ul>
-				<li>The table "cure" contains information related to the action of drugs on genes;</li>
-				<li>The table "gene_disease" stores the genes involved in each disease.</li>
-			</ul>
-            <br />The information regarding the interactions between drugs are contained in the "interaction" table, while in the tables "category" and "atc_code" are present, respectively, membership categories and the ATC-codes of each drug.
-            <br /><br />
+   			<br />
             <b><u>Net Source:</u></b><br /><br />
 			All our material come from this sites:<br />
 			<ul>
